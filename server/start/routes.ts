@@ -21,5 +21,11 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async () => {
-  return { hello: 'world' }
+  return "hi sanket"
 })
+
+Route.get('/data','CartsController.index')
+
+Route.get('/api',async()=>{
+  return "hi there"
+}).middleware('auth')
