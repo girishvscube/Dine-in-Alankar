@@ -20,12 +20,9 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return "hi sanket"
-})
-
-Route.get('/data','CartsController.index')
-
-Route.get('/api',async()=>{
-  return "hi there"
-}).middleware('auth')
+Route.resource('admin','UsersController')
+Route.patch('admin','UsersController.update')
+Route.post('login','UsersController.login')
+Route.get('mail','UsersController.sendmail')
+Route.resource('category','CategoriesController')
+Route.resource('dishes','DishesController')
