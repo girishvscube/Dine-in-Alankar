@@ -111,11 +111,11 @@ export const Login = () => {
               {formErrors.password}
             </p>
 
-            {/* <Link to="/forgotpassword"> */}
-            <p className=" text-darkyellow w-[250px] font-semibold text-lg pl-12 underline cursor-pointer">
-              Forgot your password?
-            </p>
-            {/* </Link> */}
+            <Link to="/forgotpassword">
+              <p className=" text-darkyellow w-[250px] font-semibold text-lg pl-12 underline cursor-pointer">
+                Forgot your password?
+              </p>
+            </Link>
             <button
               type="submit"
               className="w-[415px] h-[50px] radient rounded-xl mt-8 mb-13  text-xl font-semibold  text-white place-self-center 2xl:w-[516px] 2xl:h-14 2xl:mt-13 2xl:mb-16 "
