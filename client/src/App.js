@@ -1,7 +1,18 @@
+import { Routes, Route } from "react-router-dom";
+import { SideNavbar } from "./components/SideNavbar";
+
+import { ForgotPassword } from "./Pages/Login/ForgotPassword";
+import { Login } from "./Pages/Login/Login";
+import { ResetPassword } from "./Pages/Login/ResetPassword";
+
 function App() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Routes>
+        <Route exact path="/login" element={<SideNavbar />} />
+        <Route exact path="/forgotpassword" element={<ForgotPassword />} />
+        <Route exact path="/resetpassword" element={<ResetPassword />} />
+      </Routes>
     </div>
   );
 }
