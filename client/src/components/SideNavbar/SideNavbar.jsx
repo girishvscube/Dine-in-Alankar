@@ -1,21 +1,21 @@
-import { obj } from "../data";
+import { obj } from "../../data";
 import { useState } from "react";
-import alankarnav from "../Images/alan.png";
-import scube from "../Images/scube.png";
+import alankarnav from "../../Images/alan.png";
+import scube from "../../Images/scube.png";
 
 export const SideNavbar = () => {
   const [menuItems, setMenuItems] = useState(obj);
 
   return (
-    <div className="w-[306px]">
+    <div className="w-[306px] h-screen ">
       <div className=" flex justify-center">
-        <img className="" src={alankarnav} alt="navbar" />
+        <img className=" h-44 2xl:h-64" src={alankarnav} alt="navbar" />
       </div>
       <div>
         {menuItems.map((e, index) => (
-          <div key={index} className="flex place-items-start mt-10">
+          <div key={index} className="flex place-items-start mt-8 ">
             <img
-              className=" text-lg font-normal mr-7 ml-10"
+              className=" text-lg font-normal mr-7 ml-14 2xl:ml-10"
               src={e.img}
               alt="menuitems"
             />
@@ -23,9 +23,10 @@ export const SideNavbar = () => {
           </div>
         ))}
       </div>
-      <div className=" mt-52 flex justify-center">
+      <div className="absolute bottom-0 left-10">
         <img src={scube} alt="powered" />
       </div>
     </div>
   );
 };
+//etr
