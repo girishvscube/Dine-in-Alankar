@@ -1,6 +1,7 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
 import Dish from './Dish'
+import Subcat from './Subcat'
 import { compose } from '@ioc:Adonis/Core/Helpers'
 import { SoftDeletes } from '@ioc:Adonis/Addons/LucidSoftDeletes'
 import { slugify } from '@ioc:Adonis/Addons/LucidSlugify'
@@ -11,7 +12,7 @@ export default class Category extends compose(BaseModel,SoftDeletes) {
   @slugify({
     strategy: 'shortId',
     fields: ['category_name'],
-    
+    allowUpdates:true
   })
   public slug: string
   @column()
@@ -23,10 +24,11 @@ export default class Category extends compose(BaseModel,SoftDeletes) {
  })
  public dishes : HasMany<typeof Dish>
 
-
-  @column.dateTime({ autoCreate: true })
-  public createdAt: DateTime
-
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
-  public updatedAt: DateTime
+ @hasMany(()=>Subcat,{
+  foreignKey:'category_id' 
+  })
+  public subcat : HasMany<typeof Subcat>
+  
+ @column.dateTime()
+ public deletedAt: DateTime
 }

@@ -29,7 +29,7 @@ export default class DishValidator {
     price : schema.string({trim:true}),
     availability:schema.boolean(),
     stock : schema.number(),
-    mealType:schema.string({trim:true}),
+    type_of_meal:schema.string({trim:true}),
     image_url :schema.string({trim:true}),
     category_id : schema.number()
 
@@ -50,8 +50,7 @@ export default class DishValidator {
     'item_name.required':'required',
     'price.required':'required',
     'stock.required':'required',
-    'mealType.required':'required',
-    
+    'type_of_meal.required':'required',
     'category_id.required':'required',
     'image_url.required':'required'
   }

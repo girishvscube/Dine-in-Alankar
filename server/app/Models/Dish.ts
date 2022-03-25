@@ -33,8 +33,9 @@ export default class Dish extends compose(BaseModel,SoftDeletes) {
 
   @column()
   @slugify({
-    strategy: 'shortId',
+    strategy: 'dbIncrement',
     fields: ['item_name'],
+    allowUpdates:true
     
   })
   public slug: string
