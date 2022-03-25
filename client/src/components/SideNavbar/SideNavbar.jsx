@@ -1,7 +1,7 @@
-import { obj } from "../data";
+import { obj } from "../../data";
 import { useState } from "react";
-import alankarnav from "../Images/alan.png";
-import scube from "../Images/scube.png";
+import alankarnav from "../../Images/alan.png";
+import scube from "../../Images/scube.png";
 
 export const SideNavbar = () => {
   const [menuItems, setMenuItems] = useState(obj);

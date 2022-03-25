@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       width: {
         85: "20.4rem",
+        42: "10.75rem",
       },
       height: {
         18: "4.5rem",
@@ -12,6 +13,8 @@ module.exports = {
       colors: {
         darkyellow: "#F0912C",
         background: "#F5F5F5",
+        darkwhite: "#FAFAFA",
+        bglightyellow: "#FF8E16",
       },
       margin: {
         13: "3.25rem",
