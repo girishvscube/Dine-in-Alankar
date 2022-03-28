@@ -3,6 +3,7 @@ import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
 import { slugify } from '@ioc:Adonis/Addons/LucidSlugify'
 import { compose } from '@ioc:Adonis/Core/Helpers'
 import { SoftDeletes } from '@ioc:Adonis/Addons/LucidSoftDeletes'
+import Subcat from './Subcat'
 import Category from './Category'
 export default class Dish extends compose(BaseModel,SoftDeletes) {
   @column({ isPrimary: true })
@@ -13,10 +14,19 @@ export default class Dish extends compose(BaseModel,SoftDeletes) {
   public item_name : string
 
   @column()
-  public price : string
+  public take_away_price : string
 
   @column()
-  public category_id : number
+  public price_in_counter : string
+
+  @column()
+  public time : string
+
+  @column()
+  public category_id :number
+
+  @column()
+  public sub_category_id : number
 
   @column()
   public stock : number
@@ -33,16 +43,22 @@ export default class Dish extends compose(BaseModel,SoftDeletes) {
 
   @column()
   @slugify({
-    strategy: 'shortId',
+    strategy: 'dbIncrement',
     fields: ['item_name'],
+    allowUpdates:true
     
   })
   public slug: string
 
- @belongsTo(()=>Category,{
-   localKey:'category_id'
+ @belongsTo(()=>Subcat,{
+   localKey:'sub_category_id'
  })
- public category : BelongsTo<typeof Category>
+ public sub_category : BelongsTo<typeof Subcat>
+
+ @belongsTo(()=>Category,{
+  localKey:'category_id'
+})
+public category : BelongsTo<typeof Category>
   
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
