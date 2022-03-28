@@ -1,7 +1,7 @@
 import { schema } from '@ioc:Adonis/Core/Validator'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
- 
-export default class DishValidator {
+
+export default class TableValidator {
   constructor(protected ctx: HttpContextContract) {}
 
   /*
@@ -24,17 +24,9 @@ export default class DishValidator {
    *    ```
    */
   public schema = schema.create({
-
-    item_name : schema.string({trim:true}),
-    availability:schema.boolean(),
-    stock : schema.number(),
-    type_of_meal:schema.string({trim:true}),
-    image_url :schema.string({trim:true}),
-    sub_category_id : schema.number(),
-    category_id:schema.number(),
-    price_in_counter :schema.string({trim:true}),
-    take_away_price :schema.string({trim:true}),
-
+    table_number : schema.number(),
+    floor : schema.string({trim:true}),
+    hall:schema.string({trim:true})
   })
 
   /**
@@ -49,10 +41,8 @@ export default class DishValidator {
    *
    */
   public messages = {
-    'item_name.required':'required',
-    'stock.required':'required',
-    'type_of_meal.required':'required',
-    'sub_category_id.required':'required',
-    'image_url.required':'required'
+    'table_number.required':'table number should be be required',
+    'floor.required':'floor number should be required',
+    'hall.required':'hall number should be required'
   }
 }

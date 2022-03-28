@@ -29,6 +29,7 @@ export default class CategoryValidator {
       rules.minLength(2),
       rules.unique({table:'categories',column: 'category_name'})
     ]),
+    category_image :schema.string({trim:true})
   })
 
   /**
@@ -44,6 +45,7 @@ export default class CategoryValidator {
    */
   public messages = {
     'category_name.required':'category_name required',
-    'category_name.unique':'category name already exists'
+    'category_name.unique':'category name already exists',
+    'category_image.required':'Image should be required'
   }
 }

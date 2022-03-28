@@ -25,7 +25,8 @@ export default class DishesController {
       await Dish.create(data)
       return response.created({ message: 'Data added successfully' })
     } catch (err) {
-      return response.unprocessableEntity(err.messages)
+      console.log(err);
+      return response.unprocessableEntity({err:err})
     }
   }
 
@@ -44,15 +45,15 @@ export default class DishesController {
   public async update({ request, response, params }: HttpContextContract) {
     const id = params.id
     try {
-      const { item_name, price, image_url, stock, availability, category_id } =
+      const { item_name,  image_url, stock, availability, sub_category_id } =
         await request.validate(DishValidator)
       const data = await Dish.findByOrFail('slug', `${id}`)
       if (data) {
         ;(data.item_name = item_name),
-          (data.category_id = category_id),
+          (data.sub_category_id = sub_category_id),
           (data.image_url = image_url),
           (data.stock = stock),
-          (data.price = price),
+          
           (data.availability = availability)
         data.save()
         return response.created({ message: 'updated successfully' })

@@ -20,7 +20,7 @@ export default class CategoriesController {
 
   public async store({ request, response }: HttpContextContract) {
     try {
-      const { category_name } = await request.validate(CategoryValidator);
+      const { category_name,category_image } = await request.validate(CategoryValidator);
       console.log(category_name)
       const categoryPresent = await Category.findBy(
         "category_name",
@@ -32,7 +32,7 @@ export default class CategoriesController {
           message: `${category_name} already exists in the category list`,
         });
       } else {
-        const data = await Category.create({ category_name });
+        const data = await Category.create({ category_name,category_image });
         response.created({
           message: "category created successfully",
           data: data,
@@ -53,7 +53,7 @@ export default class CategoriesController {
       const limit = request.input("limit", 8);
       const category = await Category.findByOrFail('slug',`${id}`);
       const data = await category
-        .related("dishes")
+        .related("subcat")
         .query().where('dishes.type_of_meal','=',meal)
         .paginate(page, limit);
       return response.ok({ data: data });
@@ -103,7 +103,7 @@ export default class CategoriesController {
     try {     
       const page = request.input("page", 1);
       const limit = request.input("limit", 2);
-      const data = await Category.query().preload('dishes').paginate(page, limit);
+      const data = await Category.query().preload('subcat').preload('items').paginate(page, limit);
       if(data.length>0){
         return response.ok({ data: data })
       }
@@ -113,7 +113,9 @@ export default class CategoriesController {
     } catch (err) {
       return response.notFound({ message: "Requested data not found" });
     }
+ 
   }
+ 
 
   public async searchCategory({request,response}){
     try{
@@ -128,6 +130,20 @@ export default class CategoriesController {
       } 
     }catch(err){
       return response.badRequest({message:"try again later.."})
+    }
+  }
+
+  public async fetchSubcat({response,params}){
+    try{
+      const id = params.id;
+     const category = await Category.findOrFail(id)
+     
+    const  data  = await category.related('subcat').query()
+    console.log(data);
+    return data;
+
+    }catch(err){
+    response.notFound("not found")
     }
   }
 }

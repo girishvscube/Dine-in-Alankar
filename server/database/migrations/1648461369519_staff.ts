@@ -1,7 +1,7 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
-export default class Subcats extends BaseSchema {
-  protected tableName = 'subcats'
+export default class Staff extends BaseSchema {
+  protected tableName = 'staff'
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
@@ -10,11 +10,14 @@ export default class Subcats extends BaseSchema {
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
-       table.integer('category_id').unsigned()
-       .references('categories.id')
-       .onDelete('CASCADE').notNullable()
-      table.string('sub_category_name')
-      table.timestamp('deleted_at', { useTz: true }).nullable()
+      table.string('name')
+      table.string('email')
+      table.string('phone')
+      table.string('role')
+      table.string('password')
+      table.string('image')
+      table.boolean('status')
+      table.integer('table_id')
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })
