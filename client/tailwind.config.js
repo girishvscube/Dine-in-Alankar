@@ -15,6 +15,8 @@ module.exports = {
         background: "#F5F5F5",
         darkwhite: "#FAFAFA",
         bglightyellow: "#FF8E16",
+        bgsearch: "#F3EBE1",
+        bggray: "#C4C4C4",
       },
       margin: {
         13: "3.25rem",
