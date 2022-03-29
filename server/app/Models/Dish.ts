@@ -5,6 +5,7 @@ import { compose } from '@ioc:Adonis/Core/Helpers'
 import { SoftDeletes } from '@ioc:Adonis/Addons/LucidSoftDeletes'
 import Subcat from './Subcat'
 import Category from './Category'
+import Order from './Order'
 export default class Dish extends compose(BaseModel,SoftDeletes) {
   @column({ isPrimary: true })
   public id: number
@@ -54,6 +55,10 @@ export default class Dish extends compose(BaseModel,SoftDeletes) {
    localKey:'sub_category_id'
  })
  public sub_category : BelongsTo<typeof Subcat>
+
+ @belongsTo(()=>Order,{
+})
+public order : BelongsTo<typeof Order>
 
  @belongsTo(()=>Category,{
   localKey:'category_id'

@@ -14,13 +14,9 @@ export default class Table extends BaseModel {
   @column()
   public hall:string
 
-  // @hasMany(()=>Staff,{
-  // foreignKey:"table_id"
-  // })
-  // public staff: HasMany<typeof Staff>
 
   @manyToMany(()=>Staff,{
-    pivotTable:'staff_tables'
+    pivotForeignKey:'table_id'
     })
     public staff: ManyToMany<typeof Staff>
 

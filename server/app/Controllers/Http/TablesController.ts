@@ -6,7 +6,7 @@ export default class TablesController {
     try{
      
       const page = request.input('page', 1)
-      const limit = request.input('limit', 2)
+      const limit = request.input('limit', 8)
       const data = await Table.query().paginate(page,limit);
       // const da =await Table.$getRelation('staff').relatedModel()
       if(data.length>0){
