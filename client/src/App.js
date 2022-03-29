@@ -5,6 +5,12 @@ import { Dashboard } from "./Pages/Dashboard/Dashboard";
 import { ForgotPassword } from "./Pages/Login/ForgotPassword";
 import { Login } from "./Pages/Login/Login";
 import { ResetPassword } from "./Pages/Login/ResetPassword";
+import AddMenuPage from "./components/ManageMenu/AddMenuPage";
+import EditMenuPage from "./components/ManageMenu/EditMenuPage";
+import ManageMenuPage from "./components/ManageMenu/ManageMenuPage";
+import AddNewStaffPage from "./components/ManageStaff/AddNewStaffPage";
+import {EditStaffPage} from "./components/ManageStaff/EditStaffPage";
+import ManageStaffPage, {MangeStaffPage} from "./components/ManageStaff/ManageStaffPage";
 
 function App() {
   return (
@@ -16,8 +22,9 @@ function App() {
         <Route exact path="/resetpassword" element={<ResetPassword />} />
         <Route exact path="/activeorder" element={<ActiveOrder />} />
       </Routes> */}
-      <DetailOrder />
+      <ManageStaffPage/>
     </div>
+    
   );
 }
 
