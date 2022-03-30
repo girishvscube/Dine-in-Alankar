@@ -8,7 +8,7 @@ export const SideNavbar = () => {
 
   return (
     <div className="w-[306px] h-screen ">
-      <div className=" flex justify-center">
+      <div className=" flex justify-center pt-6">
         <img className=" h-44 2xl:h-64" src={alankarnav} alt="navbar" />
       </div>
       <div>

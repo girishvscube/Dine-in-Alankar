@@ -10,8 +10,11 @@ import AddMenuPage from "./components/ManageMenu/AddMenuPage";
 import EditMenuPage from "./components/ManageMenu/EditMenuPage";
 import ManageMenuPage from "./components/ManageMenu/ManageMenuPage";
 import AddNewStaffPage from "./components/ManageStaff/AddNewStaffPage";
-import {EditStaffPage} from "./components/ManageStaff/EditStaffPage";
-import ManageStaffPage, {MangeStaffPage} from "./components/ManageStaff/ManageStaffPage";
+import { EditStaffPage } from "./components/ManageStaff/EditStaffPage";
+import ManageStaffPage, {
+  MangeStaffPage,
+} from "./components/ManageStaff/ManageStaffPage";
+import { PastOrders } from "./Pages/PastOrders/PastOrders";
 
 function App() {
   return (
@@ -24,10 +27,11 @@ function App() {
         <Route exact path="/activeorder" element={<ActiveOrder />} />
       </Routes> */}
       {/* <DetailOrder /> */}
-      <CreateNewOrder />
+      {/* <CreateNewOrder /> */}
+      <PastOrders />
+
       {/* <ManageStaffPage/> */}
     </div>
-    
   );
 }
 
