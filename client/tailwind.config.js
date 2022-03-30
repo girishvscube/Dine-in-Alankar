@@ -18,6 +18,8 @@ module.exports = {
         bglightyellow: "#FF8E16",
         bgsearch: "#F3EBE1",
         bggray: "#C4C4C4",
+        bgpink: "#FCEDEA",
+        borderpink: "#FEA6A6",
         width: {
           85: "20.4rem",
           42: "10.75rem",

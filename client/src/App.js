@@ -15,21 +15,26 @@ import ManageStaffPage, {
   MangeStaffPage,
 } from "./components/ManageStaff/ManageStaffPage";
 import { PastOrders } from "./Pages/PastOrders/PastOrders";
+import { KDS } from "./Pages/KDS/KDS";
+import { ViewKDS } from "./components/KDS/ViewKDS";
+import { CreateKDS } from "./Pages/KDS/CreateKDS";
 
 function App() {
   return (
     <div>
-      {/* <Routes>
-        <Route exact path="/" element={<Dashboard />} />
+      <Routes>
+        {/* <Route exact path="/" element={<Dashboard />} /> */}
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />
         <Route exact path="/resetpassword" element={<ResetPassword />} />
         <Route exact path="/activeorder" element={<ActiveOrder />} />
-      </Routes> */}
+        <Route exact path="/KDS" element={<KDS />} />
+        <Route exact path="/viewKDS" element={<ViewKDS />} />
+      </Routes>
       {/* <DetailOrder /> */}
       {/* <CreateNewOrder /> */}
-      <PastOrders />
-
+      {/* <PastOrders /> */}
+      <CreateKDS />
       {/* <ManageStaffPage/> */}
     </div>
   );
