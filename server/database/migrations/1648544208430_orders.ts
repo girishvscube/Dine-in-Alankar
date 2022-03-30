@@ -10,12 +10,14 @@ export default class Orders extends BaseSchema {
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
-      table.integer('item_id')
-      table.integer('quantity')
-      table.integer('price')
-      table.integer('user_order_id').references('user_orders.id').unsigned().onDelete('cascade')
-      table.timestamp('created_at', { useTz: true })
-      table.timestamp('updated_at', { useTz: true })
+      table.integer('item_id').references('id').inTable('dishes').unsigned()
+      table.string('name')
+      table.string('phone_number')
+      table.integer('number_of_people')
+      table.text('instructions')
+      table.integer('table_id').references('id').inTable('tables').unsigned()
+      table.timestamps(false)
+     
     })
   }
 

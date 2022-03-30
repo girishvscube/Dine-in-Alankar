@@ -7,8 +7,7 @@ export default class TablesController {
      
       const page = request.input('page', 1)
       const limit = request.input('limit', 8)
-      const data = await Table.query().paginate(page,limit);
-      // const da =await Table.$getRelation('staff').relatedModel()
+      const data = await Table.query().paginate(page,limit)
       if(data.length>0){
         return response.ok({data:data})
       }
@@ -24,12 +23,11 @@ export default class TablesController {
   public async store({request,response}: HttpContextContract) {
 
     try{
-     
       const data = await request.validate(TableValidator);
       await Table.create(data);
       return response.created({message:"Table created"})
-
     }catch(err){
+      console.log(err)
    return response.badRequest({message:err.messages})
     }
   }
