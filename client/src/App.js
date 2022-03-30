@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { DetailOrder } from "./components/ActiveOrder/DetailOrder";
 import { ActiveOrder } from "./Pages/ActiveOrder/ActiveOrder";
+import { CreateNewOrder } from "./Pages/CreateNewOrder/CreateNewOrder";
 import { Dashboard } from "./Pages/Dashboard/Dashboard";
 import { ForgotPassword } from "./Pages/Login/ForgotPassword";
 import { Login } from "./Pages/Login/Login";
@@ -16,7 +17,8 @@ function App() {
         <Route exact path="/resetpassword" element={<ResetPassword />} />
         <Route exact path="/activeorder" element={<ActiveOrder />} />
       </Routes> */}
-      <DetailOrder />
+      {/* <DetailOrder /> */}
+      <CreateNewOrder />
     </div>
   );
 }

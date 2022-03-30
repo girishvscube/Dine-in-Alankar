@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import "./superadmin.scss";
+import "./orderdetail.scss";
 import Swal from "sweetalert2";
 export const DetailOrder = () => {
   const [sideBar, setSideBar] = useState(false);
@@ -47,9 +48,44 @@ export const DetailOrder = () => {
 
   const handleSendBill = () => {
     Swal.fire({
-      title : "Table Transfer"
-    })
-  }
+      title: "Table Transfer",
+      html:
+        "<p>Existing Table<span>20A</span></p>" +
+        "<p>Select transfer Table:<a>20A</a> </p>",
+      showCloseButton: true,
+      showConfirmButton: true,
+      confirmButtonText: "Submit",
+      customClass: {
+        popup: "swal2-popup",
+        html: "swal2-container",
+        showConfirmButton: "swal2-btn",
+        confirmButtonText: "swal2-btn-text",
+      },
+    });
+  };
+
+  const handlePrintBill = () => {
+    Swal.fire({
+      title: "Payment",
+      html:
+        "<p><label>Name</label> <a>Rahul Kharche</a></p>" +
+        "<p><label>Phone No</label> <a>987465321</a></p>" +
+        "<b>Are you sure to Send Bill </b>",
+      showCloseButton: true,
+      showConfirmButton: true,
+      confirmButtonColor: "#FFBE15",
+      confirmButtonText: "Yes",
+      showCancelButton: true,
+      cancelButtonText: "No",
+      cancelButtonColor: "#FFBE15",
+      customClass: {
+        popup: "swal2-popup",
+        html: "swal2-container2",
+        showConfirmButton: "swal2-btn",
+        confirmButtonText: "swal2-btn-text",
+      },
+    });
+  };
   return (
     <div>
       <div onClick={handleClick}>Click Me</div>
@@ -121,10 +157,16 @@ export const DetailOrder = () => {
             <p className="">Rs. 500</p>
           </div>
           <div className=" mt-44 flex justify-evenly ">
-            <button onClick={handleSendBill} className=" w-[200px] py-3  border-2 text-white font-semibold Btn">
+            <button
+              onClick={handleSendBill}
+              className=" w-[200px] py-3  border-2 text-white font-semibold Btn"
+            >
               Send Bill
             </button>
-            <button className=" w-[200px] py-3  border-2 text-white font-semibold Btn">
+            <button
+              onClick={handlePrintBill}
+              className=" w-[200px] py-3  border-2 text-white font-semibold Btn"
+            >
               Print Bill
             </button>
             <button className=" w-[200px] py-3  border-2 text-white font-semibold Btn">
