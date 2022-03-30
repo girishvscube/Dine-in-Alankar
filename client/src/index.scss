@@ -10,3 +10,18 @@
 #toggle_switch:checked::after{
     @apply transform scale-110 translate-x-6;
 }
+
+
+.cancel_btn{
+    border: 1px solid rgba(240, 145, 44, 0.34) !important;
+    color: orange !important;
+    width: 130px !important;
+    margin-left: 50px !important;
+}
+
+.confirm_btn{
+    background-color: orange !important;
+    background-image: -webkit-linear-gradient(75deg, orange 50%, rgb(248, 177, 45) 50%) !important;
+    border: 1px solid orange !important;
+    width: 130px !important;
+}

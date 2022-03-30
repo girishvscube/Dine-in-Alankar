@@ -9,8 +9,10 @@ import AddMenuPage from "./components/ManageMenu/AddMenuPage";
 import EditMenuPage from "./components/ManageMenu/EditMenuPage";
 import ManageMenuPage from "./components/ManageMenu/ManageMenuPage";
 import AddNewStaffPage from "./components/ManageStaff/AddNewStaffPage";
-import {EditStaffPage} from "./components/ManageStaff/EditStaffPage";
+import EditStaffPage from "./components/ManageStaff/EditStaffPage";
 import ManageStaffPage, {MangeStaffPage} from "./components/ManageStaff/ManageStaffPage";
+import ManageCategoryPage from "./components/ManageCategory/ManageCategoryPage/ManageCategoryPage";
+import AddNewCategoryPage from "./components/ManageCategory/AddNewCategory/AddNewCategoryPage";
 
 function App() {
   return (
@@ -22,7 +24,8 @@ function App() {
         <Route exact path="/resetpassword" element={<ResetPassword />} />
         <Route exact path="/activeorder" element={<ActiveOrder />} />
       </Routes> */}
-      <ManageStaffPage/>
+      
+      <AddNewCategoryPage/>
     </div>
     
   );

@@ -12,6 +12,8 @@ module.exports = {
         line:"#939393",
         search:"#F3EBE1",
         input_color:"#F4EDE3",
+        bgsearch: "#F3EBE1",
+        mixwhite: "#FAFAFA",
       width: {
         85: "20.4rem",
         42: "10.75rem",
@@ -32,7 +34,7 @@ module.exports = {
         background: "#F5F5F5",
         darkwhite: "#FAFAFA",
         bglightyellow: "#FF8E16",
-        bgsearch: "#F3EBE1",
+       
         bggray: "#C4C4C4",
       },
       margin: {

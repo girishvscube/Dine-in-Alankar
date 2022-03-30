@@ -7,7 +7,7 @@ import ToggleSwitch from "../ToggleSwitch";
 
 const ManageStaffTable = () => {
   return (
-    <div className="  table_div">
+    <div className="bg-white  table_div">
       <div className="text-orange w-11/12 mt-5 mb-3 ml-14 font-semibold font-sans">All Items</div>
       <div className=" w-11/12 h-5/6 ml-14 mr-12 overflow-y-scroll font-sans">
         <Table className="">
