@@ -5,15 +5,15 @@ export default class StaffTables extends BaseSchema {
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
-      table.increments('id')
+     
 
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
-      table.integer('table_id').references('tables.id').unsigned()
-      table.integer('staff_id').references('staff.id').unsigned()
-      table.timestamp('created_at', { useTz: true })
-      table.timestamp('updated_at', { useTz: true })
+       table.integer('table_id').unsigned().index('table_id')
+       table.integer('staff_id').unsigned().index('staff_id')
+       table.foreign('table_id').references('tables.id').onDelete('cascade')
+       table.foreign('staff_id').references('staff.id').onDelete('cascade')
     })
   }
 
