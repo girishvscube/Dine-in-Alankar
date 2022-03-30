@@ -9,6 +9,7 @@ export const pastAllOrdersData = [
     orderID: "#11324567",
     total: "Rs. 200",
     paymentMode: "Cash",
+    status: false,
   },
   {
     sno: "2",
@@ -19,6 +20,7 @@ export const pastAllOrdersData = [
     },
     orderID: "#11356567",
     total: "Rs. 2200",
+    status: false,
     paymentMode: "UPI",
   },
   {
@@ -30,6 +32,7 @@ export const pastAllOrdersData = [
     },
     orderID: "#11324333",
     total: "Rs. 2800",
+    status: false,
     paymentMode: "Cash",
   },
   {
@@ -41,6 +44,7 @@ export const pastAllOrdersData = [
     },
     orderID: "#41324589",
     total: "Rs. 900",
+    status: false,
     paymentMode: "UPI",
   },
   {
@@ -52,6 +56,7 @@ export const pastAllOrdersData = [
     },
     orderID: "#5544567",
     total: "Rs.4200",
+    status: false,
     paymentMode: "Cash",
   },
 ];

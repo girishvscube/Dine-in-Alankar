@@ -67,10 +67,11 @@ export const DetailOrder = () => {
   const handlePrintBill = () => {
     Swal.fire({
       title: "Payment",
-      html:
-        "<p><label>Name</label> <a>Rahul Kharche</a></p>" +
-        "<p><label>Phone No</label> <a>987465321</a></p>" +
-        "<b>Are you sure to Send Bill </b>",
+      html: `<div className = "bg-red-500">
+        <p><label>Name</label> <a>Rahul Kharche</a></p>
+      <p><label>Phone No</label> <a>987465321</a></p>
+        <b>Are you sure to Send Bill </b>
+        </div>`,
       showCloseButton: true,
       showConfirmButton: true,
       confirmButtonColor: "#FFBE15",
