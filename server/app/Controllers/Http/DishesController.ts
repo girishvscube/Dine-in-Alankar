@@ -85,10 +85,23 @@ export default class DishesController {
       const limit = request.input('limit', 2)
       const body = request.only(['item'])
       const searchItem = body.item.toLowerCase()
+      console.log(searchItem);
       const data = await Dish.query()
         .where('item_name', 'like', `%${searchItem}%`)
         .paginate(page, limit)
-      return response.ok({ data: data })
+        console.log(data);
+
+      // const search = request.all().search.toLowerCase();
+      // const data = await Dish.query()
+      // .where('item_name', 'like', `%${search}%`)
+
+        if(data.length>0){
+          return response.ok({ data: data })
+        }
+        else{
+          return response.notFound({message:"no data found"})
+        }
+      
     } catch (err) {
       return response.notFound({ message: 'no items available for this search' })
     }
