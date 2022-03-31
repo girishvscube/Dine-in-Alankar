@@ -22,6 +22,9 @@ export default class Category extends compose(BaseModel,SoftDeletes) {
   @column()
   public category_image : string
 
+  @column()
+  public is_available : boolean
+
   
 //  @hasMany(()=>Dish,{
 //  foreignKey:'category_id' 

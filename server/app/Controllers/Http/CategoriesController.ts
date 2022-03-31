@@ -48,17 +48,17 @@ export default class CategoriesController {
   public async CategoryData({ request, response}: HttpContextContract) {
     try {
       const id = request.all().id;
-      const meal = request.all().mealType;
+      // const meal = request.all().mealType;
       const page = request.input("page", 1);
       const limit = request.input("limit", 8);
       const category = await Category.findByOrFail('slug',`${id}`);
       const data = await category
-        .related("subcat")
-        .query().where('dishes.type_of_meal','=',meal)
+        .related('items')
+        .query()
         .paginate(page, limit);
       return response.ok({ data: data });
     } catch (err) {
-      return response.notFound({ message: "Requested data not found" });
+      return response.notFound({ message: "Requested data not found" ,err:err});
     }
   }
 

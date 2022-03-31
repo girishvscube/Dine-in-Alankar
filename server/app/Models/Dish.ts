@@ -6,6 +6,7 @@ import { SoftDeletes } from '@ioc:Adonis/Addons/LucidSoftDeletes'
 import Subcat from './Subcat'
 import Category from './Category'
 import Order from './Order'
+
 export default class Dish extends compose(BaseModel,SoftDeletes) {
   @column({ isPrimary: true })
   public id: number
@@ -64,6 +65,10 @@ public order : BelongsTo<typeof Order>
   localKey:'category_id'
 })
 public category : BelongsTo<typeof Category>
+
+// @belongsTo(()=>UserOrder,{
+// })
+// public customer : BelongsTo<typeof UserOrder>
   
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

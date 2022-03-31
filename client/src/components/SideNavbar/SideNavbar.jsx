@@ -7,9 +7,9 @@ export const SideNavbar = () => {
   const [menuItems, setMenuItems] = useState(obj);
 
   return (
-    <div className="w-[306px] h-screen ">
-      <div className=" flex justify-center pt-6">
-        <img className=" h-44" src={alankarnav} alt="navbar" />
+    <div className="w-[280px] h-screen">
+      <div className=" flex justify-center pt-4">
+        <img className=" h-40" src={alankarnav} alt="navbar" />
       </div>
       <div>
         {menuItems.map((e, index) => (

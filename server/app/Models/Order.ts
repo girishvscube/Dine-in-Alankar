@@ -1,32 +1,29 @@
 import { DateTime } from 'luxon'
-import { BaseModel, BelongsTo, belongsTo, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
-import UserOrder from './UserOrder'
-import Dish from './Dish'
+import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
+import Table from './Table'
 export default class Order extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
   @column()
-  public item_id: number
+  public name : string
 
   @column()
-  public quantity : number
+  public table_id : number
 
   @column()
-  public price : number
+  public phone_number : string
 
   @column()
-  public user_order_id :number
+  public number_of_people : number
 
-  @belongsTo(()=>UserOrder,{
-    localKey : 'user_order_id'
+  @column()
+  public instructions : string
+
+  @belongsTo(() => Table, {
+    foreignKey: 'table_id',
   })
-  public order_user : BelongsTo<typeof UserOrder>
-
-  @hasMany(()=>Dish,{
-  })
-  public items : HasMany<typeof Dish>
-
+  public table: BelongsTo<typeof Table>
   
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

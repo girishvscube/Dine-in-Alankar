@@ -24,7 +24,7 @@ export default class TableValidator {
    *    ```
    */
   public schema = schema.create({
-    table_number : schema.number(),
+    table_number : schema.string({trim:true}),
     floor : schema.string({trim:true}),
     hall:schema.string({trim:true})
   })

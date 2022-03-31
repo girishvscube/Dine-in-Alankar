@@ -13,6 +13,7 @@ export default class Categories extends BaseSchema {
        table.string('category_name').unique()
        table.string('category_image')
        table.string('slug').unique()
+       table.boolean('is_available')
        table.timestamp('deleted_at', { useTz: true }).nullable()
       
       table.timestamps(true)
