@@ -16,32 +16,26 @@ module.exports = {
         background: "#F5F5F5",
         darkwhite: "#FAFAFA",
         bglightyellow: "#FF8E16",
-       
         bggray: "#C4C4C4",
         bgpink: "#FCEDEA",
         borderpink: "#FEA6A6",
-        width: {
-          85: "20.4rem",
-          42: "10.75rem",
-        },
-        margin: {
-          13: "3.25rem",
-          18: "4.87rem",
-        },
-        height: {
-          18: "4.5rem",
-          17: "4.25rem",
-        },
-        padding: {
-          21: "5.3rem",
-        },
       },
-      variants: {
-        extend: {
-          backgroundcolor: ["checked"],
-        },
+      width: {
+        85: "20.4rem",
+        42: "10.75rem",
       },
-      plugins: [],
+      margin: {
+        13: "3.25rem",
+        18: "4.87rem",
+      },
+      height: {
+        18: "4.5rem",
+        17: "4.25rem",
+      },
+      padding: {
+        21: "5.3rem",
+      },
     },
   },
+  plugins: [],
 };

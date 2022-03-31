@@ -11,13 +11,16 @@ import EditMenuPage from "./components/ManageMenu/EditMenuPage";
 import ManageMenuPage from "./components/ManageMenu/ManageMenuPage";
 import AddNewStaffPage from "./components/ManageStaff/AddNewStaffPage";
 import EditStaffPage from "./components/ManageStaff/EditStaffPage";
-import ManageStaffPage, {MangeStaffPage} from "./components/ManageStaff/ManageStaffPage";
+import ManageStaffPage, {
+  MangeStaffPage,
+} from "./components/ManageStaff/ManageStaffPage";
 import ManageCategoryPage from "./components/ManageCategory/ManageCategoryPage/ManageCategoryPage";
 import AddNewCategoryPage from "./components/ManageCategory/AddNewCategory/AddNewCategoryPage";
 import { PastOrders } from "./Pages/PastOrders/PastOrders";
 import { KDS } from "./Pages/KDS/KDS";
 import { ViewKDS } from "./components/KDS/ViewKDS";
 import { CreateKDS } from "./Pages/KDS/CreateKDS";
+import { SideNavbar } from "./components/SideNavbar/SideNavbar";
 
 function App() {
   return (
@@ -31,7 +34,7 @@ function App() {
         <Route exact path="/KDS" element={<KDS />} />
         <Route exact path="/viewKDS" element={<ViewKDS />} />
       </Routes>
-      {/* <DetailOrder /> */}
+      {/* <SideNavbar /> */}
       {/* <CreateNewOrder /> */}
       {/* <PastOrders /> */}
       <CreateKDS />
