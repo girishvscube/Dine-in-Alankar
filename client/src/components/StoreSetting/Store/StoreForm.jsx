@@ -16,7 +16,7 @@ const StoreForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className=" for">
     <div className="w-11/12 ml-14 field grid  grid-rows-3 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs mb-1">Store Name</p>
+        <p className="font-sans font-semibold mb-1">Store Name</p>
         <input
           type="text"
           placeholder=""
@@ -38,7 +38,7 @@ const StoreForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs  mb-1">Email</p>
+        <p className="font-sans font-semibold   mb-1">Email</p>
         <input
           type="email"
           placeholder=""
@@ -57,7 +57,7 @@ const StoreForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs  mb-1">GST Percent</p>
+        <p className="font-sans font-semibold   mb-1">GST Percent</p>
         <input
           type="text"
           placeholder=""
@@ -77,7 +77,7 @@ const StoreForm = () => {
         
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs mb-1">Phone No.</p>
+        <p className="font-sans font-semibold  mb-1">Phone No.</p>
         <input
           type="text"
           placeholder=""
@@ -100,7 +100,7 @@ const StoreForm = () => {
       </div>
       
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs  mb-1">Store Address</p>
+        <p className="font-sans font-semibold   mb-1">Store Address</p>
         <input
           type="password"
           placeholder=""
@@ -117,7 +117,7 @@ const StoreForm = () => {
        
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs  mb-1">GST No.</p>
+        <p className="font-sans font-semibold   mb-1">GST No.</p>
         <input
           type="text"
           placeholder=""

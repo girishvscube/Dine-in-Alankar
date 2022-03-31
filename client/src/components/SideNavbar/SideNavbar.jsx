@@ -9,13 +9,13 @@ export const SideNavbar = () => {
   return (
     <div className="w-[306px] h-screen ">
       <div className=" flex justify-center pt-6">
-        <img className=" h-44 2xl:h-64" src={alankarnav} alt="navbar" />
+        <img className=" h-44" src={alankarnav} alt="navbar" />
       </div>
       <div>
         {menuItems.map((e, index) => (
-          <div key={index} className="flex place-items-start mt-8 ">
+          <div key={index} className="flex place-items-start mt-5 ">
             <img
-              className=" text-lg font-normal mr-7 ml-14 2xl:ml-10"
+              className=" text-lg font-normal mr-7 ml-14"
               src={e.img}
               alt="menuitems"
             />

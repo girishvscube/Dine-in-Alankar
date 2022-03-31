@@ -16,7 +16,7 @@ const TableForm = () => {
      <form onSubmit={handleSubmit(onSubmit)} className=" for">
     <div className="w-11/12 ml-14 field grid grid-rows-2 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs mb-1">Table Name</p>
+        <p className="font-sans font-semibold  mb-1">Table Name</p>
         <input
           type="text"
           placeholder=""
@@ -38,7 +38,7 @@ const TableForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs  mb-1">Floor No.</p>
+        <p className="font-sans font-semibold   mb-1">Floor No.</p>
         <input
           type="email"
           placeholder=""
@@ -61,7 +61,7 @@ const TableForm = () => {
       </div>
      
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs  mb-1">Hall Name</p>
+        <p className="font-sans font-semibold   mb-1">Hall Name</p>
         <input
           type="password"
           placeholder=""

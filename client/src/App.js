@@ -21,6 +21,7 @@ import { CreateKDS } from "./Pages/KDS/CreateKDS";
 import StorePage from "./components/StoreSetting/Store/StorePage";
 import TablePage from "./components/StoreSetting/Table/TablePage";
 import CouponPage from "./components/StoreSetting/Coupon/CouponPage";
+import { SideNavbar } from "./components/SideNavbar/SideNavbar";
 
 function App() {
   return (
@@ -40,7 +41,7 @@ function App() {
      {/* <CreateKDS />  */}
       {/* <ManageStaffPage/> */}
       {/* <AddNewCategoryPage/> */}
-      <CouponPage/>
+       <CouponPage/> 
     </div>
   );
 }

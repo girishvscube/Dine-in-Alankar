@@ -15,7 +15,7 @@ const CouponForm = () => {
    <form onSubmit={handleSubmit(onSubmit)} className=" for">
     <div className="w-11/12 ml-14 field grid  grid-rows-3 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs mb-1">Coupon Code</p>
+        <p className="font-sans font-semibold  mb-1">Coupon Code</p>
         <input
           type="text"
           placeholder=""
@@ -37,7 +37,7 @@ const CouponForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs  mb-1">Value</p>
+        <p className="font-sans font-semibold   mb-1">Value</p>
         <input
           type="email"
           placeholder=""
@@ -56,7 +56,7 @@ const CouponForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs  mb-1">Expiray Date</p>
+        <p className="font-sans font-semibold  mb-1">Expiray Date</p>
         <input
           type="text"
           placeholder=""
@@ -76,7 +76,7 @@ const CouponForm = () => {
         
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs mb-1">Percentage/Amount</p>
+        <p className="font-sans font-semibold  mb-1">Percentage/Amount</p>
         <input
           type="text"
           placeholder=""
@@ -99,7 +99,7 @@ const CouponForm = () => {
       </div>
       
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-xs  mb-1">Status</p>
+        <p className="font-sans font-semibold   mb-1">Status</p>
         <input
           type="password"
           placeholder=""
