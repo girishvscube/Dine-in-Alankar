@@ -45,20 +45,24 @@ export default class DishesController {
   public async update({ request, response, params }: HttpContextContract) {
     const id = params.id
     try {
-      const { item_name,  image_url, stock, availability, sub_category_id } =
+      const { item_name,  image_url, stock, availability, sub_category_id,category_id ,take_away_price,price_in_counter,type_of_meal} =
         await request.validate(DishValidator)
       const data = await Dish.findByOrFail('slug', `${id}`)
       if (data) {
-        ;(data.item_name = item_name),
+        data.category_id = category_id,
+        data.take_away_price = take_away_price,
+        data.price_in_counter = price_in_counter,
+        (data.item_name = item_name),
           (data.sub_category_id = sub_category_id),
           (data.image_url = image_url),
           (data.stock = stock),
-          
+           data.type_of_meal = type_of_meal,
           (data.availability = availability)
         data.save()
         return response.created({ message: 'updated successfully' })
       }
     } catch (err) {
+      console.log(err);
       return response.notModified({ message: 'Data requested not found', err: err })
     }
   }

@@ -2,6 +2,7 @@ import { DateTime } from 'luxon'
 import { BaseModel, column, HasMany, hasMany, HasOne, hasOne } from '@ioc:Adonis/Lucid/Orm'
 import Order from './Order'
 import FinalOrder from './FinalOrder'
+import Dish from './Dish'
 
 export default class UserOrder extends BaseModel {
   @column({ isPrimary: true })
@@ -23,7 +24,7 @@ export default class UserOrder extends BaseModel {
   public instructions : string
 
   @hasMany(()=>Order,{
-    foreignKey : 'user_order_id'
+    foreignKey : 'order_id'
   })
   public order : HasMany<typeof Order>
 
@@ -31,6 +32,11 @@ export default class UserOrder extends BaseModel {
   foreignKey:'user_id'
   })
   public final_order : HasOne<typeof FinalOrder>
+
+  @hasMany(()=>Dish,{
+   
+    })
+    public dish : HasMany<typeof Dish>
   
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

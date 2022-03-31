@@ -25,7 +25,7 @@ export default class UserOrdeerValidator {
    */
   public schema = schema.create({
     name : schema.string({trim:true}),
-    table_number :schema.string({trim:true}),
+    table_id :schema.number(),
     phone_number :schema.string({trim:true}),
     number_of_people :schema.number(),
     instructions : schema.string({trim:true})
@@ -44,7 +44,7 @@ export default class UserOrdeerValidator {
    */
   public messages = {
     'name.required':'name is required',
-    'table_number':'select table ',
+    'table_id':'select table ',
     'phone_number':'phone number is required',
     'number_of_people':'Enter number of people'
   }

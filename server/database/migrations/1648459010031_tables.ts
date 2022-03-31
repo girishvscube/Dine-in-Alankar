@@ -10,11 +10,10 @@ export default class Tables extends BaseSchema {
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
-      table.integer('table_number')
+      table.string('table_number')
       table.string('floor')
       table.string('hall')
-      table.timestamp('created_at', { useTz: true })
-      table.timestamp('updated_at', { useTz: true })
+    
     })
   }
 
