@@ -19,6 +19,7 @@ module.exports = {
         bggray: "#C4C4C4",
         bgpink: "#FCEDEA",
         borderpink: "#FEA6A6",
+        yellowstar: "#FFBB10",
       },
       width: {
         85: "20.4rem",

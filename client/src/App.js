@@ -21,23 +21,25 @@ import { KDS } from "./Pages/KDS/KDS";
 import { ViewKDS } from "./components/KDS/ViewKDS";
 import { CreateKDS } from "./Pages/KDS/CreateKDS";
 import { SideNavbar } from "./components/SideNavbar/SideNavbar";
+import { Feedback } from "./Pages/Feedback/Feedback";
 
 function App() {
   return (
     <div>
       <Routes>
-        {/* <Route exact path="/" element={<Dashboard />} /> */}
+        <Route exact path="/" element={<Dashboard />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />
         <Route exact path="/resetpassword" element={<ResetPassword />} />
         <Route exact path="/activeorder" element={<ActiveOrder />} />
         <Route exact path="/KDS" element={<KDS />} />
         <Route exact path="/viewKDS" element={<ViewKDS />} />
+        <Route exact path="/feedback" element={<Feedback />} />
       </Routes>
       {/* <SideNavbar /> */}
       {/* <CreateNewOrder /> */}
       {/* <PastOrders /> */}
-      <CreateKDS />
+      {/* <CreateKDS /> */}
       {/* <ManageStaffPage/> */}
     </div>
   );
