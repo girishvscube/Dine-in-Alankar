@@ -18,24 +18,29 @@ import { PastOrders } from "./Pages/PastOrders/PastOrders";
 import { KDS } from "./Pages/KDS/KDS";
 import { ViewKDS } from "./components/KDS/ViewKDS";
 import { CreateKDS } from "./Pages/KDS/CreateKDS";
+import StorePage from "./components/StoreSetting/Store/StorePage";
+import TablePage from "./components/StoreSetting/Table/TablePage";
+import CouponPage from "./components/StoreSetting/Coupon/CouponPage";
 
 function App() {
   return (
     <div>
       <Routes>
         {/* <Route exact path="/" element={<Dashboard />} /> */}
-        <Route exact path="/login" element={<Login />} />
+        {/* <Route exact path="/login" element={<Login />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />
         <Route exact path="/resetpassword" element={<ResetPassword />} />
         <Route exact path="/activeorder" element={<ActiveOrder />} />
         <Route exact path="/KDS" element={<KDS />} />
-        <Route exact path="/viewKDS" element={<ViewKDS />} />
+        <Route exact path="/viewKDS" element={<ViewKDS />} /> */}
       </Routes>
       {/* <DetailOrder /> */}
       {/* <CreateNewOrder /> */}
       {/* <PastOrders /> */}
-      <CreateKDS />
+     {/* <CreateKDS />  */}
       {/* <ManageStaffPage/> */}
+      {/* <AddNewCategoryPage/> */}
+      <CouponPage/>
     </div>
   );
 }
