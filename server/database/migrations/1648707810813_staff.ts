@@ -10,16 +10,16 @@ export default class Staff extends BaseSchema {
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
-      table.string('name')
-      table.string('email')
-      table.string('phone')
-      table.string('role')
-      table.string('password')
-      table.string('image')
-      table.boolean('status')
-      table.integer('table_id')
-      table.timestamp('created_at', { useTz: true })
-      table.timestamp('updated_at', { useTz: true })
+       table.string('name')
+       table.string('email')
+       table.string('phone')
+       table.integer('role').references('id').inTable('roles').unsigned()
+       table.string('password')
+       table.string('image')
+       table.boolean('available')
+       table.integer('table').references('id').inTable('tables').unsigned()
+       table.timestamps(false)
+     
     })
   }
 
