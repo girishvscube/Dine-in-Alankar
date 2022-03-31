@@ -1,0 +1,27 @@
+import { DateTime } from 'luxon'
+import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+
+export default class Takeawayorder extends BaseModel {
+  @column({ isPrimary: true })
+  public id: number
+
+ 
+
+  @column()
+  public take_away_cart_id : number
+
+  @column()
+  public order_status: string
+
+  @column()
+  public total : number
+     
+    
+  
+
+  @column.dateTime({ autoCreate: true })
+  public createdAt: DateTime
+
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  public updatedAt: DateTime
+}
