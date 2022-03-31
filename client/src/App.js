@@ -34,10 +34,10 @@ function App() {
         <Route exact path="/KDS" element={<KDS />} />
         <Route exact path="/viewKDS" element={<ViewKDS />} />
       </Routes>
-      <SideNavbar />
+      {/* <SideNavbar /> */}
       {/* <CreateNewOrder /> */}
       {/* <PastOrders /> */}
-      {/* <CreateKDS /> */}
+      <CreateKDS />
       {/* <ManageStaffPage/> */}
     </div>
   );
