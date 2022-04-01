@@ -1,7 +1,7 @@
-import { schema ,rules} from '@ioc:Adonis/Core/Validator'
+import { schema } from '@ioc:Adonis/Core/Validator'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
-export default class CategoryValidator {
+export default class FeedbackValidator {
   constructor(protected ctx: HttpContextContract) {}
 
   /*
@@ -24,13 +24,11 @@ export default class CategoryValidator {
    *    ```
    */
   public schema = schema.create({
-    category_name:schema.string({trim:true},[
-      rules.maxLength(50),
-      rules.minLength(2),
-      rules.unique({table:'categories',column: 'category_name'})
-    ]),
-    category_image :schema.string({trim:true}),
-   
+    customer_id : schema.number(),
+    order_id: schema.number(),
+    comments: schema.string({trim:true}),
+    staff: schema.number(),
+    ratings: schema.number(),
   })
 
   /**
@@ -45,8 +43,10 @@ export default class CategoryValidator {
    *
    */
   public messages = {
-    'category_name.required':'category_name required',
-    'category_name.unique':'category name already exists',
-    'category_image.required':'Image should be required'
+    'order_id.required':'required',
+    'customer_id.required':'required',
+    'comments.required':'required',
+    'staff.required':'staff required',
+    'ratingd.required':'required'
   }
 }

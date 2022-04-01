@@ -1,5 +1,16 @@
 // FoodItems.jsx
 
-.bgColor{
-    background-color:  rgba(255, 142, 22, 0.15)
+.bgColor {
+  background-color: rgba(255, 142, 22, 0.15);
+}
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: 2000ms;
+}
+
+.nav-menu.active {
+  right: 0;
+  transition: 650ms;
 }

@@ -58,12 +58,14 @@ export const CustomerDetails = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <form onSubmit={handleSubmit} className="formContainer">
         <div className="pl-14">
-          <label className="block text-lg  font-semibold">Customer Name</label>
+          <label className="block text-lg  font-semibold mb-2">
+            Customer Name
+          </label>
           <input
-            className="w-3/4 h-18 bg-bgsearch rounded-xl"
+            className="w-3/4 h-18 bg-search rounded-xl outline-darkyellow"
             type="text"
             name="cname"
             value={formValues.email}
@@ -75,9 +77,11 @@ export const CustomerDetails = () => {
         </div>
 
         <div className="pl-14 ">
-          <label className=" block text-lg  font-semibold">Phone No.</label>
+          <label className=" block text-lg  font-semibold mb-2">
+            Phone No.
+          </label>
           <input
-            className="w-3/4 h-18 bg-bgsearch rounded-xl"
+            className="w-3/4 h-18 bg-search rounded-xl outline-darkyellow"
             type="text"
             name="phnno"
             value={formValues.phnno}
@@ -89,11 +93,11 @@ export const CustomerDetails = () => {
         </div>
 
         <div className="pl-14">
-          <label className=" block text-lg  font-semibold ">
+          <label className=" block text-lg  font-semibold mb-2">
             No. Of People
           </label>
           <input
-            className="w-3/4 h-18 bg-bgsearch rounded-xl"
+            className="w-3/4 h-18 bg-search rounded-xl outline-darkyellow"
             type="text"
             name="noofpeople"
             value={formValues.noofpeople}
@@ -105,9 +109,11 @@ export const CustomerDetails = () => {
         </div>
 
         <div className="pl-14">
-          <label className=" block text-lg  font-semibold ">Table No.</label>
+          <label className=" block text-lg  font-semibold mb-2">
+            Table No.
+          </label>
           <input
-            className="w-3/4 h-18 bg-bgsearch rounded-xl"
+            className="w-3/4 h-18 bg-search rounded-xl outline-darkyellow"
             type="text"
             name="tableno"
             value={formValues.tableno}
@@ -120,7 +126,7 @@ export const CustomerDetails = () => {
 
         <button
           type="submit"
-          className="w-[210px] h-16 justify-self-end gradientBg rounded-xl text-xl font-semibold text-white mt-40 "
+          className="w-[210px] h-16 justify-self-end orangeBackground rounded-xl text-xl font-semibold text-white mt-24"
         >
           Next
         </button>

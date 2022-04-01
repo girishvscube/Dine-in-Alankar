@@ -1,39 +1,47 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column, ManyToMany, manyToMany} from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
 import Table from './Table'
+import Role from './Role'
 
 export default class Staff extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
-  @column()
-  public name : string
+  
+@column()
+public name : string
 
-  @column()
-  public email: string
+@column()
+public email: string
 
-  @column()
-  public role : string
+@column()
+public role : number
 
-  @column()
-  public phone : string
+@column()
+public phone : string
 
-  @column()
-  public password : string
+@column()
+public password : string
 
-  @column()
-  public image :string
+@column()
+public image :string
 
-  @column()
-  public table_id : number
+@column()
+public table: number
 
-  @column()
-  public status : boolean
+@column()
+public available : boolean
 
-  @manyToMany(()=>Table,{
-    pivotTable:'staff_tables'
-  })
-  public table :ManyToMany<typeof Table>
+@belongsTo(()=>Table,{
+  foreignKey:'table'
+})
+public table_staff : BelongsTo<typeof Table>
+
+@belongsTo(()=>Role,{
+  foreignKey:'role'
+})
+public role_staff : BelongsTo<typeof Role>
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 

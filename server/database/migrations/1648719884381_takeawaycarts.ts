@@ -1,7 +1,7 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
-export default class Staff extends BaseSchema {
-  protected tableName = 'staff'
+export default class Takeawaycarts extends BaseSchema {
+  protected tableName = 'takeawaycarts'
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
@@ -10,14 +10,10 @@ export default class Staff extends BaseSchema {
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
-      table.string('name')
-      table.string('email')
-      table.string('phone')
-      table.string('role')
-      table.string('password')
-      table.string('image')
-      table.boolean('status')
-      table.integer('table_id')
+      table.integer('item_id').references('id').inTable('dishes').unsigned()
+      table.integer('quantity')
+      table.integer('price')
+      table.integer('takeawaycustomer_id').references('id').inTable('takeawaycustomers').unsigned()
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })

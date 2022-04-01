@@ -20,7 +20,7 @@ export default class CategoriesController {
 
   public async store({ request, response }: HttpContextContract) {
     try {
-      const { category_name,category_image } = await request.validate(CategoryValidator);
+      const { category_name,category_image} = await request.validate(CategoryValidator);
       console.log(category_name)
       const categoryPresent = await Category.findBy(
         "category_name",
