@@ -28,6 +28,8 @@ export default class Processing extends BaseModel {
     foreignKey:'order_id'
   })
   public user : BelongsTo<typeof Order>
+
+  
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 

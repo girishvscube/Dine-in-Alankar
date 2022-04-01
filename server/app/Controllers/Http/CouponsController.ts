@@ -3,37 +3,51 @@ import Coupon from 'App/Models/Coupon'
 
 export default class CouponsController {
   public async index({response}: HttpContextContract) {
-
-    const data = await Coupon.all();
-    return response.ok({data:data})
+     try{
+      const data = await Coupon.all();
+      return response.ok({data:data})
+     }catch(err){
+       return response.notFound({message:"no data found.."})
+     }
+    
   }
 
-  public async create({}: HttpContextContract) {}
 
-  public async store({request}: HttpContextContract) {
+  public async store({request,response}: HttpContextContract) {
     try{
       const data1 = request.body();
-      console.log(data1);
-       await Coupon.create(data1)
-      return data1;
-
+      const name = data1.name;
+      const exist = await Coupon.findByOrFail('name',name)
+      if(!exist){
+        await Coupon.create(data1)
+        return response.created({message:"created successfully"})
+       }
+      else{
+        return response.unprocessableEntity({message:"coupon already exists"})
+      }
     }catch(err){
       return err
     }
   }
 
   public async show({params,response}: HttpContextContract) {
-    const id = params.id;
-
-    const Couponexist  =  await Coupon.findByOrFail('name',id) ;
-    var currentTime = new Date();
-    console.log(currentTime)
-    if(Couponexist.expiry_date >= currentTime){
-      return response.ok({message:"you availed "})
+    
+    try{
+      const id = params.id;
+      const Couponexist  =  await Coupon.findByOrFail('name',id) ;
+      var currentTime = new Date();
+      
+      console.log(currentTime)
+      if(Couponexist.expiry_date >= currentTime){
+        return response.ok({message:"you availed "})
+      }
+      else{
+        return response.unprocessableEntity({message:"coupon is expired!!!"})
+      }
+    }catch(err){
+      return response.unprocessableEntity({message:"coupon is expired!!!"})
     }
-    else{
-      return "expired"
-    }
+    
   }
 
   public async edit({}: HttpContextContract) {}

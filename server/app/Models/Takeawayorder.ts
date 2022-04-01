@@ -8,10 +8,7 @@ export default class Takeawayorder extends BaseModel {
  
 
   @column()
-  public take_away_cart_id : number
-
-  @column()
-  public order_status: string
+  public order_details : string
 
   @column()
   public total : number
