@@ -20,7 +20,7 @@ const StoreForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange"
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow"
           {...register("StoreName", {
             required: true,
             maxLength: 20,
@@ -42,7 +42,7 @@ const StoreForm = () => {
         <input
           type="email"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
           {...register("Email", {
             required: true,
             pattern:
@@ -61,7 +61,7 @@ const StoreForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow"
           {...register("Gst", {
             required: true,
             maxLength: 20,
@@ -81,7 +81,7 @@ const StoreForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow"
           {...register("Phone", {
             required: true,
             maxLength: 20,
@@ -104,7 +104,7 @@ const StoreForm = () => {
         <input
           type="password"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
           {...register("address", {
             required: true,
             maxLength: 8,
@@ -121,7 +121,7 @@ const StoreForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
           {...register("GstNo", {
             required: true,
             maxLength: 20,

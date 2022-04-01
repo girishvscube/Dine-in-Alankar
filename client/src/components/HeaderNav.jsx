@@ -3,7 +3,7 @@ import "./style.scss";
 
 const HeaderNav = () => {
   return (
-    <div className='w-full header shadow-md'>
+    <div className='w-full header shadow-xl'>
         <div className='w-2/12 h-full  float-right'>
             <div className='w-10/12 ml-5 h-full  flex flex-row'>
                 <div className='h-full w-1/3 flex items-center justify-center'>

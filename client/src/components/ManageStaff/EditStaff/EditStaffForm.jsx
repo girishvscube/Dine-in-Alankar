@@ -19,7 +19,7 @@ const EditStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 value outline-none pl-2 rounded-lg bg-search"
+            className="h-2/5 w-11/12 value outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow"
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -41,7 +41,7 @@ const EditStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
             {...register("Phone", {
               required: true,
               maxLength: 20,
@@ -63,7 +63,7 @@ const EditStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
             {...register("Role", {
               required: true,
               maxLength: 20,
@@ -85,7 +85,7 @@ const EditStaffForm = () => {
           <input
             type="email"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
             {...register("Email", {
               required: true,
               pattern:
@@ -104,7 +104,7 @@ const EditStaffForm = () => {
           <input
             type="password"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
             {...register("Password", {
               required: true,
               maxLength: 8,
@@ -126,7 +126,7 @@ const EditStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -147,7 +147,7 @@ const EditStaffForm = () => {
       <div className="w-11/12 ml-14 h-1/4 mt-5 flex justify-between">
         <div className="w-2/5 h-10/12  flex flex-col">
           <p className="font-sans font-semibold text-xs mb-2">Upload Image</p>
-          <input type="file" className="custom-file-input h-3/4 w-1/4 rounded-md  border-orange border-dashed border-2 bg-pink ml-1"></input>
+          <input type="file" className="custom-file-input h-3/4 w-1/4 rounded-md  border-yellow border-dashed border-2 bg-pink ml-1"></input>
         </div>
         <div className="w-3/5 h-10/12 pt-2">
           <div className="w-8/12 h-1/2 ml-20 flex flex-row">

@@ -22,7 +22,7 @@ const ManageCategorySearch = () => {
       <div className="h-full w-10/12 pl-2  font-semibold">
         <input
           type="text"
-          className="h-9 w-full text-lg bg-search font-semibold placeholder-orange outline-none "
+          className="h-9 w-full text-lg bg-search font-semibold placeholder-orange outline-none"
           placeholder="Search"
         />
       </div>

@@ -20,7 +20,7 @@ const TableForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange"
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow"
           {...register("StoreName", {
             required: true,
             maxLength: 20,
@@ -42,7 +42,7 @@ const TableForm = () => {
         <input
           type="email"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
           {...register("floor", {
             required: true,
             maxLength: 20,
@@ -65,7 +65,7 @@ const TableForm = () => {
         <input
           type="password"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
           {...register("hallName", {
             required: true,
             maxLength: 20,

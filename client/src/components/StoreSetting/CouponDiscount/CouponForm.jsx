@@ -19,7 +19,7 @@ const CouponForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange"
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow"
           {...register("StoreName", {
             required: true,
             maxLength: 20,
@@ -41,7 +41,7 @@ const CouponForm = () => {
         <input
           type="email"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
           {...register("Email", {
             required: true,
             pattern:
@@ -60,7 +60,7 @@ const CouponForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
+          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
           {...register("Gst", {
             required: true,
             maxLength: 20,
@@ -78,7 +78,7 @@ const CouponForm = () => {
       <div className=" mr-10 flex flex-col">
         <p className="font-sans font-semibold text-xs  mb-1">Percentage/Amount</p>
        
-         <div  className="h-2/4 w-11/12 outline-none pl-2 rounded-lg pr-5 bg-search focus-within:border-2 border-orange ">
+         <div  className="h-2/4 w-11/12 outline-none pl-2 rounded-lg pr-5 bg-search focus-within:border-2 border-ring-yellow ">
              <select className='w-full h-full outline-none bg-search '>
                  <option value="first">123295</option>
                  <option value="second">111111</option>
@@ -93,7 +93,7 @@ const CouponForm = () => {
       <div className=" mr-10 flex flex-col">
         <p className="font-sans font-semibold text-xs  mb-1">Status</p>
        
-        <div  className="h-2/4 w-11/12 outline-none pl-2 rounded-lg pr-5 bg-search focus-within:border-2 border-orange ">
+        <div  className="h-2/4 w-11/12 outline-none pl-2 rounded-lg pr-5 bg-search focus-within:border-2 border-ring-yellow ">
              <select className='w-full h-full outline-none bg-search '>
                  <option value="first">123295</option>
                  <option value="second">111111</option>

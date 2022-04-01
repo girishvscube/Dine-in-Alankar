@@ -26,6 +26,7 @@ import AddNewStaffPage from "./components/ManageStaff/AddNewStaff/AddNewStaffPag
 import ManageStaffPage from "./components/ManageStaff/Managestaff/ManageStaffPage";
 import RollPage from "./components/ManageStaff/AddRole/RollPage";
 import DetailPage from "./components/TakeAway/CustomerDetails/DetailPage";
+import ItemsPage from "./components/TakeAway/AddItems/ItemsPage";
 
 function App() {
   return (
@@ -43,12 +44,12 @@ function App() {
         <Route exact path="/discountsetting" element={<DiscountPage/>}/>
         <Route exact path="/couponsetting" element={<CouponPage/>}/>
         <Route exact path="/usersetting" element={<UserPage/>}/> */}
-        {/* <Route exact path="/addnewstaff" element={<AddNewStaffPage/>}/>
+        <Route exact path="/addnewstaff" element={<AddNewStaffPage/>}/>
         <Route exact path="/newrole" element={<RollPage/>}/>
-        <Route exact path="/editstaff" element={<EditStaffPage/>}/> */}
+        <Route exact path="/editstaff" element={<EditStaffPage/>}/>
         {/* <Route exact path="/addnewcategory" element={<AddNewCategoryPage/>}/>  */}
       </Routes>
-        <DetailPage/>
+        <ManageStaffPage/>
     </div>
   );
 }

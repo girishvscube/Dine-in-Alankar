@@ -1,7 +1,8 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
+    extend: 
+    {
       colors: {
         yellow: "#FFE885",
         orange: "#F0912C",
@@ -20,6 +21,7 @@ module.exports = {
         bggray: "#C4C4C4",
         bgpink: "#FCEDEA",
         borderpink: "#FEA6A6",
+      },
         width: {
           85: "20.4rem",
           42: "10.75rem",
@@ -35,7 +37,7 @@ module.exports = {
         padding: {
           21: "5.3rem",
         },
-      },
+      
       variants: {
         extend: {
           backgroundcolor: ["checked"],

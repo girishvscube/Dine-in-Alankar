@@ -1,22 +1,22 @@
 import React from 'react'
 import HeaderNav from '../../HeaderNav'
-import DetailBody from './DetailBody'
-import "./style.scss"
+import ItemsBody from './ItemsBody'
+import "./style.scss";
 
-const DetailPage = () => {
+const ItemsPage = () => {
   return (
-    <div>
+<div>
       <div className="main">
         <div className="bg-sidenav_pink w-1/5 h-full">
           
         </div>
         <div className="w-full h-full flex flex-col">
           <HeaderNav/>
-          <DetailBody/>
+          <ItemsBody/>
         </div>
       </div>
     </div>
   )
 }
 
-export default DetailPage
+export default ItemsPage
