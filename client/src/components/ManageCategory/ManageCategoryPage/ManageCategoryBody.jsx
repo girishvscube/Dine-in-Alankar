@@ -6,7 +6,7 @@ import ManageCategoryTable from './ManageCategoryTable';
 
 const ManageCategoryBody = () => {
   return (
-    <div  className='w-full managemenu_body bg-mixwhite'>
+    <div  className='w-full bg-darkwhite managemenu_body bg-mixwhite'>
       <ManageCategoryList/>
       <hr className='w-11/12 ml-14 mt-1 mb-3 border-2 bord'/>
       <ManageCategorySearch/>

@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.scss";
+import "./style.scss";
 import { useForm } from "react-hook-form";
 
 const AddNewStaffForm = () => {
@@ -14,7 +14,7 @@ const AddNewStaffForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className=" for">
       <div className="w-11/12 ml-12 field grid  grid-rows-3 pr-20 grid-flow-col">
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold mb-1">Name</p>
+          <p className="font-sans font-semibold text-xs mb-1">Name</p>
           <input
             type="text"
             placeholder=""
@@ -36,7 +36,7 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold  mb-1">Phone No.</p>
+          <p className="font-sans font-semibold text-xs mb-1">Phone No.</p>
           <input
             type="text"
             placeholder=""
@@ -58,7 +58,7 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold  mb-1">Role</p>
+          <p className="font-sans font-semibold text-xs mb-1">Role</p>
           <input
             type="text"
             placeholder=""
@@ -80,7 +80,7 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold  mb-1">Email</p>
+          <p className="font-sans font-semibold text-xs mb-1">Email</p>
           <input
             type="email"
             placeholder=""
@@ -99,7 +99,7 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold  mb-1">Password</p>
+          <p className="font-sans font-semibold text-xs mb-1">Password</p>
           <input
             type="password"
             placeholder=""
@@ -121,7 +121,7 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold  mb-1">Table</p>
+          <p className="font-sans font-semibold text-xs mb-1">Table</p>
           <input
             type="text"
             placeholder=""
@@ -145,8 +145,8 @@ const AddNewStaffForm = () => {
       </div>
       <div className="w-11/12 ml-12 h-1/4 mt-5 flex justify-between">
         <div className="w-2/5 h-10/12  flex flex-col">
-          <p className="font-sans font-semibold mb-2">Upload Image</p>
-          <input type="file" className="custom-file-input h-3/4 w-1/4 rounded-md  border-orange border-dashed border-2 bg-search ml-1"></input>
+          <p className="font-sans text-xs font-semibold mb-2">Upload Image</p>
+          <input type="file" className=" h-3/4 w-1/4 rounded-md  border-orange border-dashed border-2 bg-search ml-1"></input>
         </div>
         <div className="w-3/5 h-10/12 pt-2">
           <div className="w-8/12 h-1/2 ml-20 flex flex-row">

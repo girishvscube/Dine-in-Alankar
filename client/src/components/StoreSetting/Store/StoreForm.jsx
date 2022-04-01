@@ -16,7 +16,7 @@ const StoreForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className=" for">
     <div className="w-11/12 ml-14 field grid  grid-rows-3 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold mb-1">Store Name</p>
+        <p className="font-sans text-xs font-semibold mb-1">Store Name</p>
         <input
           type="text"
           placeholder=""
@@ -38,7 +38,7 @@ const StoreForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold   mb-1">Email</p>
+        <p className="font-sans font-semibold text-xs  mb-1">Email</p>
         <input
           type="email"
           placeholder=""
@@ -57,7 +57,7 @@ const StoreForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold   mb-1">GST Percent</p>
+        <p className="font-sans font-semibold text-xs  mb-1">GST Percent</p>
         <input
           type="text"
           placeholder=""
@@ -77,7 +77,7 @@ const StoreForm = () => {
         
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold  mb-1">Phone No.</p>
+        <p className="font-sans font-semibold text-xs mb-1">Phone No.</p>
         <input
           type="text"
           placeholder=""
@@ -100,7 +100,7 @@ const StoreForm = () => {
       </div>
       
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold   mb-1">Store Address</p>
+        <p className="font-sans font-semibold text-xs  mb-1">Store Address</p>
         <input
           type="password"
           placeholder=""
@@ -117,7 +117,7 @@ const StoreForm = () => {
        
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold   mb-1">GST No.</p>
+        <p className="font-sans font-semibold text-xs  mb-1">GST No.</p>
         <input
           type="text"
           placeholder=""
@@ -141,7 +141,7 @@ const StoreForm = () => {
     <div className="w-10/12 ml-12 h-1/6 mt-20 flex items-center justify-center">
       <button
         type="submit"
-        className="add font-sans text-white pl-12 pr-12 pt-2 pb-2 rounded-lg border-orange"
+        className="add font-sans text-xs font-semibold text-white pl-12 pr-12 pt-3 pb-3 rounded-lg border-orange"
       >
         Update
       </button>

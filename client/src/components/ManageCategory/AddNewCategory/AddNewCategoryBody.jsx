@@ -6,9 +6,9 @@ import "./style.scss";
 
 const AddNewCategoryBody = () => {
   return (
-    <div className="w-full managemenu_body bg-mixwhite">
+    <div className="w-full  managemenu_body bg-mixwhite">
       <AddNewCategoryList />
-      <hr className="w-11/12 ml-14 mt-1 mb-3 border-2 bord" />
+      <hr className="w-11/12 ml-14 mb-3 border-2 bord" />
       <CategoryName />
       <AddNewCategoryForm />
     </div>

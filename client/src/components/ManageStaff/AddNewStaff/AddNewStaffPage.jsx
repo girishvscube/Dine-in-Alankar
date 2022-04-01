@@ -1,9 +1,9 @@
 import React from "react";
-import EditStaffBody from "./EditStaffBody";
-import HeaderNav from "../HeaderNav";
-import "../style.scss";
+import AddNewStaffBody from "./AddNewStaffBody";
+import HeaderNav from "../../HeaderNav";
+import "./style.scss";
 
-const EditStaffPage = () => {
+const AddNewStaffPage = () => {
   return (
     <div>
       <div className="main">
@@ -12,11 +12,11 @@ const EditStaffPage = () => {
         </div>
         <div className="w-full h-full flex flex-col">
           <HeaderNav/>
-          <EditStaffBody/>
+          <AddNewStaffBody/>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default EditStaffPage
+export default AddNewStaffPage;

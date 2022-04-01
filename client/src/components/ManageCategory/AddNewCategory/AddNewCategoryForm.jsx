@@ -20,8 +20,8 @@ const AddNewCategoryForm = () => {
   });
 
   return (
-    <div className="for  mt-2 ml-14 mr-12 flex flex-col">
-      <div className="w-full h-1/4 grid grid-cols-9 pr-28">
+    <div className="h-4/6 ml-14 mt-6 w-11/12">
+        <div className="w-full h-1/4 grid grid-cols-9 pr-28">
         <div className=" flex flex-row">
           <Radio className=""
             {...controlProps("a")}
@@ -204,11 +204,13 @@ const AddNewCategoryForm = () => {
           <img src="fast-food.png" alt="food image"/>
         </div>
       </div>
-      <div className="w-full h-1/6 bg-red-400">
-            <button className="add pt-3 pb-3 pl-8 pr-8 rounded-lg font-semibold font-sans text-white">Add Category</button>
+      <div className="mb-10"></div>
+      <div className="w-full h-1/6 flex justify-center items-center">
+            <button className="add pt-3 pb-3 pl-9 pr-9 rounded-lg text-xs font-semibold font-sans text-white">Add Category</button>
       </div>
     </div>
   );
 };
 
 export default AddNewCategoryForm;
+

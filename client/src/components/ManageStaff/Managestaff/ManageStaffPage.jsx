@@ -1,6 +1,7 @@
 import React from 'react'
-import HeaderNav from '../HeaderNav'
+import HeaderNav from '../../HeaderNav'
 import ManageStaffBody from './ManageStaffBody'
+import "./style.scss"
 
 const ManageStaffPage = () => {
   return (

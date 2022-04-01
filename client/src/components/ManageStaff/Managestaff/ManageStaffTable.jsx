@@ -1,9 +1,10 @@
 import React from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
-import Data from "../Data2.json";
-import "../style.scss";
-import ToggleSwitch from "../ToggleSwitch";
+import Data from "../../Data2.json";
+import "./style.scss";
+import ToggleSwitch from "../../ToggleSwitch";
+import {Link} from "react-router-dom"
 
 const ManageStaffTable = () => {
   return (
@@ -45,7 +46,7 @@ const ManageStaffTable = () => {
                     <ToggleSwitch />
                   </Td>
                   <Td className="pt-4 flex justify-center pr-12  pb-4">
-                    <img src="EDIT ICON.svg" alt="edit icon"/>
+                    <Link to="/editstaff"><img src="EDIT ICON.svg" alt="edit icon"/></Link>
                   </Td>
                 </Tr>
               </Tbody>

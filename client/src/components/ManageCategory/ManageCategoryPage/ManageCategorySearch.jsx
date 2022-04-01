@@ -1,6 +1,7 @@
 import { border, borderColor, style } from '@mui/system';
 import React, { useState } from 'react'
 import "./style.scss";
+import {Link} from "react-router-dom"
 
 const ManageCategorySearch = () => {
   
@@ -10,9 +11,11 @@ const ManageCategorySearch = () => {
   return (
     <div className="w-11/12 h-2/12 ml-14  flex justify-between">
     <div className="w-1/6 h-full flex justify-between">
-      <div className="w-full h-full  mr-8 add text-center pt-3.5 pb-3.5 pl-2 pr-2 rounded-lg text-white font-semibold font-sans">
+      <Link to="/addnewcategory">
+      <div className="w-full h-full text-xs  mr-8 add text-center pl-6 pr-6 pt-4 pb-4 rounded-lg text-white font-semibold font-sans">
         Add New Category
       </div>
+      </Link>
       
     </div>
     <div className='w-2/4 h-full bg-search flex justify-between p-2 rounded-lg mal'>

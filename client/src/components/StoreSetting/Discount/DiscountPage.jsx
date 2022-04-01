@@ -1,10 +1,9 @@
 import React from 'react'
 import HeaderNav from '../../HeaderNav'
-import TableBody from './TableBody'
+import DiscountBody from './DiscountBody'
 import "./style.scss";
 
-
-const TablePage = () => {
+const DiscountPage = () => {
   return (
     <div>
     <div className="main">
@@ -12,11 +11,11 @@ const TablePage = () => {
       </div>
       <div className="w-full h-full flex flex-col">
         <HeaderNav/>
-        <TableBody/>
+        <DiscountBody/>
       </div>
     </div>
   </div>
   )
 }
 
-export default TablePage
+export default DiscountPage

@@ -15,7 +15,7 @@ const CouponForm = () => {
    <form onSubmit={handleSubmit(onSubmit)} className=" for">
     <div className="w-11/12 ml-14 field grid  grid-rows-3 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold  mb-1">Coupon Code</p>
+        <p className="font-sans font-semibold text-xs mb-1">Coupon Code</p>
         <input
           type="text"
           placeholder=""
@@ -37,7 +37,7 @@ const CouponForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold   mb-1">Value</p>
+        <p className="font-sans font-semibold text-xs  mb-1">Value</p>
         <input
           type="email"
           placeholder=""
@@ -56,7 +56,7 @@ const CouponForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold  mb-1">Expiray Date</p>
+        <p className="font-sans font-semibold text-xs  mb-1">Expiray Date</p>
         <input
           type="text"
           placeholder=""
@@ -76,44 +76,31 @@ const CouponForm = () => {
         
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold  mb-1">Percentage/Amount</p>
-        <input
-          type="text"
-          placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
-          {...register("Phone", {
-            required: true,
-            maxLength: 20,
-            pattern: /^[0-9\b]+$/,
-          })}
-        />
-         {errors?.Phone?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
-        {errors?.Phone?.type === "maxLength" && (
-          <p className="text-xs text-red-600">Phone cannot exceed 20 characters</p>
-        )}
-        {errors?.Phone?.type === "pattern" && (
-          <p className="text-red-600 text-xs">Numerical characters only</p>
-        )}
+        <p className="font-sans font-semibold text-xs  mb-1">Percentage/Amount</p>
+       
+         <div  className="h-2/4 w-11/12 outline-none pl-2 rounded-lg pr-5 bg-search focus-within:border-2 border-orange ">
+             <select className='w-full h-full outline-none bg-search '>
+                 <option value="first">123295</option>
+                 <option value="second">111111</option>
+                 <option value="third">222222</option>
+                 <option value="fourth">33333</option>
+             </select>
+         </div>
+          
+        
       </div>
       
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold   mb-1">Status</p>
-        <input
-          type="password"
-          placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-orange "
-          {...register("address", {
-            required: true,
-            maxLength: 8,
-            pattern:/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g,
-          })}
-        />
-         {errors?.address?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
+        <p className="font-sans font-semibold text-xs  mb-1">Status</p>
        
+        <div  className="h-2/4 w-11/12 outline-none pl-2 rounded-lg pr-5 bg-search focus-within:border-2 border-orange ">
+             <select className='w-full h-full outline-none bg-search '>
+                 <option value="first">123295</option>
+                 <option value="second">111111</option>
+                 <option value="third">222222</option>
+                 <option value="fourth">33333</option>
+             </select>
+         </div>
       </div>
       
       
@@ -122,7 +109,7 @@ const CouponForm = () => {
     <div className="w-10/12 ml-12 h-1/6 mt-20 flex items-center justify-center">
       <button
         type="submit"
-        className="add font-sans text-white pl-12 pr-12 pt-2 pb-2 rounded-lg border-orange"
+        className="add font-sans font-semibold text-xs text-white pl-12 pr-12 pt-3 pb-3 rounded-lg border-orange"
       >
         Create
       </button>

@@ -9,11 +9,7 @@ import { ResetPassword } from "./Pages/Login/ResetPassword";
 import AddMenuPage from "./components/ManageMenu/AddMenuPage";
 import EditMenuPage from "./components/ManageMenu/EditMenuPage";
 import ManageMenuPage from "./components/ManageMenu/ManageMenuPage";
-import AddNewStaffPage from "./components/ManageStaff/AddNewStaffPage";
-import EditStaffPage from "./components/ManageStaff/EditStaffPage";
-import ManageStaffPage, {
-  MangeStaffPage,
-} from "./components/ManageStaff/ManageStaffPage";
+import EditStaffPage from "./components/ManageStaff/EditStaff/EditStaffPage";
 import ManageCategoryPage from "./components/ManageCategory/ManageCategoryPage/ManageCategoryPage";
 import AddNewCategoryPage from "./components/ManageCategory/AddNewCategory/AddNewCategoryPage";
 import { PastOrders } from "./Pages/PastOrders/PastOrders";
@@ -21,6 +17,15 @@ import { KDS } from "./Pages/KDS/KDS";
 import { ViewKDS } from "./components/KDS/ViewKDS";
 import { CreateKDS } from "./Pages/KDS/CreateKDS";
 import { SideNavbar } from "./components/SideNavbar/SideNavbar";
+import  CouponPage  from "./components/StoreSetting/CouponDiscount/CouponPage";
+import  DiscountPage  from "./components/StoreSetting/Discount/DiscountPage";
+import  UserPage  from "./components/StoreSetting/UserRole/UserPage";
+import  TablePage  from "./components/StoreSetting/Table/TablePage";
+import  StorePage  from "./components/StoreSetting/Store/StorePage";
+import AddNewStaffPage from "./components/ManageStaff/AddNewStaff/AddNewStaffPage";
+import ManageStaffPage from "./components/ManageStaff/Managestaff/ManageStaffPage";
+import RollPage from "./components/ManageStaff/AddRole/RollPage";
+import DetailPage from "./components/TakeAway/CustomerDetails/DetailPage";
 
 function App() {
   return (
@@ -33,14 +38,17 @@ function App() {
         <Route exact path="/activeorder" element={<ActiveOrder />} />
         <Route exact path="/KDS" element={<KDS />} />
         <Route exact path="/viewKDS" element={<ViewKDS />} /> */}
+        {/* <Route exact path="/storesetting" element={<StorePage/>}/>
+        <Route exact path="/tablesetting" element={<TablePage/>}/>
+        <Route exact path="/discountsetting" element={<DiscountPage/>}/>
+        <Route exact path="/couponsetting" element={<CouponPage/>}/>
+        <Route exact path="/usersetting" element={<UserPage/>}/> */}
+        {/* <Route exact path="/addnewstaff" element={<AddNewStaffPage/>}/>
+        <Route exact path="/newrole" element={<RollPage/>}/>
+        <Route exact path="/editstaff" element={<EditStaffPage/>}/> */}
+        {/* <Route exact path="/addnewcategory" element={<AddNewCategoryPage/>}/>  */}
       </Routes>
-      <SideNavbar />
-      {/* <CreateNewOrder /> */}
-      {/* <PastOrders /> */}
-      {/* <CreateKDS /> */}
-      {/* <ManageStaffPage/> */}
-      {/* <AddNewCategoryPage/> */}
-       <CouponPage/> 
+        <DetailPage/>
     </div>
   );
 }

@@ -1,22 +1,22 @@
 import React from 'react'
 import HeaderNav from '../../HeaderNav'
-import TableBody from './TableBody'
+import UserBody from './UserBody'
 import "./style.scss";
 
-
-const TablePage = () => {
+const UserPage = () => {
   return (
     <div>
     <div className="main">
       <div className="bg-sidenav_pink w-1/5 h-full">
+   
       </div>
       <div className="w-full h-full flex flex-col">
         <HeaderNav/>
-        <TableBody/>
+        <UserBody/>
       </div>
     </div>
   </div>
   )
 }
 
-export default TablePage
+export default UserPage

@@ -87,7 +87,7 @@ const TableForm = () => {
     <div className="w-10/12 ml-12 h-1/6 mt-20 flex items-center justify-center">
       <button
         type="submit"
-        className="add font-sans text-white pl-12 pr-12 pt-2 pb-2 rounded-lg border-orange"
+        className="add font-sans font-semibold text-xs  text-white pl-12 pr-12 pt-3 pb-3 rounded-lg border-orange"
       >
         Create
       </button>
