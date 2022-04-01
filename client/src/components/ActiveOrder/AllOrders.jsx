@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { data } from "../../AllOrders";
+import { DetailOrder } from "./DetailOrder";
 import "./superadmin.scss";
 
 export const AllOrders = () => {
@@ -18,7 +19,7 @@ export const AllOrders = () => {
     setShowOrderDetail(true);
   };
   return (
-    <div className="ml-11 mr-20 bgGray ">
+    <div className="ml-11 mr-20 bg-white ">
       <h1 className=" text-2xl font-bold text-darkyellow my-8 ml-11">
         All Orders
       </h1>
@@ -68,6 +69,7 @@ export const AllOrders = () => {
           </tbody>
         </table>
       </div>
+      {showOrderDetail ? <DetailOrder /> : ""}
     </div>
   );
 };

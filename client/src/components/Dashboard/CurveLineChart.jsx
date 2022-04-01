@@ -41,7 +41,7 @@ export const CurveLineChart = () => {
 
   return (
     <AreaChart
-      width={904}
+      width={800}
       height={351}
       data={data}
       margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
@@ -64,6 +64,7 @@ export const CurveLineChart = () => {
       <Area
         type="monotone"
         dataKey="Sale"
+        fontSize={"10px"}
         stroke="#F0912C"
         fillOpacity={1}
         fill="url(#colorSale)"

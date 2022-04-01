@@ -1,15 +1,34 @@
 import "./createneworder.scss";
+import search from "../../Images/ActiveOrder/Search_fill.png";
 
 export const AddItems = () => {
+  var obj = [
+    {
+      name: "Rawa Idly",
+      qty: 1,
+      price: 60,
+    },
+    {
+      name: "Rawa Idly",
+      qty: 1,
+      price: 60,
+    },
+    {
+      name: "Rawa Idly",
+      qty: 1,
+      price: 60,
+    },
+  ];
   return (
     <div className="addItemsContainer">
       <div className="pl-11 pr-16">
-        <div>
+        <div className="searchGrid bg-search">
           <input
-            className="w-full  border-2 h-16 bg-bgsearch rounded-xl placeholder:text-darkyellow placeholder:font-semibold placeholder:pl-7"
+            className="h-16 bg-search rounded-xl outline-none pl-7 placeholder:text-darkyellow placeholder:font-semibold"
             type="text"
             placeholder="Search"
           />
+          <img className=" relative top-3" src={search} alt="search" />
         </div>
 
         <div className="w-2/5 flex flex-col gap-2 float-right mt-6">
@@ -32,10 +51,18 @@ export const AddItems = () => {
         <p className=" text-2xl font-semibold text-darkyellow">
           Items Selected
         </p>
-        <div></div>
-        <p>Spedcial Instructions</p>
-        <p className="w-full h-28 bg-bgsearch">d</p>
-        <button className="w-1/12 h-16 font-semibold text-xl text-white gradientBg absolute bottom-14 right-[20%]">
+        <div>
+          {obj.map((e) => (
+            <div className="flex gap-4">
+              <p>{e.name}</p>
+              <p>{e.qty}</p>
+              <p>{e.price}</p>
+            </div>
+          ))}
+        </div>
+        <p>Special Instructions</p>
+        <p className="w-full h-28 bg-search">para</p>
+        <button className="w-1/12 h-16 font-semibold text-xl text-white orangeBackground absolute bottom-14 right-[20%]">
           Create
         </button>
       </div>

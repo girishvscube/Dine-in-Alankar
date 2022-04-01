@@ -1,0 +1,12 @@
+.sidenav-menu {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 2000ms;
+}
+
+.sidenav-menu.active {
+  left: 0;
+  transition: 650ms;
+  position: relative;
+}

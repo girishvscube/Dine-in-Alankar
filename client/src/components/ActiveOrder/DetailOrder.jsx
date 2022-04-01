@@ -3,7 +3,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import "./superadmin.scss";
 import "./orderdetail.scss";
 import Swal from "sweetalert2";
-export const DetailOrder = () => {
+export const DetailOrder = ({ showOrderDetail }) => {
   const [sideBar, setSideBar] = useState(false);
   var arr = [
     {
@@ -39,9 +39,7 @@ export const DetailOrder = () => {
       isserved: "cooking",
     },
   ];
-  const handleClick = () => {
-    setSideBar(true);
-  };
+  console.log(showOrderDetail);
   const handleClose = () => {
     setSideBar(false);
   };
@@ -89,9 +87,10 @@ export const DetailOrder = () => {
   };
   return (
     <div>
-      <div onClick={handleClick}>Click Me</div>
-      <div className={sideBar ? "nav-menu active" : "nav-menu"}>
-        <div className="w-[650px] h-[100vh] overflow-y-scroll shadow-lg">
+      <div>Click Me</div>
+      <div>
+        {/* className={sideBar ? "nav-menu active" : "nav-menu"} */}
+        <div className="w-full h-[100vh] overflow-y-scroll shadow-lg">
           <div className="flex justify-between">
             <h1 className=" mt-3 ml-13 font-bold text-[32px]">Detail Order</h1>
 
@@ -160,17 +159,17 @@ export const DetailOrder = () => {
           <div className=" mt-44 flex justify-evenly ">
             <button
               onClick={handleSendBill}
-              className=" w-[200px] py-3  border-2 text-white font-semibold Btn"
+              className=" w-1/4 py-3  border-2 text-white font-semibold Btn"
             >
               Send Bill
             </button>
             <button
               onClick={handlePrintBill}
-              className=" w-[200px] py-3  border-2 text-white font-semibold Btn"
+              className=" w-1/4 py-3  border-2 text-white font-semibold Btn"
             >
               Print Bill
             </button>
-            <button className=" w-[200px] py-3  border-2 text-white font-semibold Btn">
+            <button className=" w-1/4 py-3  border-2 text-white font-semibold Btn">
               Table Transfer
             </button>
           </div>

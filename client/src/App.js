@@ -20,7 +20,7 @@ import { PastOrders } from "./Pages/PastOrders/PastOrders";
 import { KDS } from "./Pages/KDS/KDS";
 import { ViewKDS } from "./components/KDS/ViewKDS";
 import { CreateKDS } from "./Pages/KDS/CreateKDS";
-import { SideNavbar } from "./components/SideNavbar/SideNavbar";
+import SideNavbarMUi from "./components/SideNavbar/SideNavbarMUI";
 import { Feedback } from "./Pages/Feedback/Feedback";
 
 function App() {
@@ -36,7 +36,9 @@ function App() {
         <Route exact path="/viewKDS" element={<ViewKDS />} />
         <Route exact path="/feedback" element={<Feedback />} />
       </Routes>
-      {/* <SideNavbar /> */}
+
+      {/* <CreateNewOrder /> */}
+      {/* <SideNavbarMUi /> */}
       {/* <CreateNewOrder /> */}
       {/* <PastOrders /> */}
       {/* <CreateKDS /> */}

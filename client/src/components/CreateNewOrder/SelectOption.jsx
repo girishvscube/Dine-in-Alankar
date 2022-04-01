@@ -15,7 +15,7 @@ export const SelectOption = () => {
   };
   return (
     <div className="w-screen h-screen bg-background">
-      <div className=" flex flex-col gap-3 Bg pl-11 pt-36">
+      <div className=" flex flex-col gap-3 Bg pl-11 pt-10">
         <h2 className=" font-bold text-darkyellow text-3xl">
           Create New Order
         </h2>
@@ -23,16 +23,16 @@ export const SelectOption = () => {
         <div className="flex gap-11 mb-11">
           <button
             onClick={customerDetailsButton}
-            className={`w-[210px] h-16 font-semibold text-xl ${
-              isButton ? "gradientBg" : "Btn"
+            className={`w-[210px] h-16 font-semibold text-xl text-white ${
+              isButton ? "orangeBackground" : "grayBackground"
             }`}
           >
             Customer Details
           </button>
           <button
             onClick={addItemsButton}
-            className={`w-[210px] h-16 font-semibold text-xl ${
-              !isButton ? "gradientBg" : "Btn"
+            className={`w-[210px] h-16 font-semibold text-xl text-white ${
+              !isButton ? "orangeBackground" : "grayBackground"
             }`}
           >
             Add Items
