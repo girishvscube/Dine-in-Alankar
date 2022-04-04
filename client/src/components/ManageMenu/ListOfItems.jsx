@@ -1,12 +1,12 @@
 import React from 'react'
-import "../style.scss";
+import "./style.scss";
 
 const ListOfItems = () => {
   return (
-    <div className='w-11/12 h-2/12 ml-14 mt-6 mb-2 list'>
-      <p className='font-semibold text-orange font-sans'>Manage Menu</p>
-      <p className='text-sm font-semibold font-sans'>This is your menu list</p>
-    </div>
+    <div className='w-11/12 h-3/12 ml-14 mt-4 mb-3 list'>
+    <p className='font-semibold text-lg text-orange mb-1 font-sans'>Manage Menu</p>
+    <p className=' font-semibold font-sans'>This is your menu list</p>
+  </div>
   )
 }
 

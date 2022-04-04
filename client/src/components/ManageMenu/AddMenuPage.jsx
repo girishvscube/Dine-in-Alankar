@@ -1,6 +1,7 @@
 import React from "react";
 import AddMenuBody from "./AddMenuBody";
 import HeaderNav from "../HeaderNav";
+import "./style.scss"
 
 const AddMenuPage = () => {
   return (

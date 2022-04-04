@@ -1,58 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import Data from "../Data.json";
-import "../style.scss";
+import "./style.scss";
 import ToggleSwitch from "../ToggleSwitch";
 import EditAndDelete from "./EditAndDelete";
 
 const ManageTable = () => {
- 
+  const [design, setDesign] = useState("adding");
+
+  const handleClick = () => {
+    setDesign("add");
+  };
+
   return (
-    <div className=" w-11/12 h-[440px] ml-14 mr-12  overflow-y-scroll">
-      
-      <Table className="">
-        <Thead className="sticky top-0 border-b-2 mb-1 bg-white  border-red-200 ">
-          <Tr className="font-sans font-semibold">
-            <Th>S. No.</Th>
-            <Th>Item Name</Th>
-            <Th>Price</Th>
-            <Th>Category</Th>
-            <Th>Today's Stock</Th>
-            <Th>Availability</Th>
-            <Th>Action</Th>
-          </Tr>
-        </Thead>
-        {Data.map((data, i) => {
-          return (
-            <Tbody>
-              <Tr className="row border-b-2 font-sans border-red-200">
-                <Td key={i} className="pt-9 text-center pb-9">
-                  {data.S.No}
-                </Td>
-                <Td key={i} className="pt-9 text-center pb-9">
-                  {data.Item_Name}
-                </Td>
-                <Td key={i} className="pt-9 text-center pb-9">
-                  {data.Price}
-                </Td>
-                <Td key={i} className="pt-9 text-center pb-9">
-                  {data.Category}
-                </Td>
-                <Td key={i} className="pt-9 text-center pb-9">
-                  {data.Today_Stock}
-                </Td>
-                <Td key={i} className="pt-9 pb-9">
-                  <ToggleSwitch/>
-                </Td>
-                <Td className="pt-9 flex justify-center  pb-9">
-                 <EditAndDelete/>
-                </Td>
-              </Tr>
-            </Tbody>
-          );
-        })}
-      </Table>
+    <div className="bg-white w-11/12 ml-14 pl-4 mt-4 rounded-lg mr-12 hei">
+      <div className="text-orange  mt-5 mb-3 font-semibold font-sans">
+        All Items
+      </div>
+      <div className=" w-full h-5/6  overflow-y-scroll font-sans">
+        <Table className="">
+          <Thead className="sticky top-0 border-b-2 mb-1 bg-white head ">
+            <Tr className=" text-left">
+              <Th className="font-sans pb-2">S. No.</Th>
+              <Th className="font-sans pl-10 pb-2">Item Name</Th>
+              <Th className="font-sans pl-12 pb-2">Price</Th>
+              <Th className="font-sans pb-2 pl-12">Category</Th>
+              <Th className="font-sans pl-12 pb-2">Today's Stock</Th>
+              <Th className="font-sans pb-2">Availability</Th>
+              <Th className="font-sans pb-2 pl-6">Action</Th>
+            </Tr>
+          </Thead>
+          {Data.map((data, i) => {
+            return (
+              <Tbody>
+                <Tr className="row border-b-2 font-sans">
+                  <Td key={i} className="pt-9 pb-9">
+                    {data.S.No}.
+                  </Td>
+                  <Td key={i} className=" text-left pl-10 ">
+                    {data.Item_Name}
+                  </Td>
+                  <Td key={i} className="text-left pl-12">
+                    {data.Price}
+                  </Td>
+                  <Td key={i} className="pl-12 text-left ">
+                    {data.Category}
+                  </Td>
+                  <Td key={i} className="  pl-12 ">
+                   <div className="flex flex-row update">
+                     <input type="number" className="w-14 h-9 rounded pl-1 pr-1 outline-none border-2 border-button_border"/>
+                     <button className="adding ml-3 text-xs text-white font-semibold pl-1.5 pr-1.5 p-0.5">Update</button>
+                   </div>
+                  </Td>
+                  <Td key={i} className=" pr-24 ">
+                    <ToggleSwitch />
+                  </Td>
+                  <Td className=" flex justify-center pr-12 pt-6 ">
+                    <EditAndDelete />
+                  </Td>
+                </Tr>
+              </Tbody>
+            );
+          })}
+        </Table>
+      </div>
     </div>
   );
 };

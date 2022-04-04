@@ -4,11 +4,11 @@
 
 #toggle_switch::after{
     content:'';
-    @apply h-4 w-4 mt-0.5 ml-0.5 rounded-full bg-orange  absolute left-0 top-0 transform scale-110 transition duration-200;
+    @apply h-4 w-4 mt-0.5 ml-6 rounded-full bg-orange  absolute left-0 top-0 transform scale-110 transition duration-200;
 }
 
 #toggle_switch:checked::after{
-    @apply transform scale-110 translate-x-6;
+    @apply transform scale-110 -translate-x-5 bg-gray-400 border-2 border-gray-400 ;
 }
 
 
@@ -24,4 +24,8 @@
     background-image: -webkit-linear-gradient(75deg, orange 50%, rgb(248, 177, 45) 50%) !important;
     border: 1px solid orange !important;
     width: 130px !important;
+}
+
+.tit{
+    color: red !important;
 }

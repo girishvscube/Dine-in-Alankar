@@ -18,7 +18,7 @@ const ManageCategorySearch = () => {
       </Link>
       
     </div>
-    <div className='w-2/4 h-full bg-search flex justify-between p-2 rounded-lg mal'>
+    <div className='w-2/4 h-full bg-search flex justify-between p-2 rounded-lg focus-within:border-2 border-amber-300 text-orange'>
       <div className="h-full w-10/12 pl-2  font-semibold">
         <input
           type="text"

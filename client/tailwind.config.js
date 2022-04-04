@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         yellow: "#FFE885",
         orange: "#F0912C",
+        button_border:"#fed7aa",
         pink: "#FFF7E2",
         sidenav_pink: "#FFF4D4",
         nav_text: "#856702",
@@ -37,6 +38,11 @@ module.exports = {
       padding: {
         21: "5.3rem",
       },
+    },
+  },
+  variants:{
+    extend:{
+      backgroundcolor:["checked"],
     },
   },
   plugins: [],

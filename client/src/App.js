@@ -44,12 +44,13 @@ function App() {
         <Route exact path="/discountsetting" element={<DiscountPage/>}/>
         <Route exact path="/couponsetting" element={<CouponPage/>}/>
         <Route exact path="/usersetting" element={<UserPage/>}/> */}
-        <Route exact path="/addnewstaff" element={<AddNewStaffPage/>}/>
+        {/* <Route exact path="/addnewstaff" element={<AddNewStaffPage/>}/>
         <Route exact path="/newrole" element={<RollPage/>}/>
-        <Route exact path="/editstaff" element={<EditStaffPage/>}/>
+        <Route exact path="/editstaff" element={<EditStaffPage/>}/> */}
         {/* <Route exact path="/addnewcategory" element={<AddNewCategoryPage/>}/>  */}
       </Routes>
-        <ManageStaffPage/>
+        {/* <ManageStaffPage/> */}
+        <AddNewCategoryPage/>
     </div>
   );
 }

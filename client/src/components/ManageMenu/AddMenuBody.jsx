@@ -1,6 +1,7 @@
 import React from 'react'
 import AddMenuForm from './AddMenuForm'
 import AddMenuList from './AddMenuList'
+import "./style.scss";
 
 const AddMenuBody = () => {
   return (
