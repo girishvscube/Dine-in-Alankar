@@ -14,6 +14,7 @@ import { Feedback } from "./Pages/Feedback/Feedback";
 import ManageMenuPage from "./components/ManageMenu/ManageMenuPage";
 // import EditStaffPage from "./components/ManageStaff/EditStaff/EditStaffPage";
 import ManageCategoryPage from "./components/ManageCategory/ManageCategoryPage/ManageCategoryPage";
+import ManageMenuBody from "./components/ManageMenu/ManageMenuBody";
 // import AddNewCategoryPage from "./components/ManageCategory/AddNewCategory/AddNewCategoryPage";
 // import { PastOrders } from "./Pages/PastOrders/PastOrders";
 // import { KDS } from "./Pages/KDS/KDS";
@@ -45,7 +46,7 @@ function App() {
             <Route exact path="createneworder" element={<CreateNewOrder />} />
             <Route exact path="managetable" element={<CreateNewOrder />} />
           </Route>
-          <Route exact path="managemenu" element={<ManageMenuPage />} />
+          <Route exact path="managemenu" element={<ManageMenuBody />} />
           <Route exact path="takeaway" element={<ManageMenuPage />} />
           <Route exact path="managecategory" element={<ManageCategoryPage />} />
           <Route exact path="feedback" element={<Feedback />} />
