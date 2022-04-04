@@ -1,26 +1,24 @@
 import React from "react";
-import "../style.scss";
+import "./style.scss";
 
 const SearchForMenu = () => {
   return (
     <div className="w-11/12 h-2/12 ml-14  flex justify-between">
-      <div className="w-1/3 h-full flex  justify-between">
-        <div className="w-5/12 h-full add text-center p-3 rounded text-white font-sans font-semibold">
-          Add New Item
-        </div>
-        <div className="w-5/12 h-full border-2 border-orange p-3 pt-2 flex justify-between bg-pink rounded">
-          <div className="h-5 w-5/12 pl-2 text-orange">
-            <select className="bg-pink">
-              <option value="all" className="font-sans">All</option>
-              <option value="simply_south" className="font-sans">Simply south</option>
-              <option value="simply_south" className="font-sans">All Day Bites</option>
-              <option value="simply_south" className="font-sans">Chinese</option>
-              <option value="simply_south" className="font-sans">Dosa Mela</option>
-            </select>
-          </div>
+      <div className=" flex ">
+        <button className=" h-full pl-9 pr-9 pt-4 pb-4 text-xs add text-center  rounded-lg text-white font-semibold font-sans">
+          Add New Items
+        </button>
+        <div className=" text-xs  ">
+          <select className=" border-2 pl-2 pr-3 mr-2 ml-6 border-button_border text-xs text-orange rounded-lg w-full h-full ">
+            <option className="many">All</option>
+            <option value="one">Simply South</option>
+            <option value="two">Chinese</option>
+            <option value="three">Japanese</option>
+            <option value="four">Routine</option>
+          </select>
         </div>
       </div>
-      <div className="w-2/4 h-full bg-search flex justify-between p-2 rounded">
+      <div className="w-2/4 h-full bg-search text-orange flex justify-between p-2 rounded-lg focus-within:border-2 border-button_border ">
         <div className="h-full w-10/12 pl-2  font-semibold">
           <input
             type="text"

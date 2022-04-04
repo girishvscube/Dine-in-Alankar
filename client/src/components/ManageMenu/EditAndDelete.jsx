@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import '../style.scss';
+import './style.scss';
 
 const MySwal = withReactContent(Swal)
 
@@ -8,14 +8,17 @@ const EditAndDelete = () => {
 
     const sweetalert = () => {
       MySwal.fire({
-        title: 'Are you sure?',
+        title: <strong className='tit'>Are you sure?</strong>,
         text: "Are you sure to delete this 'menu'?",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText:'white',
         confirmButtonColor: 'orange',
-        cancelButtonColor: 'green',
-        confirmButtonText: 'Yes'
+        confirmButtonText: 'Yes',
+        cancelButtonText:'Cancel',
+        cancelButtonColor:'white',
+        confirmButtonClass:'confirm_btn',
+        cancelButtonClass:'cancel_btn',
       })
       };
 

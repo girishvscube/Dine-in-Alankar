@@ -26,7 +26,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("a")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -39,7 +39,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("b")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -51,7 +51,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("c")}
             sx={{
-              color: orange[50],
+              color:orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -63,7 +63,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("d")}
             sx={{
-              color: orange[50],
+              color:orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -75,7 +75,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("e")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -87,7 +87,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("f")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -99,7 +99,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("g")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -111,7 +111,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("h")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -123,7 +123,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("i")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -135,7 +135,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("j")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -147,7 +147,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("k")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -159,7 +159,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("l")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -171,7 +171,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("m")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -183,7 +183,7 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("n")}
             sx={{
-              color: orange[50],
+              color: orange[100],
               "&.Mui-checked": {
                 color: orange[800],
               },
@@ -195,7 +195,8 @@ const AddNewCategoryForm = () => {
           <Radio className=""
             {...controlProps("o")}
             sx={{
-              color: orange[50],
+              color: orange[100],
+
               "&.Mui-checked": {
                 color: orange[800],
               },

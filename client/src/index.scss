@@ -6,11 +6,11 @@
 
 #toggle_switch::after {
   content: "";
-  @apply h-4 w-4 mt-0.5 ml-0.5 rounded-full bg-orange  absolute left-0 top-0 transform scale-110 transition duration-200;
+  @apply h-4 w-4 mt-0.5 ml-6 rounded-full bg-orange  absolute left-0 top-0 transform scale-110 transition duration-200;
 }
 
 #toggle_switch:checked::after {
-  @apply transform scale-110 translate-x-6;
+  @apply transform scale-110 -translate-x-5 bg-gray-400 border-2 border-gray-400;
 }
 
 body,
@@ -18,13 +18,6 @@ html {
   font-family: "Source Sans Pro";
   -moz-osx-font-smoothing: "Source Sans Pro";
   -webkit-font-smoothing: "Source Sans Pro";
-}
-
-.cancel_btn {
-  border: 1px solid rgba(240, 145, 44, 0.34) !important;
-  color: orange !important;
-  width: 130px !important;
-  margin-left: 50px !important;
 }
 
 .confirm_btn {
@@ -36,4 +29,8 @@ html {
   ) !important;
   border: 1px solid orange !important;
   width: 130px !important;
+}
+
+.tit {
+  color: red !important;
 }
