@@ -9,22 +9,30 @@ import "./sidenavbar.scss";
 
 export const SideNavbar = () => {
   const [menuItems, setMenuItems] = useState(obj);
-  const [showNavbar, setshowNavbar] = useState(false);
+  const [showNavbar, setshowNavbar] = useState(true);
 
   const handleClickHide = () => {
     setshowNavbar(false);
+    localStorage.setItem("status", showNavbar);
   };
   const handleClickShow = () => {
     setshowNavbar(true);
+    localStorage.setItem("status", showNavbar);
   };
+  // export function isStatus() {
+  //   return { status: showNavbar };
+  // }
+
   return (
     <>
-      <div className="absolute bg-white">
+      <div className="absolute bg-white pl-1">
         <MenuIcon onClick={handleClickShow} className=" cursor-pointer " />
       </div>
       <div
-        className={`w-[330px] h-screen bg-white ${
-          showNavbar ? "sidenav-menu active" : "sidenav-menu"
+        className={`h-screen  bg-white ${
+          showNavbar
+            ? " translate-x-1 ease-in duration-300"
+            : " -translate-x-full ease-in duration-300 opacity-10 w-0"
         }`}
       >
         <div className="  text-right pr-2 pt-2">
@@ -35,7 +43,7 @@ export const SideNavbar = () => {
         </div>
         <div>
           {menuItems.map((e, index) => (
-            <div key={index} className="flex place-items-start mt-5 ">
+            <div key={index} className="flex place-items-start mt-5">
               <img
                 className=" text-lg font-normal mr-7 ml-14 2xl:ml-10"
                 src={e.img}

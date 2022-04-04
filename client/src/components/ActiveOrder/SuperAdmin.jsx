@@ -1,5 +1,4 @@
 import { FoodItems } from "../Dashboard/FoodItems";
-import { SuperAdminContainer } from "./SuperAdminContainer";
 import refresh from "../../Images/ActiveOrder/refresh.png";
 import "./superadmin.scss";
 import { AllOrders } from "./AllOrders";
@@ -7,7 +6,6 @@ import { AllOrders } from "./AllOrders";
 export const SuperAdmin = () => {
   return (
     <div className="w-screen">
-      <SuperAdminContainer />
       <div className=" overflow-y-scroll h-[88vh]">
         <div className="grid grid-flow-row gap-2 pl-11 mt-11">
           <p className=" text-[26px] font-bold text-darkyellow">Active Order</p>

@@ -19,17 +19,18 @@ export const AllOrders = () => {
     setShowOrderDetail(true);
   };
   return (
-    <div className="ml-11 mr-20 bg-white ">
+    <div className="mx-11 bg-white ">
+      {/* {showOrderDetail ? <DetailOrder /> : ""} */}
       <h1 className=" text-2xl font-bold text-darkyellow my-8 ml-11">
         All Orders
       </h1>
-      <div className="h-[43vh] text-center  overflow-y-scroll ">
+      <div className="h-[60vh] text-center  overflow-y-scroll ">
         <table className=" table-auto w-full border-collapse">
           <thead>
             <tr className="border-b-2  tableBorder ">
               {orderMenu.map((e, index) => (
                 <th key={index} className="">
-                  <p className=" mb-2">{e}</p>
+                  <p className=" mb-2 font-semibold">{e}</p>
                 </th>
               ))}
             </tr>
@@ -42,25 +43,25 @@ export const AllOrders = () => {
                     onClick={() => {
                       handleClick(e);
                     }}
-                    className=" mt-7 mb-7 font-medium cursor-pointer"
+                    className=" mt-7 mb-7 font-normal cursor-pointer"
                   >
                     {e.tableno}
                   </p>
                 </td>
                 <td>
-                  <p className=" mb-7 mt-7 font-medium">{e.OrderID}</p>
+                  <p className=" mb-7 mt-7 font-normal">{e.OrderID}</p>
                 </td>
                 <td>
-                  <p className=" mb-7 mt-7 font-medium">{e.CustomerName}</p>
+                  <p className=" mb-7 mt-7 font-normal">{e.CustomerName}</p>
                 </td>
                 <td>
-                  <p className=" mb-7 mt-7 font-medium">{e.ItemStatus}</p>
+                  <p className=" mb-7 mt-7 font-normal">{e.ItemStatus}</p>
                 </td>
                 <td>
-                  <p className=" mb-7 mt-7 font-medium">{e.PaymentStatus}</p>
+                  <p className=" mb-7 mt-7 font-normal">{e.PaymentStatus}</p>
                 </td>
                 <td>
-                  <button className="mb-7 mt-7 Btn px-11 py-3 rounded-lg text-white font-medium">
+                  <button className="mb-7 mt-7 Btn px-11 py-3 rounded-lg text-white font-normal">
                     {e.PaymentAction}
                   </button>
                 </td>
@@ -69,7 +70,6 @@ export const AllOrders = () => {
           </tbody>
         </table>
       </div>
-      {showOrderDetail ? <DetailOrder /> : ""}
     </div>
   );
 };

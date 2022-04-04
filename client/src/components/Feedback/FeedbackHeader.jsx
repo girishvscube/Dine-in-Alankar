@@ -4,8 +4,9 @@ import search from "../../Images/ActiveOrder/Search_fill.png";
 
 export const FeedbackHeader = () => {
   return (
-    <div className="px-11 mt-11">
-      <div className="flex flex-col gap-2">
+    <>
+      {" "}
+      <div className="flex flex-col gap-2 px-9 mt-4">
         <p className=" font-bold text-2xl text-darkyellow tracking-wider">
           Feedback{" "}
           <span>
@@ -19,7 +20,7 @@ export const FeedbackHeader = () => {
         <p>(3 Rating Overall)</p>
         <p className="border-t-2 border-darkyellow mt-4"></p>
       </div>
-      <div className="grid grid-cols-2 mt-10">
+      <div className="grid grid-cols-2 mt-10 px-9">
         <div className="bg-white w-2/6 h-14 outline-none border border-darkyellow rounded-[10px] grid grid-cols-2">
           <p></p>
           <img
@@ -39,6 +40,6 @@ export const FeedbackHeader = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
