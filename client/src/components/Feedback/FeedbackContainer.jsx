@@ -1,12 +1,10 @@
 import { Customers } from "./Customers";
 import { FeedbackCard } from "./FeedbackCard";
 import { FeedbackHeader } from "./FeedbackHeader";
-import { SuperAdminContainer } from "./SuperAdminContainer";
 
 export const FeedbackContainer = () => {
   return (
-    <div className="w-screen bg-darkwhite">
-      <SuperAdminContainer />
+    <div className="h-[88vh] bg-darkwhite overflow-y-scroll">
       <FeedbackHeader />
       <div className="flex justify-between m-11">
         <FeedbackCard />

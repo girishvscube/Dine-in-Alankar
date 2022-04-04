@@ -40,6 +40,10 @@ export const DetailOrder = ({ showOrderDetail }) => {
     },
   ];
   console.log(showOrderDetail);
+  const handleShow = () => {
+    setSideBar(true);
+  };
+
   const handleClose = () => {
     setSideBar(false);
   };
@@ -47,15 +51,15 @@ export const DetailOrder = ({ showOrderDetail }) => {
   const handleSendBill = () => {
     Swal.fire({
       title: "Table Transfer",
-      html:
-        "<p>Existing Table<span>20A</span></p>" +
-        "<p>Select transfer Table:<a>20A</a> </p>",
+      html: `<div className="sendBill">
+          <p>Existing Table :</p>
+          <p>20A</p>
+        </div>`,
       showCloseButton: true,
       showConfirmButton: true,
       confirmButtonText: "Submit",
       customClass: {
         popup: "swal2-popup",
-        html: "swal2-container",
         showConfirmButton: "swal2-btn",
         confirmButtonText: "swal2-btn-text",
       },
@@ -87,10 +91,9 @@ export const DetailOrder = ({ showOrderDetail }) => {
   };
   return (
     <div>
-      <div>Click Me</div>
-      <div>
-        {/* className={sideBar ? "nav-menu active" : "nav-menu"} */}
-        <div className="w-full h-[100vh] overflow-y-scroll shadow-lg">
+      <div onClick={handleShow}>Click Me</div>
+      <div className={sideBar ? "nav-menu active" : "nav-menu"}>
+        <div className="w-[630px] h-[100vh] overflow-y-scroll shadow-lg">
           <div className="flex justify-between">
             <h1 className=" mt-3 ml-13 font-bold text-[32px]">Detail Order</h1>
 

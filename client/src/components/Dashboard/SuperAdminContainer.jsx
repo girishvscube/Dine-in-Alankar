@@ -12,7 +12,7 @@ export const SuperAdminContainer = () => {
            alt="profile" */}
         </div>
       </div>
-      <div className=" relative top-1">
+      <div className=" relative top-2">
         <p className=" text-lg font-semibold mb-1">{obj.name}</p>
         <p className=" text-sm font-normal">{obj.role}</p>
       </div>

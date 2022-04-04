@@ -16,9 +16,9 @@ export const Customers = () => {
   return (
     <div>
       <h1 className=" text-2xl font-bold text-darkyellow my-8 ml-11 ">
-        All Orders
+        Customers
       </h1>
-      <div className="h-[413px] text-center  overflow-y-scroll ">
+      <div className="h-[413px] text-center  overflow-y-scroll bg-white border-gray-200 border pt-2 ml-11 ">
         <table className=" table-auto w-full border-collapse">
           <thead>
             <tr className="border-b-2  tableBorder ">
