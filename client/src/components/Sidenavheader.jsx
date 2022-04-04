@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 export const Sidenavheader = () => {
   const [menuItems, setMenuItems] = useState(obj);
   const [showNavbar, setshowNavbar] = useState(true);
+  const [showColor, setShowColor] = useState(false);
 
   const handleClickHide = () => {
     setshowNavbar(false);
@@ -17,6 +18,20 @@ export const Sidenavheader = () => {
   const handleClickShow = () => {
     setshowNavbar(true);
     localStorage.setItem("status", showNavbar);
+  };
+
+  const handleClickBackground = (item) => {
+    setMenuItems(
+      menuItems.map((element) => {
+        if (element.id === item.id) {
+          element.status = true;
+        } else {
+          element.status = false;
+        }
+
+        return element;
+      })
+    );
   };
   const sadmin = {
     picture: require("../Images/alan.png"),
@@ -36,12 +51,20 @@ export const Sidenavheader = () => {
         <div className=" flex justify-center pt-2 2xl:mb-14">
           <img className=" h-40" src={alankarnav} alt="navbar" />
         </div>
-        <div className="">
+        <div className="  h-[69vh] overflow-y-scroll">
           {menuItems.map((e, index) => (
-            <div key={index} className="flex place-items-start mt-5 2xl:mt-6 ">
+            <div
+              key={index + 1}
+              onClick={() => {
+                handleClickBackground(e, index + 1);
+              }}
+              className={`flex place-items-start mt-5 2xl:mt-6 ml-4 w-3/4 gap-4 py-3 ${
+                e.status ? "text-white bg-darkyellow rounded-[8px]" : ""
+              }`}
+            >
               <img
-                className=" text-lg font-normal mr-7 ml-14 2xl:ml-10"
-                src={e.img}
+                className=" text-lg font-normal pl-8"
+                src={e.status ? e.wimg : e.img}
                 alt="menuitems"
               />
               <Link to={`/menu/${e.link}`}>

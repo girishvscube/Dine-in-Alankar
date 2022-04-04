@@ -43,7 +43,7 @@ export const SideNavbar = () => {
         </div>
         <div>
           {menuItems.map((e, index) => (
-            <div key={index} className="flex place-items-start mt-5 ">
+            <div key={index} className="flex place-items-start mt-5">
               <img
                 className=" text-lg font-normal mr-7 ml-14 2xl:ml-10"
                 src={e.img}
