@@ -50,44 +50,53 @@ export const DetailOrder = ({ showOrderDetail }) => {
 
   const handleSendBill = () => {
     Swal.fire({
-      title: "Table Transfer",
-      html: `<div className="sendBill">
-          <p>Existing Table :</p>
-          <p>20A</p>
-        </div>`,
+      title: '<strong>Table Transfer</strong>',
+      html:`<div>
+      <p>Existing Table :&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>20A</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+      <br/>
+      <br/>
+      <p>Select Transfer Table :&emsp;&emsp;
+      <select>
+      <option value="one">Table 1</option>
+      <option value="two">Table 2</option>
+      <option value="three">Table 3</option>
+      </select>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+      </div>`,
       showCloseButton: true,
-      showConfirmButton: true,
-      confirmButtonText: "Submit",
-      customClass: {
-        popup: "swal2-popup",
-        showConfirmButton: "swal2-btn",
-        confirmButtonText: "swal2-btn-text",
-      },
-    });
+      focusConfirm: false,
+      confirmButtonText:'Submit',
+      confirmButtonClass:'confirm_btn'
+    })
   };
 
   const handlePrintBill = () => {
     Swal.fire({
-      title: "Payment",
-      html: `<div className = "bg-red-500">
-        <p><label>Name</label> <a>Rahul Kharche</a></p>
-      <p><label>Phone No</label> <a>987465321</a></p>
-        <b>Are you sure to Send Bill </b>
-        </div>`,
+      title: '<strong>Payment</strong>',
+      html:`<div>
+      <p>Name :&emsp;&emsp;&emsp;&emsp;<b>Sailu Chandragiri</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+      <br/>
+      <br/>
+      <p>Phone No :&emsp;&emsp;<b>+919550968914</b>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+      <br/>
+      <br/>
+      <p><b>Are you sure to send bill?</b></p>
+      </div>`,
       showCloseButton: true,
-      showConfirmButton: true,
-      confirmButtonColor: "#FFBE15",
-      confirmButtonText: "Yes",
+      focusConfirm: false,
       showCancelButton: true,
-      cancelButtonText: "No",
-      cancelButtonColor: "#FFBE15",
-      customClass: {
-        popup: "swal2-popup",
-        html: "swal2-container2",
-        showConfirmButton: "swal2-btn",
-        confirmButtonText: "swal2-btn-text",
-      },
-    });
+      showDenyButton: true,
+      confirmButtonText:'Yes',
+      cancelButtonText:'NC',
+      denyButtonText:'No',
+      cancelButtonColor:'white',
+      denyButtonColor:'white',
+      confirmButtonClass:'confirm_btn',
+      cancelButtonClass:'cancel_btn',
+      denyButtonClass:'cancel_btn',
+      
+    })
   };
   return (
     <div>

@@ -14,11 +14,11 @@ const ManageTable = () => {
   };
 
   return (
-    <div className="bg-white w-11/12 ml-14 pl-4 mt-4 rounded-lg mr-12 hei">
+    <div className=" h-[800px] pl-4 mt-4 rounded-lg">
       <div className="text-orange  mt-5 mb-3 font-semibold font-sans">
         All Items
       </div>
-      <div className=" w-full h-5/6  overflow-y-scroll font-sans">
+      <div className="h-full overflow-y-scroll font-sans">
         <Table className="">
           <Thead className="sticky top-0 border-b-2 mb-1 bg-white head ">
             <Tr className=" text-left">
@@ -49,8 +49,8 @@ const ManageTable = () => {
                   </Td>
                   <Td key={i} className="  pl-12 ">
                    <div className="flex flex-row update">
-                     <input type="number" className="w-14 h-9 rounded pl-1 pr-1 outline-none border-2 border-button_border"/>
-                     <button className="adding ml-3 text-xs text-white font-semibold pl-1.5 pr-1.5 p-0.5">Update</button>
+                     <input type="number" className="w-14 h-9 rounded pl-1 pr-1 outline-none border-2 border-button_border" />
+                     <button className="adding ml-3 text-xs text-white font-semibold pl-1.5 pr-1.5 p-0.5" onClick={handleClick}>Update</button>
                    </div>
                   </Td>
                   <Td key={i} className=" pr-24 ">

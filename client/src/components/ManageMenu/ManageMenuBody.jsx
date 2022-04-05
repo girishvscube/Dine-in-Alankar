@@ -6,11 +6,16 @@ import "./style.scss";
 
 const ManageMenuBody = () => {
   return (
-    <div  className='w-full bg-darkwhite managemenu_body'>
-      <ListOfItems/>
-      <hr className='w-11/12 ml-14 mt-1 mb-3 border-2 bord'/>
-      <SearchForMenu/>
-      <ManageTable/>
+    // <div  className=' pr-6  bg-red-400 managemenu_body'>
+    //   <ListOfItems/>
+    //   <hr className=' mt-1 mb-3 border-2 bord'/>
+    //   <SearchForMenu/>
+    //   <ManageTable/>
+    // </div>
+    <div className=" bg-red-300 w-screen">
+        <div className="h-[87vh] overflow-y-scroll">
+          
+        </div>
     </div>
   )
 }
