@@ -6,6 +6,11 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wdashboard.png"),
     status: false,
     link: "dashboard",
+    submenu: {
+      menulist: [],
+      status: false,
+      menuimg: [],
+    },
   },
   {
     id: 2,
@@ -14,6 +19,23 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wdinein.png"),
     status: false,
     link: "dinein",
+    submenu: {
+      menulist: [
+        "dashboard",
+        "Active Order",
+        "Past Order",
+        "Manage Table",
+        "KDS",
+      ],
+      status: false,
+      menuimg: [
+        require("./Images/Sidenavbar/dashboard.png"),
+        require("./Images/Sidenavbar/activeorder.png"),
+        require("./Images/Sidenavbar/pastorder.png"),
+        require("./Images/Sidenavbar/managetable.png"),
+        require("./Images/Sidenavbar/kds.png"),
+      ],
+    },
   },
   {
     id: 3,
@@ -22,6 +44,11 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wmanagemenu.png"),
     status: false,
     link: "managemenu",
+    submenu: {
+      menulist: [],
+      status: false,
+      menuimg: [],
+    },
   },
   {
     id: 4,
@@ -30,6 +57,11 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wmanagecategory.png"),
     status: false,
     link: "managecategory",
+    submenu: {
+      menulist: [],
+      status: false,
+      menuimg: [],
+    },
   },
   {
     id: 5,
@@ -38,6 +70,14 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wtakeaway.png"),
     status: false,
     link: "takeaway",
+    submenu: {
+      menulist: ["Dashboard", "Manage Order"],
+      status: false,
+      menuimg: [
+        require("./Images/Sidenavbar/dashboard.png"),
+        require("./Images/Sidenavbar/activeorder.png"),
+      ],
+    },
   },
   {
     id: 6,
@@ -46,6 +86,14 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wpartyorder.png"),
     status: false,
     link: "partyorder",
+    submenu: {
+      menulist: ["Active Order", "Past Order"],
+      status: false,
+      menuimg: [
+        require("./Images/Sidenavbar/activeorder.png"),
+        require("./Images/Sidenavbar/pastorder.png"),
+      ],
+    },
   },
   {
     id: 7,
@@ -54,6 +102,11 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wmanagestaff.png"),
     status: false,
     link: "managestaff",
+    submenu: {
+      menulist: [],
+      status: false,
+      menuimg: [],
+    },
   },
   {
     id: 8,
@@ -62,6 +115,11 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wfeedback.png"),
     status: false,
     link: "feedback",
+    submenu: {
+      menulist: [],
+      status: false,
+      menuimg: [],
+    },
   },
   {
     id: 9,
@@ -70,6 +128,11 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wreports.png"),
     status: false,
     link: "reports",
+    submenu: {
+      menulist: [],
+      status: false,
+      menuimg: [],
+    },
   },
   {
     id: 10,
@@ -78,5 +141,10 @@ export const obj = [
     wimg: require("./Images/Sidenavbar/wsetting.png"),
     status: false,
     link: "setting",
+    submenu: {
+      menulist: [],
+      status: false,
+      menuimg: [],
+    },
   },
 ];

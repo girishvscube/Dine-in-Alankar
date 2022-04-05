@@ -1,12 +1,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: 
-    {
+    extend: {
       colors: {
         yellow: "#FFE885",
         orange: "#F0912C",
-        button_border:"#fed7aa",
+        button_border: "#fed7aa",
         pink: "#FFF7E2",
         sidenav_pink: "#FFF4D4",
         nav_text: "#856702",
@@ -22,6 +21,7 @@ module.exports = {
         bgpink: "#FCEDEA",
         borderpink: "#FEA6A6",
         yellowstar: "#FFBB10",
+        managetable: "#8F8F8F",
       },
       width: {
         85: "20.4rem",
@@ -40,9 +40,9 @@ module.exports = {
       },
     },
   },
-  variants:{
-    extend:{
-      backgroundcolor:["checked"],
+  variants: {
+    extend: {
+      backgroundcolor: ["checked"],
     },
   },
   plugins: [],

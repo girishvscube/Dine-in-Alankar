@@ -1,8 +1,7 @@
-import React from 'react'
-import ListOfItems from './ListOfItems'
-import ManageTable from './ManageTable'
-import SearchForMenu from './SearchForMenu'
-import "./style.scss";
+import React from "react";
+import ListOfItems from "./ListOfItems";
+import ManageTable from "./ManageTable";
+import SearchForMenu from "./SearchForMenu";
 
 const ManageMenuBody = () => {
   return (
@@ -17,7 +16,7 @@ const ManageMenuBody = () => {
           
         </div>
     </div>
-  )
-}
+  );
+};
 
-export default ManageMenuBody
+export default ManageMenuBody;

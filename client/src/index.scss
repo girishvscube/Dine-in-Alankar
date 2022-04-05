@@ -1,31 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-#toggle_switch::after{
-    content:'';
-    @apply h-4 w-4 mt-0.5 ml-6 rounded-full bg-orange  absolute left-0 top-0 transform scale-110 transition duration-200;
+#toggle_switch::after {
+  content: "";
+  @apply h-4 w-4 mt-0.5 ml-6 rounded-full bg-orange  absolute left-0 top-0 transform scale-110 transition duration-200;
 }
 
-#toggle_switch:checked::after{
-    @apply transform scale-110 -translate-x-5 bg-gray-400 border-2 border-gray-400 ;
+#toggle_switch:checked::after {
+  @apply transform scale-110 -translate-x-5 bg-gray-400 border-2 border-gray-400;
 }
 
-
-.cancel_btn{
-    border: 1px solid rgba(240, 145, 44, 0.34) !important;
-    color: orange !important;
-    width: 130px !important;
-    margin-left: 50px !important;
+@font-face {
+  font-family: "DS-digital";
+  src: url("./Fonts/DS-digital/DS-DIGIB.TTF") format("truetype");
+  font-weight: 600;
 }
 
-.confirm_btn{
-    background-color: orange !important;
-    background-image: -webkit-linear-gradient(75deg, orange 50%, rgb(248, 177, 45) 50%) !important;
-    border: 1px solid orange !important;
-    width: 130px !important;
+.digitalFont {
+  font-family: "DS-digital";
+}
+@layer base {
+  html {
+    font-family: "Source Sans Pro";
+    -moz-osx-font-smoothing: "Source Sans Pro";
+    -webkit-font-smoothing: "Source Sans Pro";
+  }
 }
 
-.tit{
-    color: red !important;
+.confirm_btn {
+  background-color: orange !important;
+  background-image: -webkit-linear-gradient(
+    75deg,
+    orange 50%,
+    rgb(248, 177, 45) 50%
+  ) !important;
+  border: 1px solid orange !important;
+  width: 130px !important;
+}
+
+.tit {
+  color: red !important;
 }
