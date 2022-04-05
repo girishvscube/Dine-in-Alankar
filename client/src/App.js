@@ -7,9 +7,10 @@ import { ForgotPassword } from "./Pages/Login/ForgotPassword";
 import { Login } from "./Pages/Login/Login";
 import { ResetPassword } from "./Pages/Login/ResetPassword";
 import { Feedback } from "./Pages/Feedback/Feedback";
-import ManageMenuPage from "./components/ManageMenu/ManageMenuPage";
 import ManageCategoryPage from "./components/ManageCategory/ManageCategoryPage/ManageCategoryPage";
-import ManageMenuBody from "./components/ManageMenu/ManageMenuBody";
+import ManageMenuBody from "./Pages/ManageMenu/ManageMenuBody"
+import AddMenuBody from "./components/ManageMenu/AddMenuBody";
+
 //import { ManageTables } from "./components/ManageTables/ManageTables";
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
             <Route exact path="managetable" element={<CreateNewOrder />} />
           </Route>
           <Route exact path="managemenu" element={<ManageMenuBody />} />
-          <Route exact path="takeaway" element={<ManageMenuPage />} />
+          <Route exact path="addmenu" element={<AddMenuBody/>} />
           <Route exact path="managecategory" element={<ManageCategoryPage />} />
           <Route exact path="feedback" element={<Feedback />} />
           <Route exact path="reports" element={<Feedback />} />

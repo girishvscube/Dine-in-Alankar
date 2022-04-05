@@ -14,13 +14,13 @@ const ManageTable = () => {
   };
 
   return (
-    <div className=" h-[800px] pl-4 mt-4 rounded-lg">
+    <div className=" h-[70vh] pl-4 mt-4 rounded-lg">
       <div className="text-orange  mt-5 mb-3 font-semibold font-sans">
         All Items
       </div>
       <div className="h-full overflow-y-scroll font-sans">
-        <Table className="">
-          <Thead className="sticky top-0 border-b-2 mb-1 bg-white head ">
+        <Table className="relative">
+          <Thead className="sticky top-0 border-b-2 mb-1  bg-white head ">
             <Tr className=" text-left">
               <Th className="font-sans pb-2">S. No.</Th>
               <Th className="font-sans pl-10 pb-2">Item Name</Th>
@@ -53,7 +53,7 @@ const ManageTable = () => {
                      <button className="adding ml-3 text-xs text-white font-semibold pl-1.5 pr-1.5 p-0.5" onClick={handleClick}>Update</button>
                    </div>
                   </Td>
-                  <Td key={i} className=" pr-24 ">
+                  <Td key={i} className="pr-24">
                     <ToggleSwitch />
                   </Td>
                   <Td className=" flex justify-center pr-12 pt-6 ">
