@@ -1,23 +1,19 @@
 import { obj } from "../data";
 import { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
+
 import alankarnav from "../Images/alan.png";
 import scube from "../Images/scube.png";
-import { Link, Outlet } from "react-router-dom";
-import CloseIcon from "@mui/icons-material/Close";
-import MenuIcon from "@mui/icons-material/Menu";
+import arrowdown from "../Images/Sidenavbar/arrowdown.svg";
 
 export const Sidenavheader = () => {
   const [menuItems, setMenuItems] = useState(obj);
   const [showNavbar, setshowNavbar] = useState(true);
-  const [showColor, setShowColor] = useState(false);
 
-  const handleClickHide = () => {
-    setshowNavbar(false);
-    localStorage.setItem("status", showNavbar);
-  };
-  const handleClickShow = () => {
-    setshowNavbar(true);
-    localStorage.setItem("status", showNavbar);
+  const sadmin = {
+    picture: require("../Images/alan.png"),
+    name: "Ramya",
+    role: "Super Admin",
   };
 
   const handleClickBackground = (item) => {
@@ -33,11 +29,21 @@ export const Sidenavheader = () => {
       })
     );
   };
-  const sadmin = {
-    picture: require("../Images/alan.png"),
-    name: "Ramya",
-    role: "Super Admin",
+
+  const handleClickSubmenu = (item) => {
+    setMenuItems(
+      menuItems.map((element) => {
+        if (element.id === item.id) {
+          element.submenu.status = true;
+        } else {
+          element.submenu.status = false;
+        }
+
+        return element;
+      })
+    );
   };
+
   return (
     <>
       {/* SideMenu */}
@@ -57,6 +63,7 @@ export const Sidenavheader = () => {
               key={index + 1}
               onClick={() => {
                 handleClickBackground(e, index + 1);
+                console.log(e.submenu.menulist.length);
               }}
               className={`flex place-items-start mt-5 2xl:mt-6 ml-4 w-3/4 gap-4 py-3 ${
                 e.status ? "text-white bg-darkyellow rounded-[8px]" : ""
@@ -67,9 +74,27 @@ export const Sidenavheader = () => {
                 src={e.status ? e.wimg : e.img}
                 alt="menuitems"
               />
-              <Link to={`/menu/${e.link}`}>
-                <p className=" w-36 relative bottom-[1px]">{e.name}</p>
-              </Link>
+
+              <div className=" w-36  flex justify-between  ">
+                <Link to={`/menu/${e.link}`}>
+                  <p className="">{e.name}</p>
+                </Link>
+                {e.submenu.menulist.length > 0 ? (
+                  <div>
+                    <img
+                      onClick={() => {
+                        handleClickSubmenu(e);
+                      }}
+                      className="mr-4 relative top-2 cursor-pointer"
+                      src={arrowdown}
+                      alt="arrowup"
+                    />
+                    <div>{e.submenu.status}</div>
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
             </div>
           ))}
         </div>
