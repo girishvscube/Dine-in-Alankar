@@ -8,7 +8,7 @@ const AddNewCategoryBody = () => {
   return (
      <div className="h-[88vh] pt-3 mt-2 pl-10 pr-8 bg-darkwhite overflow-y-scroll">
      <AddNewCategoryList/>
-     <hr className=' mt-1 mb-3 border-2 bord'/>
+     <hr className=' mt-3 mb-6 border-2 bord'/>
      <CategoryName/>
      <AddNewCategoryForm/>
    </div>

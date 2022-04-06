@@ -2,17 +2,17 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 
 
-const CategoryName = () => {
+const EditName = () => {
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm();
+      const onSubmit = (data) => console.log(data);
 
   return (
-   <div className=' name  mt-4 flex flex-col'>
+    <div className=' name  mt-4 flex flex-col'>
        <p className='font-semibold text-base'>Category Name</p>
         <input className='w-1/3  mt-2 h-3/5 rounded-lg bg-search outline-none focus-within:border-2 border-button_border font-sans pl-2' type="text" placeholder='' {...register("Name", {
                 required: true,
@@ -27,4 +27,4 @@ const CategoryName = () => {
   )
 }
 
-export default CategoryName
+export default EditName

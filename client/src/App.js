@@ -13,9 +13,11 @@ import { PastOrders } from "./Pages/PastOrders/PastOrders";
 import { ManageTables } from "./components/ManageTables/ManageTables";
 import { KDS } from "./Pages/KDS/KDS";
 import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody";
+import CategoryBody from "./components/ManageCategory/EditCategory/CategoryBody";
 import AddMenuBody from "./components/ManageMenu/AddMenuBody";
 import EditMenuBody from "./components/ManageMenu/EditMenuBody";
 import { CreateNewOrder } from "./Pages/CreateNewOrder/CreateNewOrder";
+import ItemsBody from "./components/TakeAway/AddItems/ItemsBody";
 // import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody";
 // import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
 // import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
@@ -55,6 +57,11 @@ function App() {
           {/* ManageCategory Route */}
           <Route exact path="managecategory" element={<ManageCategoryBody />} />
           <Route exact path="addnewcategory" element={<AddNewCategoryBody />} />
+          <Route exact path="editcategory" element={<CategoryBody/>}/>
+
+          {/* Take away */}
+          <Route exact path="itemdetails" element={<ItemsBody/>}/>
+
           {/* <Route exact path="addmenu" element={<AddMenuBody />} /> */}
           <Route exact path="feedback" element={<Feedback />} />
           <Route exact path="reports" element={<Feedback />} />

@@ -5,20 +5,21 @@ import Radio from "@mui/material/Radio";
 import { color } from "@mui/system";
 import food from "../../../Images/ManageCategory/fast-food.png"
 
-const AddNewCategoryForm = () => {
-  const [selectedValue, setSelectedValue] = React.useState("a");
+const CategoryForm = () => {
 
-  const handleChange = (event) => {
-    setSelectedValue(event.target.value);
-  };
+    const [selectedValue, setSelectedValue] = React.useState("a");
 
-  const controlProps = (item) => ({
-    checked: selectedValue === item,
-    onChange: handleChange,
-    value: item,
-    name: "color-radio-button-demo",
-    inputProps: { "aria-label": item },
-  });
+    const handleChange = (event) => {
+      setSelectedValue(event.target.value);
+    };
+  
+    const controlProps = (item) => ({
+      checked: selectedValue === item,
+      onChange: handleChange,
+      value: item,
+      name: "color-radio-button-demo",
+      inputProps: { "aria-label": item },
+    });
 
   return (
     <div className="mt-8 h-[70vh]">
@@ -210,11 +211,10 @@ const AddNewCategoryForm = () => {
         <button className=" mt-10 bg-search rounded-md pl-3 pr-3 text-3xl text-orange">+</button>
       </div>
       <div className="w-full h-1/6 flex justify-center items-center">
-            <button className="add pt-4 pb-4 pl-6 pr-6 rounded-lg text-base font-semibold font-sans text-white">Add Category</button>
+            <button className="add pt-4 pb-4 pl-6 pr-6 rounded-lg text-base font-semibold font-sans text-white">Update Category</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AddNewCategoryForm;
-
+export default CategoryForm
