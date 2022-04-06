@@ -9,7 +9,6 @@ export const obj = [
     submenu: {
       menulist: [],
       status: false,
-      menuimg: [],
     },
   },
   {
@@ -20,20 +19,28 @@ export const obj = [
     status: false,
     link: "dinein",
     submenu: {
-      menulist: [
-        "dashboard",
-        "Active Order",
-        "Past Order",
-        "Manage Table",
-        "KDS",
-      ],
       status: false,
-      menuimg: [
-        require("./Images/Sidenavbar/dashboard.png"),
-        require("./Images/Sidenavbar/activeorder.png"),
-        require("./Images/Sidenavbar/pastorder.png"),
-        require("./Images/Sidenavbar/managetable.png"),
-        require("./Images/Sidenavbar/kds.png"),
+      menulist: [
+        {
+          menuItem: "Dashboard",
+          menuimg: require("./Images/Sidenavbar/dashboard.png"),
+        },
+        {
+          menuItem: "Active Order",
+          menuimg: require("./Images/Sidenavbar/activeorder.png"),
+        },
+        {
+          menuItem: "Past Order",
+          menuimg: require("./Images/Sidenavbar/pastorder.png"),
+        },
+        {
+          menuItem: "Manage Table",
+          menuimg: require("./Images/Sidenavbar/managetable.png"),
+        },
+        {
+          menuItem: "KDS",
+          menuimg: require("./Images/Sidenavbar/kds.png"),
+        },
       ],
     },
   },
@@ -47,7 +54,6 @@ export const obj = [
     submenu: {
       menulist: [],
       status: false,
-      menuimg: [],
     },
   },
   {
@@ -60,7 +66,6 @@ export const obj = [
     submenu: {
       menulist: [],
       status: false,
-      menuimg: [],
     },
   },
   {
@@ -71,11 +76,16 @@ export const obj = [
     status: false,
     link: "takeaway",
     submenu: {
-      menulist: ["Dashboard", "Manage Order"],
       status: false,
-      menuimg: [
-        require("./Images/Sidenavbar/dashboard.png"),
-        require("./Images/Sidenavbar/activeorder.png"),
+      menulist: [
+        {
+          menuItem: "Dashboard",
+          menuimg: require("./Images/Sidenavbar/dashboard.png"),
+        },
+        {
+          menuItem: "Manage Order",
+          menuimg: require("./Images/Sidenavbar/activeorder.png"),
+        },
       ],
     },
   },
@@ -87,11 +97,16 @@ export const obj = [
     status: false,
     link: "partyorder",
     submenu: {
-      menulist: ["Active Order", "Past Order"],
       status: false,
-      menuimg: [
-        require("./Images/Sidenavbar/activeorder.png"),
-        require("./Images/Sidenavbar/pastorder.png"),
+      menulist: [
+        {
+          menuItem: "Active Order",
+          menuimg: require("./Images/Sidenavbar/activeorder.png"),
+        },
+        {
+          menuItem: "Past Order",
+          menuimg: require("./Images/Sidenavbar/pastorder.png"),
+        },
       ],
     },
   },
@@ -105,7 +120,6 @@ export const obj = [
     submenu: {
       menulist: [],
       status: false,
-      menuimg: [],
     },
   },
   {
@@ -118,7 +132,6 @@ export const obj = [
     submenu: {
       menulist: [],
       status: false,
-      menuimg: [],
     },
   },
   {
@@ -131,7 +144,6 @@ export const obj = [
     submenu: {
       menulist: [],
       status: false,
-      menuimg: [],
     },
   },
   {
@@ -144,7 +156,6 @@ export const obj = [
     submenu: {
       menulist: [],
       status: false,
-      menuimg: [],
     },
   },
 ];

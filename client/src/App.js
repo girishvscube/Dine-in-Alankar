@@ -10,6 +10,9 @@ import { Feedback } from "./Pages/Feedback/Feedback";
 import ManageMenuPage from "./components/ManageMenu/ManageMenuPage";
 import ManageCategoryPage from "./components/ManageCategory/ManageCategoryPage/ManageCategoryPage";
 import ManageMenuBody from "./components/ManageMenu/ManageMenuBody";
+import { PastOrders } from "./Pages/PastOrders/PastOrders";
+import { ManageTables } from "./components/ManageTables/ManageTables";
+import { KDS } from "./Pages/KDS/KDS";
 //import { ManageTables } from "./components/ManageTables/ManageTables";
 
 function App() {
@@ -23,9 +26,11 @@ function App() {
         <Route exact path="/menu" element={<Sidenavheader />}>
           <Route exact path="dashboard" element={<Dashboard />} />
           <Route exact path="dinein" element={<ActiveOrder />}>
-            <Route exact path="activeorder" element={<Dashboard />} />
-            <Route exact path="createneworder" element={<CreateNewOrder />} />
-            <Route exact path="managetable" element={<CreateNewOrder />} />
+            <Route exact path="activeorder" element={<ActiveOrder />} />
+            <Route exact path="dashboard" element={<Dashboard />} />
+            <Route exact path="pastorder" element={<PastOrders />} />
+            <Route exact path="managetable" element={<ManageTables />} />
+            <Route exact path="KDS" element={<KDS />} />
           </Route>
 
           <Route exact path="managemenu" element={<ManageMenuBody />} />
@@ -37,7 +42,6 @@ function App() {
           <Route exact path="managestaff" element={<Dashboard />} />
         </Route>
       </Routes>
-      {/* <ManageTables /> */}
     </>
   );
 }

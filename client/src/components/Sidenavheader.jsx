@@ -1,11 +1,11 @@
 import { obj } from "../data";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import "./style.scss";
 
 import alankarnav from "../Images/alan.png";
 import scube from "../Images/scube.png";
-import arrowdown from "../Images/Sidenavbar/arrowdown.svg";
-
+import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
 export const Sidenavheader = () => {
   const [menuItems, setMenuItems] = useState(obj);
   const [showNavbar, setshowNavbar] = useState(true);
@@ -34,7 +34,7 @@ export const Sidenavheader = () => {
     setMenuItems(
       menuItems.map((element) => {
         if (element.id === item.id) {
-          element.submenu.status = true;
+          element.submenu.status = !element.submenu.status;
         } else {
           element.submenu.status = false;
         }
@@ -59,42 +59,67 @@ export const Sidenavheader = () => {
         </div>
         <div className="  h-[69vh] overflow-y-scroll">
           {menuItems.map((e, index) => (
-            <div
-              key={index + 1}
-              onClick={() => {
-                handleClickBackground(e, index + 1);
-                console.log(e.submenu.menulist.length);
-              }}
-              className={`flex place-items-start mt-5 2xl:mt-6 ml-4 w-3/4 gap-4 py-3 ${
-                e.status ? "text-white bg-darkyellow rounded-[8px]" : ""
-              }`}
-            >
-              <img
-                className=" text-lg font-normal pl-8"
-                src={e.status ? e.wimg : e.img}
-                alt="menuitems"
-              />
+            <div key={index + 1}>
+              <div
+                onClick={() => {
+                  handleClickBackground(e, index + 1);
+                  console.log(e.submenu.menulist.length);
+                }}
+                className={`flex place-items-start mt-5 2xl:mt-6 ml-4 w-3/4 gap-4 py-3 ${
+                  e.status ? "text-white bg-darkyellow rounded-[8px]" : ""
+                }`}
+              >
+                <img
+                  className=" text-lg font-normal pl-8"
+                  src={e.status ? e.wimg : e.img}
+                  alt="menuitems"
+                />
 
-              <div className=" w-36  flex justify-between  ">
-                <Link to={`/menu/${e.link}`}>
-                  <p className="">{e.name}</p>
-                </Link>
-                {e.submenu.menulist.length > 0 ? (
-                  <div>
-                    <img
-                      onClick={() => {
-                        handleClickSubmenu(e);
-                      }}
-                      className="mr-4 relative top-2 cursor-pointer"
-                      src={arrowdown}
-                      alt="arrowup"
-                    />
-                    <div>{e.submenu.status}</div>
-                  </div>
-                ) : (
-                  <div></div>
-                )}
+                <div className=" w-36  flex justify-between  ">
+                  <Link to={`/menu/${e.link}`}>
+                    <p className="">{e.name}</p>
+                  </Link>
+                  {e.submenu.menulist.length > 0 ? (
+                    <div>
+                      <ArrowDropDownRoundedIcon
+                        onClick={() => {
+                          handleClickSubmenu(e);
+                        }}
+                        className={`mr-4  cursor-pointer ${
+                          e.submenu.status ? "rotateAnimation" : ""
+                        }`}
+                      />
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
               </div>
+              {e.submenu.status ? (
+                <div>
+                  {e.submenu.menulist.map((item, index) => (
+                    <div
+                      className="flex justify-center gap-3 w-3/4 my-3  ml-4 py-3 rounded-[8px] hover:bg-submenu "
+                      key={index + 1}
+                    >
+                      <img
+                        className="ml-2 object-contain"
+                        src={item.menuimg}
+                        alt="sub menu"
+                      />
+                      <Link
+                        to={`/menu/dinein/${item.menuItem
+                          .toLowerCase()
+                          .replace(" ", "")}`}
+                      >
+                        <p className=" w-24">{item.menuItem}</p>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           ))}
         </div>

@@ -71,3 +71,8 @@
 .table_cat {
   height: 95%;
 }
+
+.rotateAnimation {
+  transition: 750ms ease-in-out;
+  transform: rotate(180deg);
+}

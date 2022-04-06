@@ -22,6 +22,7 @@ module.exports = {
         borderpink: "#FEA6A6",
         yellowstar: "#FFBB10",
         managetable: "#8F8F8F",
+        submenu: "#F7BF41",
       },
       width: {
         85: "20.4rem",
