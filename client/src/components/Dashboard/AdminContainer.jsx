@@ -43,16 +43,16 @@ export const AdminContainer = () => {
           />
         </div>
         <div className="mt-6 px-11">
-          <div className="grid grid-flow-col mb-11">
+          <div className="flex justify-between mb-11 ">
             <p className=" text-2xl font-semibold text-darkyellow">Date</p>
-            <div className=" justify-self-center">
+            <div className="  ">
               <img
                 onClick={handleClick}
-                className=" cursor-pointer "
+                className=" w-5 cursor-pointer mr-0"
                 src={dateimg}
                 alt="calender"
               />
-              {showCalender ? <Calender /> : ""}
+              <div className="mt-4"> {showCalender ? <Calender /> : ""}</div>
             </div>
           </div>
           <CurveLineChart />
