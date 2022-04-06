@@ -34,7 +34,7 @@ export const ManageTables = () => {
       {/* Manage Table Data */}
       <div className="flex flex-grow gap-10 pl-11 mt-11">
         {obj.map((e) => (
-          <div className="w-1/4">
+          <div className="w-2/6 2xl:w-3/12 ">
             <div
               className={`flex justify-around text-white text-xl font-semibold rounded-t-lg ${
                 e.status === "Occupied" ? " bg-darkyellow" : " bg-managetable"
@@ -44,7 +44,7 @@ export const ManageTables = () => {
               <p className="py-6">Waiter : {e.waiter}</p>
               <img className=" w-5 object-contain" src={edit} alt="edit" />
             </div>
-            <div className="font-semibold text-[#000000] text-base flex flex-col gap-2 mt-3 pl-5">
+            <div className="font-semibold text-[#000000] text-base flex flex-col gap-2 mt-3 px-5">
               <div className="flex">
                 <p className="w-[130px] ">Status:</p>
                 <p className=" text-lg font-normal relative bottom-[1px]">

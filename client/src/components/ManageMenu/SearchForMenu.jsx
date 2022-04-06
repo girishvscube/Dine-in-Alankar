@@ -1,14 +1,17 @@
 import React from "react";
 import "./style.scss";
 import search from "../../Images/ActiveOrder/Search_fill.png";
+import { Link } from "react-router-dom";
 
 const SearchForMenu = () => {
   return (
     <div className="flex justify-between">
       <div className=" flex ">
-        <button className=" pl-9 pr-9 pt-3 pb-3 text-xs add text-center  rounded-lg text-white font-semibold font-sans">
-          Add New Items
-        </button>
+        <Link to="/menu/addmenu">
+          <button className=" pl-9 pr-9 pt-3 pb-3 text-xs add text-center  rounded-lg text-white font-semibold font-sans">
+            Add New Items
+          </button>
+        </Link>
         <div className=" text-xs  ">
           <select className=" border-2 pl-3 pr-8 pt-4 pb-4  mr-2 ml-6 border-button_border text-xs text-orange rounded-lg ">
             <option className="many">All</option>

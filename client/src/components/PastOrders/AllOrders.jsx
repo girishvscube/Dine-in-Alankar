@@ -16,11 +16,11 @@ export const AllOrders = () => {
 
   const handleClick = (el) => {};
   return (
-    <div className="ml-11 mr-11 mt-10">
+    <div className="mx-11 mt-10">
       <h1 className=" text-2xl font-bold text-darkyellow my-8 ml-11">
         All Orders
       </h1>
-      <div className="h-[50vh] text-center  overflow-y-scroll ">
+      <div className="h-[60vh] text-center  overflow-y-scroll  divBorder pt-2 ">
         <table className=" table-auto w-full border-collapse">
           <thead>
             <tr className="border-b-2  tableBorder  ">
