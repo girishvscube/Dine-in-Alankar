@@ -1,8 +1,8 @@
 import React from "react";
-import ManageStaffButtons from "./ManageStaffButtons";
-import ManageStaffList from "./ManageStaffList";
-import ManageStaffTable from "./ManageStaffTable";
-import "./style.scss";
+import ManageStaffButtons from '../../components/ManageStaff/Managestaff/ManageStaffButtons';
+import ManageStaffList from '../../components/ManageStaff/Managestaff/ManageStaffList';
+import ManageStaffTable from '../../components/ManageStaff/Managestaff/ManageStaffTable'
+import '../../components/ManageStaff/Managestaff/style.scss';
 
 const ManageStaffBody = () => {
   return (

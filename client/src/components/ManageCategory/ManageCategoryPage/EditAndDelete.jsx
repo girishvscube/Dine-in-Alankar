@@ -1,6 +1,9 @@
 import React from 'react'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import trash from "../../../Images/ManageMenu/DUSTBIN.svg"
+import line from "../../../Images/ManageMenu/MIDLINE.svg"
+import edit from "../../../Images/ManageMenu/EDIT ICON.svg"
 
 
 const MySwal = withReactContent(Swal)
@@ -26,13 +29,13 @@ const EditAndDelete = () => {
   return (
     <div className='flex felx-row p-3'>
                       <div className='pr-3'>
-                          <img src='EDIT ICON.svg' alt='edit icon'/>
+                          <img src={edit} alt='edit icon'/>
                       </div>
                       <div>
-                          <img src='MIDLINE.svg' alt='midline'/>
+                          <img src={line} alt='midline'/>
                       </div>
                       <div className='pl-3' >
-                          <img src='DUSTBIN.svg' alt='dustbin' onClick={sweetalert}/>
+                          <img src={trash} alt='dustbin' onClick={sweetalert}/>
                       </div>
                   </div>
   )

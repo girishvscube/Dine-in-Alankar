@@ -3,7 +3,7 @@ import "./style.scss";
 
 const AddNewCategoryList = () => {
   return (
-    <div className="w-11/12 h-3/12 ml-14 mt-2 mb-3 list">
+    <div className="">
       <p className="font-semibold text-lg text-orange mb-1 font-sans">
         Add New Category
       </p>

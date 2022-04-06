@@ -3,6 +3,7 @@ import "./style.scss";
 import { orange } from "@mui/material/colors";
 import Radio from "@mui/material/Radio";
 import { color } from "@mui/system";
+import food from "../../../Images/ManageCategory/fast-food.png"
 
 const AddNewCategoryForm = () => {
   const [selectedValue, setSelectedValue] = React.useState("a");
@@ -20,7 +21,7 @@ const AddNewCategoryForm = () => {
   });
 
   return (
-    <div className="h-4/6 ml-14 mt-6 w-11/12">
+    <div className="mt-8 h-[70vh]">
         <div className="w-full h-1/4 grid grid-cols-9 pr-28">
         <div className=" flex flex-row">
           <Radio className=""
@@ -32,7 +33,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         
         <div className=" flex flex-row">
@@ -45,7 +46,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -57,7 +58,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -69,7 +70,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -81,7 +82,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -93,7 +94,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -105,7 +106,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -117,7 +118,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -129,7 +130,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -141,7 +142,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -153,7 +154,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -165,7 +166,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -177,7 +178,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -189,7 +190,7 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
         <div className=" flex flex-row">
           <Radio className=""
@@ -202,12 +203,14 @@ const AddNewCategoryForm = () => {
               },
             }}
           />
-          <img src="fast-food.png" alt="food image"/>
+          <img src={food} alt="food image"/>
         </div>
       </div>
-      <div className="mb-10"></div>
+      <div className="mb-10">
+        <button className=" mt-10 bg-search rounded-md pl-3 pr-3 text-3xl text-orange">+</button>
+      </div>
       <div className="w-full h-1/6 flex justify-center items-center">
-            <button className="add pt-3 pb-3 pl-9 pr-9 rounded-lg text-xs font-semibold font-sans text-white">Add Category</button>
+            <button className="add pt-4 pb-4 pl-9 pr-9 rounded-lg text-xs font-semibold font-sans text-white">Add Category</button>
       </div>
     </div>
   );
