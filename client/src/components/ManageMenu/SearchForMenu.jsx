@@ -19,7 +19,7 @@ const SearchForMenu = () => {
           </select>
         </div>
       </div>
-      <div className="w-1/2 bg-search focus-within:border-2 border-amber-200 text-orange  flex justify-between p-2 rounded-lg ">
+      <div className="w-1/2 bg-search focus-within:border-2 border-button_border text-orange  flex justify-between p-2 rounded-lg ">
         <div className=" pl-2  font-semibold">
           <input
             type="text"

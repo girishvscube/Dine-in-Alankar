@@ -82,16 +82,16 @@ const EditMenuForm = () => {
             <p className="text-xs font-semibold font-sans">Meal Type</p>
             <div className="w-5/6 h-12  flex justify-between flex-row">
               <div className="w-1/3 h-full pt-2 form-group flex felx-row">
-                <input type="checkbox" className="h-4/5 check  w-2/12" />
-                <label className="mt-2 ml-2 text-xs font-sans">Breakfast</label>
+                <input type="checkbox" id="one" className="h-4/5 check  w-2/12" />
+                <label className="mt-2 ml-2 text-xs font-sans" for="one">Breakfast</label>
               </div>
               <div className="w-1/3 h-full pt-2 form-group   flex felx-row">
-                <input type="checkbox" className="h-4/5 w-2/12" />
-                <label className="mt-2 ml-2 text-xs font-sans">Lunch</label>
+                <input type="checkbox"  id="two" className="h-4/5 w-2/12" />
+                <label className="mt-2 ml-2 text-xs font-sans" for="two">Lunch</label>
               </div>
               <div className="w-1/3 h-full pt-2 form-group   flex felx-row">
-                <input type="checkbox" className="h-4/5 w-2/12" />
-                <label className="mt-2 ml-2 text-xs font-sans">Dinner</label>
+                <input type="checkbox" id="three" className="h-4/5 w-2/12" />
+                <label className="mt-2 ml-2 text-xs font-sans" for="three">Dinner</label>
               </div>
             </div>
           </div>

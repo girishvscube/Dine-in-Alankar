@@ -11,14 +11,14 @@ const AddNewStaffForm = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className=" for">
-      <div className="w-11/12 ml-14 h-4/6 grid  grid-rows-3 pr-20 grid-flow-col">
+    <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
+      <div className="h-[40vh] grid  grid-rows-3 pr-20 grid-flow-col">
         <div className=" mr-10 flex flex-col">
           <p className="font-sans font-semibold text-xs mb-1">Name</p>
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow"
+            className="h-2/5 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -40,7 +40,7 @@ const AddNewStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
+            className="h-2/5 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
             {...register("Phone", {
               required: true,
               maxLength: 20,
@@ -62,7 +62,7 @@ const AddNewStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 text-orange w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow"
+            className="h-2/5 text-orange w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Role", {
               required: true,
               maxLength: 20,
@@ -84,7 +84,7 @@ const AddNewStaffForm = () => {
           <input
             type="email"
             placeholder=""
-            className="h-2/5 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
+            className="h-2/5 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Email", {
               required: true,
               pattern:
@@ -103,7 +103,7 @@ const AddNewStaffForm = () => {
           <input
             type="password"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow"
+            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Password", {
               required: true,
               maxLength: 8,
@@ -125,7 +125,7 @@ const AddNewStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-yellow "
+            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -143,33 +143,40 @@ const AddNewStaffForm = () => {
           )}
         </div>
       </div>
-      <div className="w-11/12 ml-14 h-1/4 mt-5 flex justify-between">
-        <div className="w-2/5 h-10/12  flex flex-col">
+      <div className="h-[18vh] mt-5 flex justify-between">
+        <div className="w-3/6 h-10/12  flex flex-col">
           <p className="font-sans text-xs font-semibold mb-2">Upload Image</p>
-          <input type="file" className=" h-3/4 w-1/4 rounded-md  border-yellow border-dashed border-2 bg-search ml-1"></input>
+          <input type="file" className=" h-3/4 w-1/5 rounded-md bg-search ml-1 border-2 border-orange border-dashed"></input>
         </div>
-        <div className="w-3/5 h-10/12 pt-2">
-          <div className="w-8/12 h-1/2 ml-20 flex flex-row">
-            <input
-              className="w-1/12 h-2/5  outline-none"
-              type="checkbox"
-            />
-            <p className="font-sans ml-2 mt-1">20A</p>
-            <input className="w-1/12 h-2/5 rounded-md ml-5" type="checkbox" />
-            <p className="font-sans ml-2 mt-1">20A</p>
-            <input className="w-1/12 h-2/5 rounded-md ml-5" type="checkbox" />
-            <p className="font-sans ml-2 mt-1">20A</p>
-            <input className="w-1/12 h-2/5 rounded-md ml-5" type="checkbox" />
-            <p className="font-sans ml-2 mt-1">20A</p>
-            <input className="w-1/12 h-2/5 rounded-md ml-5" type="checkbox" />
-            <p className="font-sans ml-2 mt-1">20A</p>
+        <div className="w-3/5 h-10/12   pt-2">
+          <div className="w-8/12 h-1/2 ml-4 flex flex-row">
+           <div className="form-group mr-8">
+           <input className="outline-none" id="one" type="checkbox"/>
+            <label className="font-sans" for="one">20A</label>
+           </div>
+            <div className="form-group mr-8">
+            <input className="rounded-md ml-5" id="two" type="checkbox" />
+            <label className="font-sans" for="two">20A</label>
+            </div>
+            <div className="form-group mr-8">
+              <input type="checkbox" id="three"/>
+              <label for="three">20A</label>
+            </div>
+            <div className="form-group mr-8">
+              <input type="checkbox" id="four"/>
+              <label for="four">20A</label>
+            </div>
+            <div className="form-group mr-8">
+              <input type="checkbox" id="five"/>
+              <label for="five">20A</label>
+            </div>
           </div>
         </div>
       </div>
       <div className="w-11/12 ml-12 h-1/6 mt-1 flex items-center justify-center">
         <button
           type="submit"
-          className="add font-sans text-white pl-7 pr-7 pt-2 pb-2 rounded-lg border-orange"
+          className="add font-sans text-white pl-7 pr-7 pt-3 pb-3 rounded-lg border-orange"
         >
           Create Staff
         </button>

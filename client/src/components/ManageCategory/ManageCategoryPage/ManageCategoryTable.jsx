@@ -5,10 +5,12 @@ import Data from "../../Data2.json"
 import EditAndDelete from './EditAndDelete';
 import "./style.scss";
 import Switch from './Switch';
+import food from "../../../Images/ManageCategory/FOOD.svg"
+
 
 const ManageCategoryTable = () => {
   return (
-    <div className="table_div p-4 bg-white rounded-lg  mt-4  ml-14 mr-12">
+    <div className="h-[75vh] bg-white rounded-lg  mt-4">
     <div className="text-orange w-full  mb-3 font-semibold font-sans">All Items</div>
     <div className=" w-full table_cat  overflow-y-scroll font-sans">
       <Table className="">
@@ -32,7 +34,7 @@ const ManageCategoryTable = () => {
                   {data.Name}
                 </Td>
                 <Td key={i} className="pt-2   text-left  pb-2">
-                  <img src='FOOD.svg' className='p-2' alt='food_icon'/>
+                  <img src={food} className='p-2' alt='food_icon'/>
                 </Td>
                 <Td key={i} className="pt-2  pl-5 pb-2">
                   <Switch/>

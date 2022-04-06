@@ -7,9 +7,17 @@ import { ForgotPassword } from "./Pages/Login/ForgotPassword";
 import { Login } from "./Pages/Login/Login";
 import { ResetPassword } from "./Pages/Login/ResetPassword";
 import { Feedback } from "./Pages/Feedback/Feedback";
-import ManageCategoryPage from "./components/ManageCategory/ManageCategoryPage/ManageCategoryPage";
 import ManageMenuBody from "./Pages/ManageMenu/ManageMenuBody"
+import ManageCategoryBody from './Pages/ManageCategory/ManageCategoryBody';
+import ManageStaffBody from './Pages/ManageStaff/ManageStaffBody'
+
 import AddMenuBody from "./components/ManageMenu/AddMenuBody";
+import EditMenuBody from "./components/ManageMenu/EditMenuBody"
+import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody"
+import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody"
+import EditStaffBody from './components/ManageStaff/EditStaff/EditStaffBody'
+import RollBody from './components/ManageStaff/AddRole/RollBody'
+
 
 //import { ManageTables } from "./components/ManageTables/ManageTables";
 
@@ -29,12 +37,20 @@ function App() {
             <Route exact path="managetable" element={<CreateNewOrder />} />
           </Route>
           <Route exact path="managemenu" element={<ManageMenuBody />} />
-          <Route exact path="addmenu" element={<AddMenuBody/>} />
-          <Route exact path="managecategory" element={<ManageCategoryPage />} />
+          <Route exact path="managecategory" element={<ManageCategoryBody />} />
           <Route exact path="feedback" element={<Feedback />} />
           <Route exact path="reports" element={<Feedback />} />
           <Route exact path="partyorder" element={<Dashboard />} />
-          <Route exact path="managestaff" element={<Dashboard />} />
+          <Route exact path="managestaff" element={<ManageStaffBody/>} />
+
+          <Route exact path="addmenu" element={<AddMenuBody/>} />
+          <Route exact path="editmenu" element={<EditMenuBody/>} />
+          <Route exact path="addnewcategory" element={<AddNewCategoryBody/>} />
+          <Route exact path="addnewstaff" element={<AddNewStaffBody/>} />
+          <Route exact path="editstaff" element={<EditStaffBody/>}></Route>
+          <Route exact path="addrole" element={<RollBody/>}></Route>
+          
+
         </Route>
       </Routes>
       {/* <ManageTables /> */}
