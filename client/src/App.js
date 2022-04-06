@@ -1,18 +1,18 @@
 import { Routes, Route } from "react-router-dom";
 import { Sidenavheader } from "./components/Sidenavheader";
 import { ActiveOrder } from "./Pages/ActiveOrder/ActiveOrder";
-import { CreateNewOrder } from "./Pages/CreateNewOrder/CreateNewOrder";
 import { Dashboard } from "./Pages/Dashboard/Dashboard";
 import { ForgotPassword } from "./Pages/Login/ForgotPassword";
 import { Login } from "./Pages/Login/Login";
 import { ResetPassword } from "./Pages/Login/ResetPassword";
 import { Feedback } from "./Pages/Feedback/Feedback";
-import ManageMenuPage from "./components/ManageMenu/ManageMenuPage";
 import ManageCategoryPage from "./components/ManageCategory/ManageCategoryPage/ManageCategoryPage";
 import ManageMenuBody from "./components/ManageMenu/ManageMenuBody";
 import { PastOrders } from "./Pages/PastOrders/PastOrders";
 import { ManageTables } from "./components/ManageTables/ManageTables";
 import { KDS } from "./Pages/KDS/KDS";
+import AddMenuBody from "./components/ManageMenu/AddMenuBody";
+
 //import { ManageTables } from "./components/ManageTables/ManageTables";
 
 function App() {
@@ -32,9 +32,8 @@ function App() {
             <Route exact path="managetable" element={<ManageTables />} />
             <Route exact path="KDS" element={<KDS />} />
           </Route>
-
           <Route exact path="managemenu" element={<ManageMenuBody />} />
-          <Route exact path="takeaway" element={<ManageMenuPage />} />
+          <Route exact path="addmenu" element={<AddMenuBody />} />
           <Route exact path="managecategory" element={<ManageCategoryPage />} />
           <Route exact path="feedback" element={<Feedback />} />
           <Route exact path="reports" element={<Feedback />} />

@@ -1,6 +1,10 @@
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import './style.scss';
+import line from "../../Images/ManageMenu/MIDLINE.svg"
+import edit from "../../Images/ManageMenu/EDIT ICON.svg"
+import trash from "../../Images/ManageMenu/DUSTBIN.svg"
+
 
 const MySwal = withReactContent(Swal)
 
@@ -12,11 +16,11 @@ const EditAndDelete = () => {
         text: "Are you sure to delete this 'menu'?",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText:'white',
         confirmButtonColor: 'orange',
         confirmButtonText: 'Yes',
-        cancelButtonText:'Cancel',
         cancelButtonColor:'white',
+        cancelButtonText:'Cancel',
+        cancelButtonText:'orange',
         confirmButtonClass:'confirm_btn',
         cancelButtonClass:'cancel_btn',
       })
@@ -25,15 +29,15 @@ const EditAndDelete = () => {
   return (
     <div>
        <div className="flex w-11/12  h-10     ">
-                    <div className="w-6/12 h-full  ">
-                      <img src="EDIT ICON.svg" className='mt-1' alt="edit icon" />
+                    <div className="  ">
+                     <img src={edit} className='mt-1' alt="edit icon" />
                     </div>
-                    <div className="h-full">
-                      <img src="MIDLINE.svg" alt="midline" className='ml-3 mr-3' />
+                    <div className="">
+                      <img src={line} alt="midline" className='ml-3 mr-3' />
                     </div>
-                    <div className="w-5/12 h-full  ">
+                    <div className="">
                       <img
-                        src="DUSTBIN.svg"
+                        src={trash}
                         onClick={sweetalert}
                         alt="trash icon"
                         className='mt-1'

@@ -12,7 +12,7 @@ const AddMenuForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className=" form_box">
-      <div className=" h-full w-11/12  rounded-lg bg-white ml-14 flex flex-col">
+      <div className=" h-full w-11/12  rounded-lg bg-white  flex flex-col">
         <div className=" menu_box w-full mt-1 grid grid-rows-4  grid-flow-col gap-1 pr-32">
           <div className=" mr-14">
             <p className="text-xs font-semibold font-sans">Name</p>
