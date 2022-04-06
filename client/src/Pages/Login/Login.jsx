@@ -53,9 +53,9 @@ export const Login = () => {
   };
 
   return (
-    <div className=" bg-background max-w-[1920px] mx-auto">
+    <div className=" bg-background max-w-[1920px] mx-auto h-screen overflow-hidden">
       {/* Alankar Logo */}
-      <div className=" ml-24 pt-9 mb-16 2xl:ml-40 2xl:pt-20 2xl:mb-24">
+      <div className=" ml-24 pt-6 mb-16 2xl:ml-40 2xl:pt-20 2xl:mb-24">
         <img
           className="w-[220px] h-16 2xl:w-[326px] 2xl:h-18"
           src={alankar}
@@ -72,7 +72,7 @@ export const Login = () => {
             alt="login"
           />
         </div>
-        <div className="relative bottom-[72px] 2xl:bottom-24">
+        <div className="relative bottom-[82px] 2xl:bottom-24">
           <h2 className=" font-sans text-4xl font-normal tracking-wider max-w-[500px] 2xl:max-w-[615px] ">
             Welcome back, Please login to your{" "}
             <span className="text-darkyellow font-semibold">
@@ -81,33 +81,33 @@ export const Login = () => {
           </h2>
           <form
             onSubmit={handleSubmit}
-            className="grid grid-flow-row bg-white rounded-xl mt-11 max-w-[500px] 2xl:max-w-[619px] 2xl:mt-18"
+            className="grid grid-flow-row bg-white rounded-xl boxShadow mt-11  max-w-[500px] 2xl:max-w-[619px] 2xl:mt-18"
           >
-            <label className="block text-lg text-darkyellow font-semibold pl-14 mt-8 2xl:pl-12 2xl:mt-13">
+            <label className="block text-lg text-darkyellow font-semibold pl-11 mt-5 2xl:pl-12 2xl:mt-13">
               Email
             </label>
             <input
-              className="w-[420px] h-[55px] border border-darkyellow rounded-xl mt-3 place-self-center 2xl:w-[525px] 2xl:h-17 "
+              className="w-[420px] h-[55px] border border-darkyellow rounded-xl mt-3 place-self-center outline-none pl-3 text-darkyellow bg-search 2xl:w-[525px] 2xl:h-17 "
               type="email"
               name="email"
               value={formValues.email}
               onChange={handleChange}
             />
-            <p className=" mb-6 text-[10px] pl-14 text-[#FF0000] font-medium">
+            <p className=" mb-3 text-[10px] pl-14 text-[#FF0000] font-medium">
               {formErrors.email}
             </p>
 
-            <label className=" block text-lg text-darkyellow font-semibold pl-14 2xl:pl-12">
+            <label className=" block text-lg text-darkyellow font-semibold pl-11 2xl:pl-12">
               Password
             </label>
             <input
-              className="w-[420px] h-[55px] border border-darkyellow rounded-xl mt-3 place-self-center 2xl:h-17 2xl:w-[525px]"
+              className="w-[420px] h-[55px] border border-darkyellow rounded-xl mt-3 place-self-center outline-none bg-search pl-3 2xl:h-17 2xl:w-[525px]"
               type="password"
               name="password"
               value={formValues.password}
               onChange={handleChange}
             />
-            <p className=" mb-6 text-[10px] pl-14 text-[#FF0000] font-medium">
+            <p className=" mb-4 text-[10px] pl-14 text-[#FF0000] font-medium">
               {formErrors.password}
             </p>
 

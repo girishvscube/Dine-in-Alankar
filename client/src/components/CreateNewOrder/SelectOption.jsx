@@ -14,8 +14,8 @@ export const SelectOption = () => {
     setIsButton(false);
   };
   return (
-    <div className="w-screen h-screen bg-background">
-      <div className=" flex flex-col gap-3 Bg pl-11 pt-10">
+    <div className=" bg-background overflow-y-scroll">
+      <div className=" flex flex-col gap-3 Bg pl-11 pt-3">
         <h2 className=" font-bold text-darkyellow text-3xl">
           Create New Order
         </h2>
