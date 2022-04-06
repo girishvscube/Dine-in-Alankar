@@ -20,7 +20,7 @@ export const AddItems = () => {
     },
   ];
   return (
-    <div className="addItemsContainer">
+    <div className="addItemsContainer  h-[59vh] overflow-y-scroll">
       <div className="pl-11 pr-16">
         <div className="searchGrid bg-search">
           <input

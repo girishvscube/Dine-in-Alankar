@@ -8,7 +8,7 @@ export const ForgotPassword = () => {
     console.log("form submitted");
   };
   return (
-    <div className=" bg-background max-w-[1920px] mx-auto">
+    <div className=" bg-background max-w-[1920px] mx-auto h-screen overflow-hidden">
       {/* Alankar Logo */}
       <div className=" ml-24 pt-9 mb-16 2xl:ml-40 2xl:pt-20 2xl:mb-24">
         <img
@@ -33,13 +33,13 @@ export const ForgotPassword = () => {
           </h2>
           <form
             onSubmit={handleSubmit}
-            className="grid grid-flow-row bg-white rounded-xl mt-11 max-w-[500px] 2xl:max-w-[619px] 2xl:mt-18"
+            className="grid grid-flow-row bg-white rounded-xl mt-11 boxShadow max-w-[500px] 2xl:max-w-[619px] 2xl:mt-18"
           >
             <label className="block text-lg text-darkyellow font-semibold pl-14 mt-8 2xl:pl-12 2xl:mt-13">
               Your Email Address
             </label>
             <input
-              className="w-[420px] h-[55px] border border-darkyellow rounded-xl mt-3 mb-6 place-self-center 2xl:w-[525px] 2xl:h-17 "
+              className="w-[420px] h-[55px] border border-darkyellow rounded-xl mt-3  place-self-center outline-none pl-3 text-darkyellow bg-search 2xl:w-[525px] 2xl:h-17 "
               type="email"
             />
 
