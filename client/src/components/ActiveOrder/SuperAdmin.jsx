@@ -2,6 +2,7 @@ import { FoodItems } from "../Dashboard/FoodItems";
 import refresh from "../../Images/ActiveOrder/refresh.png";
 import "./superadmin.scss";
 import { AllOrders } from "./AllOrders";
+import { Link } from "react-router-dom";
 
 export const SuperAdmin = () => {
   return (
@@ -51,10 +52,13 @@ export const SuperAdmin = () => {
             placeholder="Search"
           />
           <div className="2xl:ml-4">
-            <button className="h-[60px] Btn text-sm w-[160px] px-3 py-3 relative top-1 text-white font-semibold 2xl:px-5 2xl:w-[180px] 2xl:text-base ">
-              {/*  px-7 py-3 */}
-              Create New Order
-            </button>
+            <Link to="/menu/dinein/createneworder">
+              {" "}
+              <button className="h-[60px] Btn text-sm w-[160px] px-3 py-3 relative top-1 text-white font-semibold 2xl:px-5 2xl:w-[180px] 2xl:text-base ">
+                {/*  px-7 py-3 */}
+                Create New Order
+              </button>
+            </Link>
 
             <div className="grid grid-flow-col mt-16">
               <p className=" font-semibold text-base 2xl:text-xl text-darkyellow underline justify-self-end">
