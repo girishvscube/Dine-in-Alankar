@@ -6,10 +6,9 @@ import { ForgotPassword } from "./Pages/Login/ForgotPassword";
 import { Login } from "./Pages/Login/Login";
 import { ResetPassword } from "./Pages/Login/ResetPassword";
 import { Feedback } from "./Pages/Feedback/Feedback";
-import ManageMenuBody from "./Pages/ManageMenu/ManageMenuBody"
+import ManageMenuBody from "./Pages/ManageMenu/ManageMenuBody";
 import ManageCategoryBody from './Pages/ManageCategory/ManageCategoryBody';
 import ManageStaffBody from './Pages/ManageStaff/ManageStaffBody'
-import ManageMenuBody from "./components/ManageMenu/ManageMenuBody";
 import { PastOrders } from "./Pages/PastOrders/PastOrders";
 import { ManageTables } from "./components/ManageTables/ManageTables";
 import { KDS } from "./Pages/KDS/KDS";
@@ -43,7 +42,7 @@ function App() {
           <Route exact path="managemenu" element={<ManageMenuBody />} />
           <Route exact path="managecategory" element={<ManageCategoryBody />} />
           <Route exact path="addmenu" element={<AddMenuBody />} />
-          <Route exact path="managecategory" element={<ManageCategoryPage />} />
+          
           <Route exact path="feedback" element={<Feedback />} />
           <Route exact path="reports" element={<Feedback />} />
           <Route exact path="partyorder" element={<Dashboard />} />
