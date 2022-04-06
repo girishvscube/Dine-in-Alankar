@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Sidenavheader } from "./components/Sidenavheader";
 import { ActiveOrder } from "./Pages/ActiveOrder/ActiveOrder";
-import { CreateNewOrder } from "./Pages/CreateNewOrder/CreateNewOrder";
 import { Dashboard } from "./Pages/Dashboard/Dashboard";
 import { ForgotPassword } from "./Pages/Login/ForgotPassword";
 import { Login } from "./Pages/Login/Login";
@@ -10,7 +9,10 @@ import { Feedback } from "./Pages/Feedback/Feedback";
 import ManageMenuBody from "./Pages/ManageMenu/ManageMenuBody"
 import ManageCategoryBody from './Pages/ManageCategory/ManageCategoryBody';
 import ManageStaffBody from './Pages/ManageStaff/ManageStaffBody'
-
+import ManageMenuBody from "./components/ManageMenu/ManageMenuBody";
+import { PastOrders } from "./Pages/PastOrders/PastOrders";
+import { ManageTables } from "./components/ManageTables/ManageTables";
+import { KDS } from "./Pages/KDS/KDS";
 import AddMenuBody from "./components/ManageMenu/AddMenuBody";
 import EditMenuBody from "./components/ManageMenu/EditMenuBody"
 import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody"
@@ -32,12 +34,16 @@ function App() {
         <Route exact path="/menu" element={<Sidenavheader />}>
           <Route exact path="dashboard" element={<Dashboard />} />
           <Route exact path="dinein" element={<ActiveOrder />}>
-            <Route exact path="activeorder" element={<Dashboard />} />
-            <Route exact path="createneworder" element={<CreateNewOrder />} />
-            <Route exact path="managetable" element={<CreateNewOrder />} />
+            <Route exact path="activeorder" element={<ActiveOrder />} />
+            <Route exact path="dashboard" element={<Dashboard />} />
+            <Route exact path="pastorder" element={<PastOrders />} />
+            <Route exact path="managetable" element={<ManageTables />} />
+            <Route exact path="KDS" element={<KDS />} />
           </Route>
           <Route exact path="managemenu" element={<ManageMenuBody />} />
           <Route exact path="managecategory" element={<ManageCategoryBody />} />
+          <Route exact path="addmenu" element={<AddMenuBody />} />
+          <Route exact path="managecategory" element={<ManageCategoryPage />} />
           <Route exact path="feedback" element={<Feedback />} />
           <Route exact path="reports" element={<Feedback />} />
           <Route exact path="partyorder" element={<Dashboard />} />
@@ -53,7 +59,6 @@ function App() {
 
         </Route>
       </Routes>
-      {/* <ManageTables /> */}
     </>
   );
 }
