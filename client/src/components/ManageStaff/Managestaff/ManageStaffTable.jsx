@@ -46,7 +46,7 @@ const ManageStaffTable = () => {
                   <Td key={i} className="pt-4 pr-24 pb-4">
                     <ToggleSwitch />
                   </Td>
-                  <Td className="pt-4 flex justify-center pr-12  pb-4">
+                  <Td className="pt-6 flex justify-center pr-12  pb-4">
                     <Link to="/editstaff"><img src={edit} alt="edit icon"/></Link>
                   </Td>
                 </Tr>

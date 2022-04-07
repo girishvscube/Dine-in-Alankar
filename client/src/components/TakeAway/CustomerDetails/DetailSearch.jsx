@@ -1,23 +1,28 @@
-import React from 'react'
+import React from "react";
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 const DetailSearch = () => {
   return (
-    <div className="w-11/12 h-2/12 ml-14  flex justify-between">
-    <div className=" flex ">
-   <button className=" h-full pl-8 pr-8 pt-4 pb-4 text-xs add text-center  rounded-lg text-white font-semibold font-sans">
-        Customer Details
-      </button>
-      <button className="h-full text-xs ml-10 pl-12 pr-12 pt-4 pb-4 button text-center rounded-lg text-white font-semibold font-sans">
-        Add Items
-      </button>
-      <button className="h-full text-xs ml-10 pl-7 pr-7 pt-4 pb-4 button text-center rounded-lg text-white font-semibold font-sans">
-        Manage Payment 
-      </button>
-    </div>
-   
-  </div>
-  )
-}
+    <div className="  flex justify-between">
+      <div className=" flex ">
+        <button className=" h-full pl-6 pr-6 pt-4 pb-4 text-base add text-center  rounded-lg text-white font-semibold font-sans">
+          Customer Details
+        </button>
 
-export default DetailSearch
+        <Link to="/menu/takeaway/itemdetails">
+          <button className="h-full text-base ml-10 pl-12 pr-12 pt-4 pb-4 button text-center rounded-lg text-white font-semibold font-sans">
+            Add Items
+          </button>
+        </Link>
+        <Link to="/menu/takeaway/managepayment">
+          <button className="h-full text-base ml-10 pl-6 pr-6 pt-4 pb-4 button text-center rounded-lg text-white font-semibold font-sans">
+            Manage Payment
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default DetailSearch;

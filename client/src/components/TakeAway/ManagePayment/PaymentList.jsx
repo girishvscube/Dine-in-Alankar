@@ -1,7 +1,7 @@
 import React from 'react'
-import "./style.scss"
+import "./style.scss";
 
-const ItemsList = () => {
+const PaymentList = () => {
   return (
     <div className=''>
     <p className='font-semibold text-orange mb-1 text-lg font-sans'>Manage Order</p>
@@ -10,4 +10,4 @@ const ItemsList = () => {
   )
 }
 
-export default ItemsList
+export default PaymentList
