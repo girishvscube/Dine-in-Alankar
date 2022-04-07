@@ -22,12 +22,9 @@ import DetailBody from "./components/TakeAway/CustomerDetails/DetailBody";
 import PaymentBody from "./components/TakeAway/ManagePayment/PaymentBody";
 import ManageOrderBody from "./Pages/TakeAway/ManageOrderBody";
 import SalesBody from "./components/Reports/SalesReport/SalesBody";
-// import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody";
-// import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
-// import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
-// import RollBody from "./components/ManageStaff/AddRole/RollBody";
-
-//import { ManageTables } from "./components/ManageTables/ManageTables";
+import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
+import RollBody from "./components/ManageStaff/AddRole/RollBody";
+import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
 
 function App() {
   return (
@@ -63,7 +60,7 @@ function App() {
           <Route exact path="addnewcategory" element={<AddNewCategoryBody />} />
           <Route exact path="editcategory" element={<CategoryBody />} />
 
-          {/* Take away */}
+          {/* Take away Route */}
           <Route exact path="takeaway" element={<ManageOrderBody />} />
           <Route exact path="takeaway/itemdetails" element={<ItemsBody />} />
           <Route
@@ -76,13 +73,27 @@ function App() {
             path="takeaway/managepayment"
             element={<PaymentBody />}
           />
+          <Route exact path="takeaway/dashboard" element={<Dashboard />} />
+          <Route
+            exact
+            path="takeaway/manageorder"
+            element={<ManageOrderBody />}
+          />
+          {/* Party Order Route*/}
 
-          {/* <Route exact path="addmenu" element={<AddMenuBody />} /> */}
+          {/* Manage Staff Route */}
+          <Route exact path="managestaff" element={<ManageStaffBody />} />
+          <Route exact path="addnewstaff" element={<AddNewStaffBody />} />
+          <Route exact path="newrole" element={<RollBody />} />
+          <Route exact path="editstaff" element={<EditStaffBody />} />
+
+          {/* FeedBack Route */}
           <Route exact path="feedback" element={<Feedback />} />
+
+          {/* Reports Route*/}
           <Route exact path="reports" element={<SalesBody />} />
 
           <Route exact path="partyorder" element={<Dashboard />} />
-          <Route exact path="managestaff" element={<ManageStaffBody />} />
         </Route>
       </Routes>
     </>
