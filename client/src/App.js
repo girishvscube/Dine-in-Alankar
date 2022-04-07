@@ -18,6 +18,9 @@ import AddMenuBody from "./components/ManageMenu/AddMenuBody";
 import EditMenuBody from "./components/ManageMenu/EditMenuBody";
 import { CreateNewOrder } from "./Pages/CreateNewOrder/CreateNewOrder";
 import ItemsBody from "./components/TakeAway/AddItems/ItemsBody";
+import DetailBody from "./components/TakeAway/CustomerDetails/DetailBody";
+import PaymentBody from "./components/TakeAway/ManagePayment/PaymentBody";
+import ManageOrderBody from "./Pages/TakeAway/ManageOrderBody"
 // import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody";
 // import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
 // import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
@@ -60,7 +63,10 @@ function App() {
           <Route exact path="editcategory" element={<CategoryBody/>}/>
 
           {/* Take away */}
-          <Route exact path="itemdetails" element={<ItemsBody/>}/>
+          <Route exact path="takeaway/itemdetails" element={<ItemsBody/>}/>
+          <Route exact path="takeaway/customerdetails" element={<DetailBody/>}/>
+          <Route exact path="takeaway/managepayment" element={<PaymentBody/>}/>
+          <Route exact path="manageorder" element={<ManageOrderBody/>}/>
 
           {/* <Route exact path="addmenu" element={<AddMenuBody />} /> */}
           <Route exact path="feedback" element={<Feedback />} />

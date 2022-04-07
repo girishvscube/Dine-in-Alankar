@@ -81,7 +81,7 @@ const ItemsForm = () => {
           <div className="w-1/3 h-full flex flex-col">
             <p className="font-sans text-base font-semibold mt-1 mb-1">Category</p>
             <div className="">
-              <select className="h-full mt-1 w-full pt-2 pb-2 cate_box text-orange rounded-lg pl-4">
+              <select className="h-full mt-1 w-full pt-3 pb-3 cate_box text-orange rounded-lg pl-4">
                 <option value="one">One</option>
                 <option value="two">Two</option>
                 <option value="three">Three</option>
