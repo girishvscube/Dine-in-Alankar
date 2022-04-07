@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./style.scss";
 import search from "../../../Images/ActiveOrder/Search_fill.png";
-import refresh from "../../../Images/TakeAway/Refresh.svg"
-import {Link} from "react-router-dom"
+import refresh from "../../../Images/TakeAway/Refresh.svg";
+import { Link } from "react-router-dom";
 
 const ManageOrderButtons = () => {
   return (
@@ -27,14 +27,18 @@ const ManageOrderButtons = () => {
               <img src={search} alt="search_icon" />
             </div>
           </div>
-          <Link to="/menu/takeaway/customerdetails"><button className="add pl-6 pr-6  pt-4 pb-4 font-sans font-semibold text-white">
-            Create New Order
-          </button></Link>
+          <Link to="/menu/takeaway/customerdetails">
+            <button className="add pl-6 pr-6  pt-4 pb-4 font-sans font-semibold text-white">
+              Create New Order
+            </button>
+          </Link>
         </div>
       </div>
       <div className="float-right flex flex-row">
-          <p className="text-base font-sans text-orange mt-3"><u>Refresh Orders</u></p>
-            <img className="mt-2" src={refresh} alt="refresh_icon"/>
+        <p className="text-base font-sans text-orange mt-3">
+          <u>Refresh Orders</u>
+        </p>
+        <img className="mt-2" src={refresh} alt="refresh_icon" />
       </div>
     </div>
   );

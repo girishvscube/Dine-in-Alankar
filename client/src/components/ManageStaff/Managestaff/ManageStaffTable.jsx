@@ -4,8 +4,8 @@ import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import Data from "../../Data2.json";
 import "./style.scss";
 import ToggleSwitch from "../../ToggleSwitch";
-import {Link} from "react-router-dom"
-import edit from "../../../Images/ManageStaff/EDIT ICON.svg"
+import { Link } from "react-router-dom";
+import edit from "../../../Images/ManageStaff/EDIT ICON.svg";
 
 const ManageStaffTable = () => {
   return (
@@ -47,7 +47,9 @@ const ManageStaffTable = () => {
                     <ToggleSwitch />
                   </Td>
                   <Td className="pt-6 flex justify-center pr-12  pb-4">
-                    <Link to="menu/editstaff"><img src={edit} alt="edit icon"/></Link>
+                    <Link to="/menu/editstaff">
+                      <img src={edit} alt="edit icon" />
+                    </Link>
                   </Td>
                 </Tr>
               </Tbody>

@@ -20,20 +20,11 @@ import { CreateNewOrder } from "./Pages/CreateNewOrder/CreateNewOrder";
 import ItemsBody from "./components/TakeAway/AddItems/ItemsBody";
 import DetailBody from "./components/TakeAway/CustomerDetails/DetailBody";
 import PaymentBody from "./components/TakeAway/ManagePayment/PaymentBody";
-import ManageOrderBody from "./Pages/TakeAway/ManageOrderBody"
+import ManageOrderBody from "./Pages/TakeAway/ManageOrderBody";
 import SalesBody from "./components/Reports/SalesReport/SalesBody";
-import StoreBody from "./components/StoreSetting/Store/StoreBody";
-import TableBody from "./components/StoreSetting/Table/TableBody";
-import DiscountBody from "./components/StoreSetting/Discount/DiscountBody"
-import CouponBody from "./components/StoreSetting/CouponDiscount/CouponBody";
-import UserBody from "./components/StoreSetting/UserRole/UserBody";
+import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
 import RollBody from "./components/ManageStaff/AddRole/RollBody";
-// import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody";
-// import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
-// import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
-// import RollBody from "./components/ManageStaff/AddRole/RollBody";
-
-//import { ManageTables } from "./components/ManageTables/ManageTables";
+import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
 
 function App() {
   return (
@@ -73,19 +64,40 @@ function App() {
           {/* ManageCategory Route */}
           <Route exact path="managecategory" element={<ManageCategoryBody />} />
           <Route exact path="addnewcategory" element={<AddNewCategoryBody />} />
-          <Route exact path="editcategory" element={<CategoryBody/>}/>
+          <Route exact path="editcategory" element={<CategoryBody />} />
 
-          {/* Take away */}
-          <Route exact path="takeaway/itemdetails" element={<ItemsBody/>}/>
-          <Route exact path="takeaway/customerdetails" element={<DetailBody/>}/>
-          <Route exact path="takeaway/managepayment" element={<PaymentBody/>}/>
-          <Route exact path="manageorder" element={<ManageOrderBody/>}/>
+          {/* Take away Route */}
+          <Route exact path="takeaway" element={<ManageOrderBody />} />
+          <Route exact path="takeaway/itemdetails" element={<ItemsBody />} />
+          <Route
+            exact
+            path="takeaway/customerdetails"
+            element={<DetailBody />}
+          />
+          <Route
+            exact
+            path="takeaway/managepayment"
+            element={<PaymentBody />}
+          />
+          <Route exact path="takeaway/dashboard" element={<Dashboard />} />
+          <Route
+            exact
+            path="takeaway/manageorder"
+            element={<ManageOrderBody />}
+          />
+          {/* Party Order Route*/}
 
-          {/* <Route exact path="addmenu" element={<AddMenuBody />} /> */}
+          {/* Manage Staff Route */}
+          <Route exact path="managestaff" element={<ManageStaffBody />} />
+          <Route exact path="addnewstaff" element={<AddNewStaffBody />} />
+          <Route exact path="newrole" element={<RollBody />} />
+          <Route exact path="editstaff" element={<EditStaffBody />} />
+
+          {/* FeedBack Route */}
           <Route exact path="feedback" element={<Feedback />} />
-          <Route exact path="reports" element={<SalesBody/>} />
 
-
+          {/* Reports Route*/}
+          <Route exact path="reports" element={<SalesBody />} />
 
           <Route exact path="partyorder" element={<Dashboard />} />
           
