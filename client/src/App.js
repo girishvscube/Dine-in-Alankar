@@ -20,7 +20,7 @@ import { CreateNewOrder } from "./Pages/CreateNewOrder/CreateNewOrder";
 import ItemsBody from "./components/TakeAway/AddItems/ItemsBody";
 import DetailBody from "./components/TakeAway/CustomerDetails/DetailBody";
 import PaymentBody from "./components/TakeAway/ManagePayment/PaymentBody";
-import ManageOrderBody from "./Pages/TakeAway/ManageOrderBody"
+import ManageOrderBody from "./Pages/TakeAway/ManageOrderBody";
 // import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody";
 // import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
 // import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
@@ -60,13 +60,21 @@ function App() {
           {/* ManageCategory Route */}
           <Route exact path="managecategory" element={<ManageCategoryBody />} />
           <Route exact path="addnewcategory" element={<AddNewCategoryBody />} />
-          <Route exact path="editcategory" element={<CategoryBody/>}/>
+          <Route exact path="editcategory" element={<CategoryBody />} />
 
           {/* Take away */}
-          <Route exact path="takeaway/itemdetails" element={<ItemsBody/>}/>
-          <Route exact path="takeaway/customerdetails" element={<DetailBody/>}/>
-          <Route exact path="takeaway/managepayment" element={<PaymentBody/>}/>
-          <Route exact path="manageorder" element={<ManageOrderBody/>}/>
+          <Route exact path="takeaway" element={<ManageOrderBody />} />
+          <Route exact path="takeaway/itemdetails" element={<ItemsBody />} />
+          <Route
+            exact
+            path="takeaway/customerdetails"
+            element={<DetailBody />}
+          />
+          <Route
+            exact
+            path="takeaway/managepayment"
+            element={<PaymentBody />}
+          />
 
           {/* <Route exact path="addmenu" element={<AddMenuBody />} /> */}
           <Route exact path="feedback" element={<Feedback />} />
