@@ -22,6 +22,12 @@ import DetailBody from "./components/TakeAway/CustomerDetails/DetailBody";
 import PaymentBody from "./components/TakeAway/ManagePayment/PaymentBody";
 import ManageOrderBody from "./Pages/TakeAway/ManageOrderBody"
 import SalesBody from "./components/Reports/SalesReport/SalesBody";
+import StoreBody from "./components/StoreSetting/Store/StoreBody";
+import TableBody from "./components/StoreSetting/Table/TableBody";
+import DiscountBody from "./components/StoreSetting/Discount/DiscountBody"
+import CouponBody from "./components/StoreSetting/CouponDiscount/CouponBody";
+import UserBody from "./components/StoreSetting/UserRole/UserBody";
+import RollBody from "./components/ManageStaff/AddRole/RollBody";
 // import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody";
 // import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
 // import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
@@ -58,6 +64,12 @@ function App() {
           <Route exact path="managemenu" element={<ManageMenuBody />} />
           <Route exact path="addmenu" element={<AddMenuBody />} />
           <Route exact path="editmenu" element={<EditMenuBody />} />
+
+          {/*Managestaff Route */}
+          <Route exact path="managestaff" element={<ManageStaffBody />} />
+          <Route exact path="managestaff/addrole" element={<RollBody/>} />
+
+
           {/* ManageCategory Route */}
           <Route exact path="managecategory" element={<ManageCategoryBody />} />
           <Route exact path="addnewcategory" element={<AddNewCategoryBody />} />
@@ -76,7 +88,17 @@ function App() {
 
 
           <Route exact path="partyorder" element={<Dashboard />} />
-          <Route exact path="managestaff" element={<ManageStaffBody />} />
+          
+
+
+
+          <Route exact path="setting/store" element={<StoreBody/>}/>
+          <Route exact path="setting/table" element={<TableBody/>}/>
+          <Route exact path="setting/discount" element={<DiscountBody/>}/>
+          <Route exact path="setting/user" element={<UserBody/>}/>
+          <Route exact path="setting/discount/createcoupon" element={<CouponBody/>}/>
+
+
         </Route>
       </Routes>
     </>

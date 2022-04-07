@@ -4,11 +4,11 @@ import "./style.scss"
 const CategoryList = () => {
   return (
     <div className="">
-    <p className="font-semibold text-xl text-orange mb-1 font-sans">
+    <p className="font-semibold text-2xl text-orange mb-1 font-sans">
       Edit Category
     </p>
-    <p className="  font-semibold text-lg font-sans">
-      Manage Category &#8250; Edit Category
+    <p className="  font-semibold text-xl font-sans">
+      Manage Category &nbsp; &#8250; &nbsp; Edit Category
     </p>
   </div>
   )

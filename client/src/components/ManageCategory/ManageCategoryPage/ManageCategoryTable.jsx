@@ -11,11 +11,11 @@ import food from "../../../Images/ManageCategory/FOOD.svg"
 const ManageCategoryTable = () => {
   return (
     <div className="h-[75vh] pl-6 bg-white rounded-lg  mt-10">
-    <div className="text-orange w-full text-lg  mb-3 font-semibold font-sans">All Items</div>
+    <div className="text-orange w-full text-xl  mb-3 font-semibold font-sans">All Items</div>
     <div className=" w-full table_cat  overflow-y-scroll font-sans">
       <Table className="">
         <Thead className="sticky top-0 border-b-2 mb-1  bg-white head ">
-          <Tr className=" text-left text-base">
+          <Tr className=" text-left text-lg">
             <Th className="font-sans pb-2 pr-5">S. No.</Th>
             <Th className="font-sans pb-2 ">Name</Th>
             <Th className="font-sans pb-2 ">Image</Th>

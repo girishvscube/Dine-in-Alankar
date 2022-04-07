@@ -2,116 +2,116 @@ import React from "react";
 
 const UserForm = () => {
   return (
-    <div className="for ml-14 mt-4 mr-12 flex  p-5 flex-col">
-      <div className="h-4/5 w-full flex flex-row gap-14">
-        <div className="h-full gap-2.5 p-5 flex flex-col">
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Dine - In</p>
+    <div className=" flex mt-12 flex-col">
+      <div className=" h-[50vh] flex flex-row gap-16">
+        <div className="h-full gap-5 p-5 flex flex-col">
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="one" />
+            <label className="text-lg  mt-1" for="one">Dine - In</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Dashbord</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="two" />
+            <label className="text-lg mt-1 " for="two">Dashbord</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Manage Offers</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="three" />
+            <label className="text-lg mt-1" for="three">Manage Offers</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Manage Tables</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox"  id="four"/>
+            <label className="text-lg mt-1" for="four">Manage Tables</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Active Orders</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="five" />
+            <label className="text-lg mt-1" for="five">Active Orders</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Past Orders</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="six" />
+            <label className="text-lg mt-1" for="six">Past Orders</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Manage Staff</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="seven" />
+            <label className="text-lg mt-1" for="seven">Manage Staff</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">KDS</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="eight" />
+            <label className="text-lg mt-1" for="eight">KDS</label>
           </div>
         </div>
-        <div className="h-full gap-2.5 p-5 flex flex-col">
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Manage Menu</p>
+        <div className="  gap-5 p-5 flex flex-col">
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="a" />
+            <label className="text-lg mt-1" for="a">Manage Menu</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Manage Category</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="b" />
+            <label className="text-lg mt-1" for="b">Manage Category</label>
           </div>
           
         </div>
-        <div className="h-full  gap-2.5 p-5 flex flex-col">
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Take Away</p>
+        <div className="  gap-5 p-5 flex flex-col">
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="c" />
+            <label className="text-lg mt-1" for='c'>Take Away</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Dashbord</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='d' />
+            <label className="text-lg mt-1" for='d'>Dashbord</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Manage Offers</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='e' />
+            <label className="text-lg mt-1" for='e'>Manage Offers</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Active Orders</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='f' />
+            <label className="text-lg mt-1" for='f'>Active Orders</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Past Orders</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='g'/>
+            <label className="text-lg mt-1" for='g'>Past Orders</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">KDS</p>
-          </div>
-         
-        </div>
-        <div className="h-full  gap-2 p-5 flex flex-col">
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Party Orders</p>
-          </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Create New Order</p>
-          </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Active Orders</p>
-          </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Past Orders</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id="h" />
+            <label className="text-lg mt-1" for='h'>KDS</label>
           </div>
          
         </div>
-        <div className="h-full gap-2 p-5 flex flex-col">
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Feedback</p>
+        <div className="  gap-5 p-5 flex flex-col">
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='i' />
+            <label className="text-lg mt-1" for='i'>Party Orders</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Reports</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='j' />
+            <label className="text-lg mt-1" for='j'>Create New Order</label>
           </div>
-          <div className="flex flex-row">
-            <input type="checkbox" className="h-6 w-6" />
-            <p className="text-xs mt-1 ml-2">Setting</p>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='k' />
+            <label className="text-lg mt-1" for='k'>Active Orders</label>
+          </div>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='l'/>
+            <label className="text-lg mt-1" for='l'>Past Orders</label>
+          </div>
+         
+        </div>
+        <div className=" gap-5 p-5 flex flex-col">
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='m'/>
+            <label className="text-lg mt-1" for='m'>Feedback</label>
+          </div>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='n'/>
+            <label className="text-lg mt-1" for='n'>Reports</label>
+          </div>
+          <div className="flex form-group flex-row">
+            <input type="checkbox" id='o' />
+            <label className="text-lg mt-1" for='o'>Setting</label>
           </div>
           </div>
       </div>
-      <div className="h-1/5 w-full flex justify-center items-center">
-          <button className=" pl-6 pt-3 pb-3  pr-6 add rounded-lg border-2 text-xs border-orange text-white font-semibold bg-red-600">Add User Role</button>
+      <div className=" flex justify-center items-center">
+          <button className=" pl-12 pt-4 pb-4  pr-12 add rounded-lg border-2 text-lg border-orange text-white font-semibold">Add User Role</button>
       </div>
     </div>
   );

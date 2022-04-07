@@ -3,12 +3,12 @@ import "./style.scss";
 
 const UserButton = () => {
   return (
-    <div className='w-9/12 h-3/12 ml-14'>
-        <div className='w-1/5 bg-white pr-5 h-full '>
-            <select className='w-4/5 h-full rounded-lg pt-1.5 pb-1.5 pl-1 text-orange bg-white outline-none border-2 border-yellow'>
-                <option>sfklja</option>
-                <option>dsfkajl</option>
-                <option>sdfjka</option>
+    <div className=''>
+        <div className=' bg-darkwhite pr-5'>
+            <select className='rounded-lg pt-4 pb-4 pl-3 pr-20 text-orange outline-none border-2 text-lg border-button_border'>
+                <option>Waiter</option>
+                <option>Manager</option>
+                <option>Chief</option>
             </select>
         </div>
     </div>

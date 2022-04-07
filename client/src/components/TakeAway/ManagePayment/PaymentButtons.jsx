@@ -12,7 +12,7 @@ const PaymentButtons = () => {
           </button>
         </Link>
         <Link to="/menu/takeaway/itemdetails">
-          <button className="h-full text-lg ml-10 pl-12 pr-12 pt-4 pb-4 button text-center rounded-lg text-white font-semibold font-sans">
+          <button className="h-full text-lg ml-10 pl-14 pr-12 pt-4 pb-4 button text-center rounded-lg text-white font-semibold font-sans">
             Add Items
           </button>
         </Link>

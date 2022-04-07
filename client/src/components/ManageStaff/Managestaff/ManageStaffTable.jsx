@@ -9,12 +9,12 @@ import edit from "../../../Images/ManageStaff/EDIT ICON.svg"
 
 const ManageStaffTable = () => {
   return (
-    <div className="bg-white mt-8 h-[75vh]">
-      <div className="text-orange  mt-5 mb-3  text-lg font-semibold font-sans">All Items</div>
+    <div className="bg-white mt-8 box pt-2 pl-5 h-[75vh]">
+      <div className="text-orange  mt-5 mb-5  text-xl font-semibold font-sans">All Items</div>
       <div className="h-[70vh] overflow-y-scroll font-sans">
         <Table className="">
           <Thead className="sticky top-0 border-b-2 mb-1 bg-white head ">
-            <Tr className=" text-left">
+            <Tr className=" text-left text-lg">
               <Th className="font-sans pb-2">S.No.</Th>
               <Th className="font-sans pl-10 pb-2">Name</Th>
               <Th className="font-sans pl-12 pb-2">Email</Th>
@@ -47,7 +47,7 @@ const ManageStaffTable = () => {
                     <ToggleSwitch />
                   </Td>
                   <Td className="pt-6 flex justify-center pr-12  pb-4">
-                    <Link to="/editstaff"><img src={edit} alt="edit icon"/></Link>
+                    <Link to="menu/editstaff"><img src={edit} alt="edit icon"/></Link>
                   </Td>
                 </Tr>
               </Tbody>

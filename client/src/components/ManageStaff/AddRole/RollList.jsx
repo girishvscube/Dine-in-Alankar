@@ -4,8 +4,8 @@ import "./style.scss"
 const RollList = () => {
   return (
     <div className=''>
-    <p className='font-semibold text-orange mb-1 text-lg font-sans'>Edit Staff</p>
-    <p className=' font-semibold font-sans'>Edit Staff</p>
+    <p className='font-semibold text-orange mb-1 text-2xl font-sans'>Edit Staff</p>
+    <p className=' font-semibold text-xl font-sans'>Edit Staff</p>
   </div>
   )
 }

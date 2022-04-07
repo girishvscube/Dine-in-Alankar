@@ -19,8 +19,7 @@ const EditAndDelete = () => {
       confirmButtonColor: "orange",
       confirmButtonText: "Yes",
       cancelButtonColor: "white",
-      cancelButtonText: "Cancel",
-      cancelButtonText: "orange",
+      cancelButtonText: "Cancle",
       confirmButtonClass: "confirm_btn",
       cancelButtonClass: "cancel_btn",
     });
