@@ -15,7 +15,7 @@ const EditStaffForm = () => {
   <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
       <div className="h-[40vh]  field grid  grid-rows-3 pr-20 grid-flow-col">
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Name</p>
+          <p className="font-sans font-semibold text-lg mb-1">Name</p>
           <input
             type="text"
             placeholder=""
@@ -37,7 +37,7 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Phone No.</p>
+          <p className="font-sans font-semibold text-lg mb-1">Phone No.</p>
           <input
             type="text"
             placeholder=""
@@ -59,7 +59,7 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Role</p>
+          <p className="font-sans font-semibold text-lg mb-1">Role</p>
           <input
             type="text"
             placeholder=""
@@ -81,7 +81,7 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Email</p>
+          <p className="font-sans font-semibold text-lg mb-1">Email</p>
           <input
             type="email"
             placeholder=""
@@ -100,7 +100,7 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Password</p>
+          <p className="font-sans font-semibold text-lg mb-1">Password</p>
           <input
             type="password"
             placeholder=""
@@ -122,7 +122,7 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Table</p>
+          <p className="font-sans font-semibold text-lg mb-1">Table</p>
           <input
             type="text"
             placeholder=""
@@ -146,7 +146,7 @@ const EditStaffForm = () => {
       </div>
       <div className="h-[18vh] mt-5 flex justify-between">
         <div className="w-3/6 h-10/12  flex flex-col">
-          <p className="font-sans text-xs font-semibold mb-2">Upload Image</p>
+          <p className="font-sans text-lg font-semibold mb-2">Upload Image</p>
           <input type="file" className=" h-3/4 w-1/5 rounded-md bg-search ml-1 border-2 border-orange border-dashed"></input>
         </div>
         <div className="w-3/5 h-10/12   pt-2">
@@ -174,10 +174,10 @@ const EditStaffForm = () => {
           </div>
         </div>
       </div>
-      <div className="w-11/12 ml-12 h-1/6 mt-1 flex items-center justify-center">
+      <div className="mt-1 flex items-center justify-center">
         <button
           type="submit"
-          className="add font-sans text-white pl-8 pr-8 pt-3 pb-3 rounded-lg border-orange"
+          className="add font-sans text-lg text-white pl-14 pr-14 pt-4 pb-4 rounded-lg border-orange"
         >
           Edit Staff
         </button>

@@ -25,6 +25,11 @@ import SalesBody from "./components/Reports/SalesReport/SalesBody";
 import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
 import RollBody from "./components/ManageStaff/AddRole/RollBody";
 import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
+import StoreBody from "./components/StoreSetting/Store/StoreBody"
+import TableBody from "./components/StoreSetting/Table/TableBody"
+import DiscountBody from "./components/StoreSetting/Discount/DiscountBody"
+import UserBody from "./components/StoreSetting/UserRole/UserBody";
+import CouponBody from "./components/StoreSetting/CouponDiscount/CouponBody";
 
 function App() {
   return (
