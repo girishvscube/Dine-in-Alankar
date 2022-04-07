@@ -9,6 +9,7 @@ import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
 export const Sidenavheader = () => {
   const [menuItems, setMenuItems] = useState(obj);
   const [showNavbar, setshowNavbar] = useState(true);
+  // console.log(menuItems);
 
   const sadmin = {
     picture: require("../Images/alan.png"),
@@ -35,6 +36,11 @@ export const Sidenavheader = () => {
       menuItems.map((element) => {
         if (element.id === item.id) {
           element.submenu.status = !element.submenu.status;
+          if (!element.submenu.status) {
+            element?.submenu?.menulist.map((el) => {
+              el.status = false;
+            });
+          }
         } else {
           element.submenu.status = false;
         }
@@ -42,6 +48,25 @@ export const Sidenavheader = () => {
         return element;
       })
     );
+  };
+
+  const handleClickSubmenuItem = (item) => {
+    setMenuItems(
+      menuItems.map((element) => {
+        element?.submenu?.menulist?.map((el) => {
+          if (el.menuItem === item.menuItem) {
+            el.status = true;
+          } else {
+            el.status = false;
+          }
+
+          return el;
+        });
+
+        return element;
+      })
+    );
+    //console.log(item);
   };
 
   return (
@@ -99,7 +124,9 @@ export const Sidenavheader = () => {
                 <div>
                   {e.submenu.menulist.map((item, index) => (
                     <div
-                      className="flex justify-center gap-3 w-3/4 my-3  ml-4 py-3 rounded-[8px] hover:bg-submenu "
+                      className={`flex justify-center gap-3 w-3/4 my-3  ml-4 py-3 rounded-[8px] ${
+                        item.status ? " bg-submenu" : ""
+                      }`}
                       key={index + 1}
                     >
                       <img
@@ -108,11 +135,16 @@ export const Sidenavheader = () => {
                         alt="sub menu"
                       />
                       <Link
-                        to={`/menu/dinein/${item.menuItem
+                        to={`/menu/${item?.mainmenu}/${item.menuItem
                           .toLowerCase()
                           .replace(" ", "")}`}
                       >
-                        <p className=" w-24">{item.menuItem}</p>
+                        <p
+                          onClick={() => handleClickSubmenuItem(item)}
+                          className={`w-24 `}
+                        >
+                          {item.menuItem}
+                        </p>
                       </Link>
                     </div>
                   ))}
@@ -129,7 +161,7 @@ export const Sidenavheader = () => {
       </div>
 
       {/* Header */}
-      <div className="bg-white flex h-20 justify-end pr-9 shadow-lg">
+      <div className="bg-white flex h-20 justify-end pr-9 headerShadow">
         <div>
           <div className=" w-11 h-11 rounded-[22px] mr-4 bg-slate-600 relative top-3">
             {/* src={obj.picture}
