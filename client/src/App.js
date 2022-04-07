@@ -21,6 +21,7 @@ import ItemsBody from "./components/TakeAway/AddItems/ItemsBody";
 import DetailBody from "./components/TakeAway/CustomerDetails/DetailBody";
 import PaymentBody from "./components/TakeAway/ManagePayment/PaymentBody";
 import ManageOrderBody from "./Pages/TakeAway/ManageOrderBody";
+import SalesBody from "./components/Reports/SalesReport/SalesBody";
 // import AddNewCategoryBody from "./components/ManageCategory/AddNewCategory/AddNewCategoryBody";
 // import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
 // import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
@@ -78,7 +79,8 @@ function App() {
 
           {/* <Route exact path="addmenu" element={<AddMenuBody />} /> */}
           <Route exact path="feedback" element={<Feedback />} />
-          <Route exact path="reports" element={<Feedback />} />
+          <Route exact path="reports" element={<SalesBody />} />
+
           <Route exact path="partyorder" element={<Dashboard />} />
           <Route exact path="managestaff" element={<ManageStaffBody />} />
         </Route>
