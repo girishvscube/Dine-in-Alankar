@@ -10,6 +10,18 @@ export const pastAllOrdersData = [
     total: "Rs. 200",
     paymentMode: "Cash",
     status: false,
+    history: [
+      {
+        date: "2020-01-05",
+        customerId: "11091700",
+        amount: 3,
+      },
+      {
+        date: "2020-01-02",
+        customerId: "Anonymous",
+        amount: 1,
+      },
+    ],
   },
   {
     sno: "2",
@@ -22,6 +34,18 @@ export const pastAllOrdersData = [
     total: "Rs. 2200",
     status: false,
     paymentMode: "UPI",
+    history: [
+      {
+        date: "2020-01-05",
+        customerId: "11091700",
+        amount: 3,
+      },
+      {
+        date: "2020-01-02",
+        customerId: "Anonymous",
+        amount: 1,
+      },
+    ],
   },
   {
     sno: "3",
@@ -34,6 +58,18 @@ export const pastAllOrdersData = [
     total: "Rs. 2800",
     status: false,
     paymentMode: "Cash",
+    history: [
+      {
+        date: "2020-01-05",
+        customerId: "11091700",
+        amount: 3,
+      },
+      {
+        date: "2020-01-02",
+        customerId: "Anonymous",
+        amount: 1,
+      },
+    ],
   },
   {
     sno: "4",
@@ -46,6 +82,18 @@ export const pastAllOrdersData = [
     total: "Rs. 900",
     status: false,
     paymentMode: "UPI",
+    history: [
+      {
+        date: "2020-01-05",
+        customerId: "11091700",
+        amount: 3,
+      },
+      {
+        date: "2020-01-02",
+        customerId: "Anonymous",
+        amount: 1,
+      },
+    ],
   },
   {
     sno: "5",
@@ -58,5 +106,17 @@ export const pastAllOrdersData = [
     total: "Rs.4200",
     status: false,
     paymentMode: "Cash",
+    history: [
+      {
+        date: "2020-01-05",
+        customerId: "11091700",
+        amount: 3,
+      },
+      {
+        date: "2020-01-02",
+        customerId: "Anonymous",
+        amount: 1,
+      },
+    ],
   },
 ];
