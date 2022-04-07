@@ -14,14 +14,14 @@ const ManageTable = () => {
   };
 
   return (
-    <div className=" h-[70vh] pl-4 mt-4 rounded-lg">
-      <div className="text-orange  mt-5 mb-3 font-semibold font-sans">
+    <div className=" h-[70vh] bg-white pl-4 mt-10 rounded-lg">
+      <div className="text-orange text-xl  mt-5 mb-3 font-semibold font-sans">
         All Items
       </div>
       <div className="h-full overflow-y-scroll font-sans">
         <Table className="relative">
           <Thead className="sticky top-0 border-b-2 mb-1  bg-white head ">
-            <Tr className=" text-left">
+            <Tr className=" text-left text-base ">
               <Th className="font-sans pb-2">S. No.</Th>
               <Th className="font-sans pl-10 pb-2">Item Name</Th>
               <Th className="font-sans pl-12 pb-2">Price</Th>
