@@ -7,6 +7,8 @@ import {
   YAxis,
 } from "recharts";
 
+//console.log(window.innerWidth);
+
 export const CurveLineChart = () => {
   const data = [
     {

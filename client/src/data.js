@@ -7,6 +7,7 @@ export const obj = [
     status: false,
     link: "dashboard",
     submenu: {
+      //mainmenu: "dashboard",
       menulist: [],
       status: false,
     },
@@ -24,21 +25,31 @@ export const obj = [
         {
           menuItem: "Dashboard",
           menuimg: require("./Images/Sidenavbar/dashboard.png"),
+          status: false,
+          mainmenu: "dinein",
         },
         {
           menuItem: "Active Order",
+          status: false,
+          mainmenu: "dinein",
           menuimg: require("./Images/Sidenavbar/activeorder.png"),
         },
         {
           menuItem: "Past Order",
+          status: false,
+          mainmenu: "dinein",
           menuimg: require("./Images/Sidenavbar/pastorder.png"),
         },
         {
           menuItem: "Manage Table",
+          status: false,
+          mainmenu: "dinein",
           menuimg: require("./Images/Sidenavbar/managetable.png"),
         },
         {
           menuItem: "KDS",
+          status: false,
+          mainmenu: "dinein",
           menuimg: require("./Images/Sidenavbar/kds.png"),
         },
       ],
@@ -80,10 +91,14 @@ export const obj = [
       menulist: [
         {
           menuItem: "Dashboard",
+          status: false,
+          mainmenu: "takeaway",
           menuimg: require("./Images/Sidenavbar/dashboard.png"),
         },
         {
           menuItem: "Manage Order",
+          status: false,
+          mainmenu: "takeaway",
           menuimg: require("./Images/Sidenavbar/activeorder.png"),
         },
       ],
@@ -101,10 +116,14 @@ export const obj = [
       menulist: [
         {
           menuItem: "Active Order",
+          status: false,
+          mainmenu: "partyorder",
           menuimg: require("./Images/Sidenavbar/activeorder.png"),
         },
         {
           menuItem: "Past Order",
+          status: false,
+          mainmenu: "partyorder",
           menuimg: require("./Images/Sidenavbar/pastorder.png"),
         },
       ],
@@ -142,7 +161,20 @@ export const obj = [
     status: false,
     link: "reports",
     submenu: {
-      menulist: [],
+      menulist: [
+        {
+          menuItem: "Sales Report",
+          status: false,
+          mainmenu: "reports",
+          menuimg: require("./Images/Sidenavbar/staffreport.png"),
+        },
+        {
+          menuItem: "Staff Report",
+          status: false,
+          mainmenu: "reports",
+          menuimg: require("./Images/Sidenavbar/staffreport.png"),
+        },
+      ],
       status: false,
     },
   },
@@ -154,7 +186,32 @@ export const obj = [
     status: false,
     link: "setting",
     submenu: {
-      menulist: [],
+      menulist: [
+        {
+          menuItem: "Store",
+          status: false,
+          mainmenu: "setting",
+          menuimg: require("./Images/Sidenavbar/store.png"),
+        },
+        {
+          menuItem: "Table",
+          status: false,
+          mainmenu: "setting",
+          menuimg: require("./Images/Sidenavbar/table.png"),
+        },
+        {
+          menuItem: "Discount",
+          status: false,
+          mainmenu: "setting",
+          menuimg: require("./Images/Sidenavbar/discount.png"),
+        },
+        {
+          menuItem: "User Role",
+          status: false,
+          mainmenu: "setting",
+          menuimg: require("./Images/Sidenavbar/userrole.png"),
+        },
+      ],
       status: false,
     },
   },

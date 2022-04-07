@@ -13,13 +13,13 @@ export const AdminContainer = () => {
 
   return (
     <div className="w-screen">
-      <div className="h-[88vh] overflow-y-scroll">
+      <div className="h-[88vh] overflow-y-scroll bg-darkwhite">
         <div className="grid grid-flow-row gap-2 pl-11 mt-11">
           <p className=" text-[26px] font-bold text-darkyellow">Dashboard</p>
           <p className="text-2xl font-normal">Your Statistic Report</p>
-          <p className="border-b-2 border-darkyellow mr-11 mt-4"></p>
+          <p className="border-b-2 headerBorder mr-11 mt-4"></p>
         </div>
-        <div className=" flex gap-11 mt-10 pl-11 w-4/6 lg:w-1/2">
+        <div className=" flex gap-11 mt-10 pl-11 w-5/6 lg:w-8/12 2xl:w-1/2">
           <FoodItems
             data={{
               picture: require("../../Images/Dashboard/fooditem.png"),
