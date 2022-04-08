@@ -8,12 +8,12 @@ const SearchForMenu = () => {
     <div className="flex justify-between">
       <div className=" flex ">
         <Link to="/menu/addmenu">
-          <button className=" pl-6 pr-6 pt-4 pb-4 text-lg add text-center  rounded-lg text-white font-semibold font-sans">
+          <button className=" pl-6 pr-6 pt-5 pb-5 text-lg add text-center  rounded-lg text-white font-semibold font-sans">
             Add New Items
           </button>
         </Link>
         <div className=" text-xs  ">
-          <select className=" border-2 pl-3 pr-8 pt-4 pb-4  mr-2 ml-6 border-button_border text-lg outline-none text-orange rounded-lg ">
+          <select className=" border-2 pl-3 pr-8 pt-5 pb-5  mr-2 ml-6 border-button_border text-lg outline-none text-orange rounded-lg ">
             <option className="many">All</option>
             <option value="one">Simply South</option>
             <option value="two">Chinese</option>
@@ -26,11 +26,11 @@ const SearchForMenu = () => {
         <div className=" pl-2  font-semibold">
           <input
             type="text"
-            className=" text-lg pt-3.5 bg-search font-semibold placeholder-orange outline-none"
+            className=" text-lg pt-5 bg-search font-semibold placeholder-orange outline-none"
             placeholder="Search"
           />
         </div>
-        <div className=" bg-search pt-3">
+        <div className=" bg-search pt-4">
           <img src={search} alt="search_icon" />
         </div>
       </div>

@@ -10,9 +10,9 @@ import food from "../../../Images/ManageCategory/FOOD.svg"
 
 const ManageCategoryTable = () => {
   return (
-    <div className="h-[75vh] pl-6 bg-white rounded-lg  mt-10">
+    <div className="h-[68vh] box pl-6 pt-4 bg-white rounded-lg  mt-10">
     <div className="text-orange w-full text-xl  mb-3 font-semibold font-sans">All Items</div>
-    <div className=" w-full table_cat  overflow-y-scroll font-sans">
+    <div className=" w-full h-[60vh] overflow-y-scroll font-sans">
       <Table className="">
         <Thead className="sticky top-0 border-b-2 mb-1  bg-white head ">
           <Tr className=" text-left text-lg">

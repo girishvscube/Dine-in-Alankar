@@ -40,7 +40,7 @@ const ItemTable = () => {
   ];
 
   return (
-    <div className=" h-[50vh] bg-white pl-8  mt-8 rounded-xl  w-[52vw]">
+    <div className= " h-[48vh] bg-white pl-8 box  mt-8 rounded-xl  w-[52vw]">
       <div className="  overflow-y-scroll font-sans">
         <Table className="">
           <Thead className="sticky top-0 border-b-2 mb-1 text-base bg-white head ">

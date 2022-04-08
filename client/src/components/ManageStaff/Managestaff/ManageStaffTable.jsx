@@ -9,9 +9,9 @@ import edit from "../../../Images/ManageStaff/EDIT ICON.svg";
 
 const ManageStaffTable = () => {
   return (
-    <div className="bg-white mt-8 box pt-2 pl-5 h-[75vh]">
+    <div className="bg-white mt-8 box pt-2 pb-10 pl-5 h-[65vh]">
       <div className="text-orange  mt-5 mb-5  text-xl font-semibold font-sans">All Items</div>
-      <div className="h-[70vh] overflow-y-scroll font-sans">
+      <div className="h-[58vh] overflow-y-scroll font-sans">
         <Table className="">
           <Thead className="sticky top-0 border-b-2 mb-1 bg-white head ">
             <Tr className=" text-left text-lg">

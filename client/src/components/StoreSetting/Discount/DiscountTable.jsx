@@ -7,8 +7,8 @@ import ToggleSwitch from './ToggleSwitch';
 
 const DicsountTable = () => {
   return (
-    <div className="bg-white mt-8 pt-10 box ">
-    <div className=" overflow-y-scroll h-[80vh] pl-10 pr-10 pb-10  font-sans">
+    <div className="bg-white pb-4 mt-8 pt-10 box ">
+    <div className=" overflow-y-scroll h-[60vh] pl-10 pr-10 pb-10  font-sans">
       <Table className="">
         <Thead className="sticky top-0 border-b-2 mb-1 bg-white head ">
           <Tr className=" text-left text-lg">

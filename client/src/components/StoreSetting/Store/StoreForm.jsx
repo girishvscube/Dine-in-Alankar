@@ -13,14 +13,14 @@ const StoreForm = () => {
 
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className=" for">
-    <div className="h-[45vh] grid  grid-rows-3 pr-20 grid-flow-col">
+    <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
+    <div className="h-[40vh] grid  grid-rows-3 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
         <p className="font-sans text-lg font-semibold mb-1">Store Name</p>
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+          className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
           {...register("StoreName", {
             required: true,
             maxLength: 20,
@@ -42,7 +42,7 @@ const StoreForm = () => {
         <input
           type="email"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+          className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
           {...register("Email", {
             required: true,
             pattern:
@@ -61,7 +61,7 @@ const StoreForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+          className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
           {...register("Gst", {
             required: true,
             maxLength: 20,
@@ -81,7 +81,7 @@ const StoreForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+          className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
           {...register("Phone", {
             required: true,
             maxLength: 20,
@@ -104,7 +104,7 @@ const StoreForm = () => {
         <input
           type="password"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+          className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
           {...register("address", {
             required: true,
             maxLength: 8,
@@ -121,7 +121,7 @@ const StoreForm = () => {
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+          className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
           {...register("GstNo", {
             required: true,
             maxLength: 20,
@@ -141,7 +141,7 @@ const StoreForm = () => {
     <div className=" mt-20 mr-28 flex items-center justify-center">
       <button
         type="submit"
-        className="add font-sans text-lg font-semibold text-white pl-16 pr-16 pt-4 pb-4 rounded-lg border-orange"
+        className="add font-sans text-lg font-semibold text-white pl-16 pr-16 pt-5 pb-5 rounded-lg border-orange"
       >
         Update
       </button>

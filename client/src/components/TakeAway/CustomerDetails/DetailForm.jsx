@@ -12,14 +12,14 @@ const DetailForm = () => {
       const onSubmit = (data) => console.log(data);
 
   return (
-     <form onSubmit={handleSubmit(onSubmit)} className="h-[80vh]">
-      <div className="h-[60vh] field grid  mt-10 grid-col-1 pr-20 grid-flow-col">
+     <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
+      <div className="h-[45vh] field grid  mt-10 grid-col-1 pr-20 grid-flow-col">
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-base mb-1">Customer Name</p>
+          <p className="font-sans font-semibold text-lg mb-1">Customer Name</p>
           <input
             type="text"
             placeholder=""
-            className="h-1/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -38,11 +38,11 @@ const DetailForm = () => {
         </div>
        
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-base mb-1">Phone No.</p>
+          <p className="font-sans font-semibold text-lg mb-1">Phone No.</p>
           <input
             type="text"
             placeholder=""
-            className="h-1/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
             {...register("Phone", {
               required: true,
               maxLength: 20,
@@ -65,7 +65,7 @@ const DetailForm = () => {
       <div className="w-11/12  h-1/6 mt-18 flex items-center justify-center">
         <button
           type="submit"
-          className="add font-sans text-white pl-16 text-base pr-16 pt-4 pb-4 rounded-lg border-orange"
+          className="add font-sans text-white pl-16 text-lg pr-16 pt-5 pb-5 rounded-lg border-orange"
         >
           Next
         </button>

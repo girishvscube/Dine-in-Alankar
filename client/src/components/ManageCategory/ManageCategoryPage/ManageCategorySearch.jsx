@@ -11,12 +11,12 @@ const ManageCategorySearch = () => {
     <div className="  flex justify-between">
       <div className=" flex justify-between">
         <Link to="/menu/addnewcategory">
-          <button className=" text-lg pl-6 pr-6 add text-center pt-4 pb-4 text-white font-semibold font-sans">
+          <button className=" text-lg pl-6 pr-6 add text-center pt-5 pb-5 text-white font-semibold font-sans">
             Add New Category
           </button>
         </Link>
       </div>
-      <div className=" w-3/5 bg-search flex justify-between pl-2 pr-2 pt-3 pb-2 rounded-lg focus-within:border-2 border-button_border text-orange">
+      <div className=" w-3/5 bg-search flex justify-between pl-2 pr-2 pt-4 pb-2 rounded-lg focus-within:border-2 border-button_border text-orange">
         <div className="h-full w-10/12 pl-2  font-semibold">
           <input
             type="text"

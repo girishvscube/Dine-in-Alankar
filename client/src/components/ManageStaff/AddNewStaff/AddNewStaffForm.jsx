@@ -18,7 +18,7 @@ const AddNewStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-20 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -40,7 +40,7 @@ const AddNewStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+            className="h-20 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
             {...register("Phone", {
               required: true,
               maxLength: 20,
@@ -62,7 +62,7 @@ const AddNewStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 text-orange w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-20 text-orange w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Role", {
               required: true,
               maxLength: 20,
@@ -84,7 +84,7 @@ const AddNewStaffForm = () => {
           <input
             type="email"
             placeholder=""
-            className="h-2/5 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-20 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Email", {
               required: true,
               pattern:
@@ -103,7 +103,7 @@ const AddNewStaffForm = () => {
           <input
             type="password"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Password", {
               required: true,
               maxLength: 8,
@@ -125,7 +125,7 @@ const AddNewStaffForm = () => {
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -149,7 +149,7 @@ const AddNewStaffForm = () => {
           <input type="file" className=" h-3/4 w-1/5 rounded-md bg-search ml-1 border-2 border-orange border-dashed"></input>
         </div>
         <div className="w-3/5 h-10/12   pt-2">
-          <div className="w-8/12 h-1/2 ml-4 flex flex-row">
+          <div className="w-8/12 h-1/2 ml-10 flex flex-row">
            <div className="form-group mr-8">
            <input className="outline-none" id="one" type="checkbox"/>
             <label className="font-sans" for="one">20A</label>
@@ -176,7 +176,7 @@ const AddNewStaffForm = () => {
       <div className=" mt-1 flex items-center justify-center">
         <button
           type="submit"
-          className="add font-sans text-white pl-12 pr-12 pt-4 pb-4 text-lg rounded-lg border-orange"
+          className="add font-sans text-white mt-8 pl-12 pr-12 pt-4 pb-4 text-lg rounded-lg border-orange"
         >
           Create Staff
         </button>

@@ -13,14 +13,14 @@ const TableForm = () => {
 
 
   return (
-     <form onSubmit={handleSubmit(onSubmit)} className=" for">
-    <div className=" field grid grid-rows-2 pr-20 grid-flow-col">
+     <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
+    <div className=" h-[26vh] grid grid-rows-2 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
         <p className="font-sans text-lg font-semibold  mb-1">Table Name</p>
         <input
           type="text"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+          className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
           {...register("StoreName", {
             required: true,
             maxLength: 20,
@@ -42,7 +42,7 @@ const TableForm = () => {
         <input
           type="email"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+          className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
           {...register("floor", {
             required: true,
             maxLength: 20,
@@ -65,7 +65,7 @@ const TableForm = () => {
         <input
           type="password"
           placeholder=""
-          className="h-2/4 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+          className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
           {...register("hallName", {
             required: true,
             maxLength: 20,
@@ -84,10 +84,10 @@ const TableForm = () => {
       
     </div>
    
-    <div className="w-10/12 ml-12 h-1/6 mt-20 flex items-center justify-center">
+    <div className="w-10/12 ml-12 h-1/6 mt-24 flex items-center justify-center">
       <button
         type="submit"
-        className="add font-sans font-semibold text-lg  text-white pl-16 pr-16 pt-4 pb-4 rounded-lg border-orange"
+        className="add font-sans font-semibold text-lg  text-white pl-16 pr-16 pt-5 pb-5 rounded-lg border-orange"
       >
         Create
       </button>

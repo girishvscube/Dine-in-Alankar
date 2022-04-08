@@ -11,15 +11,15 @@ const ManageOrderButtons = () => {
         <div className="w-1/4">
           <input
             type="date"
-            className="outline-none text-orange  pl-6 pr-6 rounded-lg bg-search border-2 border-button_border pt-4 pb-4"
+            className="outline-none text-orange  pl-6 pr-6 rounded-lg bg-search border-2 border-button_border pt-5 pb-4"
           />
         </div>
-        <div className="w-3/4 flex flex-row justify-between">
+        <div className="w-3/4 h-16 flex flex-row justify-between">
           <div className=" bg-search w-3/4 focus-within:border-2 border-button_border text-orange  flex justify-between pl-2 pr-2  rounded-lg ">
             <div className=" pl-2  font-semibold">
               <input
                 type="text"
-                className=" text-lg pt-3.5 bg-search font-semibold placeholder-orange outline-none"
+                className=" text-lg pt-5 bg-search font-semibold placeholder-orange outline-none"
                 placeholder="Search"
               />
             </div>
@@ -28,7 +28,7 @@ const ManageOrderButtons = () => {
             </div>
           </div>
           <Link to="/menu/takeaway/customerdetails">
-            <button className="add pl-6 pr-6  pt-4 pb-4 font-sans font-semibold text-white">
+            <button className="add pl-6 pr-6  pt-5 pb-5 font-sans font-semibold text-white">
               Create New Order
             </button>
           </Link>
