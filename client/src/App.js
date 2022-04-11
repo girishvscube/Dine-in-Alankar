@@ -31,7 +31,10 @@ import DiscountBody from "./components/StoreSetting/Discount/DiscountBody"
 import UserBody from "./components/StoreSetting/UserRole/UserBody";
 import CouponBody from "./components/StoreSetting/CouponDiscount/CouponBody";
 import StaffBody from "./components/Reports/StaffReport/StaffBody";
-import PCustomerBody from "./components/PartyOrder/PartyCustomer/PCustomerBody";
+ import PCustomerBody from "./components/PartyOrder/PartyCustomer/PCustomerBody";
+import PItemsBody from "./components/PartyOrder/PartyItems/PItemsBody";
+import PPaymentBody from "./components/PartyOrder/PartyPayement/PPaymentBody";
+import PartyBody from "./components/PartyOrder/PartyOrder/PartyBody";
 
 function App() {
   return (
@@ -107,7 +110,13 @@ function App() {
           <Route exact path="reports/staffreport" element={<StaffBody/>} />
           <Route exact path="reports/salesreport" element={<SalesBody/>} />
 
-          <Route exact path="partyorder/activeorder" element={<PCustomerBody/>  } />
+
+          {/*Party orders */}
+          <Route exact path="partyorder/activeorder" element={<PartyBody/>} />
+          <Route exact path="partyorder/activeorder/customer" element={<PCustomerBody/>} />
+          <Route exact path="partyorder/activeorder/items" element={<PItemsBody/>} />
+          <Route exact path="partyorder/activeorder/payment" element={<PPaymentBody/>} />
+        
           
 
 
