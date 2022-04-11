@@ -95,10 +95,10 @@ function App() {
             path="take-away/manage-payment"
             element={<PaymentBody />}
           />
-          <Route exact path="takeaway/dashboard" element={<Dashboard />} />
+          <Route exact path="take-away/dashboard" element={<Dashboard />} />
           <Route
             exact
-            path="takeaway/manageorder"
+            path="take-away/manage-order"
             element={<ManageOrderBody />}
           />
           {/* Party Order Route*/}
@@ -118,7 +118,7 @@ function App() {
           <Route exact path="reports/salesreport" element={<SalesBody />} />
 
           {/*Party orders */}
-          <Route exact path="partyorder/activeorder" element={<PartyBody />} />
+          <Route exact path="party-order" element={<PartyBody />} />
           <Route
             exact
             path="partyorder/activeorder/customer"

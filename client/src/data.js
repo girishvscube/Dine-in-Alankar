@@ -92,13 +92,13 @@ export const obj = [
         {
           menuItem: "Dashboard",
           status: false,
-          mainmenu: "takeaway",
+          mainmenu: "take-away",
           menuimg: require("./Images/Sidenavbar/dashboard.png"),
         },
         {
           menuItem: "Manage Order",
           status: false,
-          mainmenu: "takeaway",
+          mainmenu: "take-away",
           menuimg: require("./Images/Sidenavbar/activeorder.png"),
         },
       ],
@@ -110,7 +110,7 @@ export const obj = [
     img: require("./Images/Sidenavbar/party.png"),
     wimg: require("./Images/Sidenavbar/wpartyorder.png"),
     status: false,
-    link: "partyorder",
+    link: "party-order",
     submenu: {
       status: false,
       menulist: [
