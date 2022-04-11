@@ -7,31 +7,31 @@ import ToggleSwitch from './ToggleSwitch';
 
 const DicsountTable = () => {
   return (
-    <div className="bg-white mt-8 table_div">
-    <div className=" w-11/12 h-5/6 ml-14 mr-12 overflow-y-scroll font-sans">
+    <div className="bg-white pb-4 mt-8 pt-10 box ">
+    <div className=" overflow-y-scroll h-[60vh] pl-10 pr-10 pb-10  font-sans">
       <Table className="">
         <Thead className="sticky top-0 border-b-2 mb-1 bg-white head ">
-          <Tr className=" text-left">
-            <Th className="font-sans pb-2">S. No.</Th>
-            <Th className="font-sans  pb-2">Name</Th>
-            <Th className="font-sans  pb-2">Date</Th>
-            <Th className="font-sans pb-2 pr-56">Status</Th>
+          <Tr className=" text-left text-lg">
+            <Th className="font-sans  pb-4">S. No.</Th>
+            <Th className="font-sans pb-4 ">Name</Th>
+            <Th className="font-sans pb-4">Date</Th>
+            <Th className="font-sans pb-4 pr-56">Status</Th>
           </Tr>
         </Thead>
         {Data.map((data, i) => {
           return (
             <Tbody>
               <Tr className="row border-b-2 font-sans">
-                <Td key={i} className="pt-4 pb-4">
+                <Td key={i} className="pt-8 pb-8">
                   {data.s}.
                 </Td>
-                <Td key={i} className="pt-4 text-left  pb-4">
+                <Td key={i} className=" text-left  ">
                   {data.coupon}
                 </Td>
-                <Td key={i} className="pt-4 text-left pb-4">
+                <Td key={i} className="text-left">
                   {data.date}
                 </Td>
-                <Td key={i} className="pt-4 text-left pb-4">
+                <Td key={i} className=" text-left">
                   <ToggleSwitch/>
                 </Td>
               </Tr>

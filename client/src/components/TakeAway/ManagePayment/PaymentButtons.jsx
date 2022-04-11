@@ -16,7 +16,7 @@ const PaymentButtons = () => {
             Add Items
           </button>
         </Link>
-        <button className="h-full text-lg ml-10 pl-6 pr-6 pt-4 pb-4 add text-center rounded-lg text-white font-semibold font-sans">
+        <button className="h-full text-lg ml-10 pl-6 pr-6 pt-5 pb-5 add text-center rounded-lg text-white font-semibold font-sans">
           Manage Payment
         </button>
       </div>

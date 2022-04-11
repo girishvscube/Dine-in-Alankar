@@ -6,7 +6,7 @@ import ManageCategoryTable from '../../components/ManageCategory/ManageCategoryP
 
 const ManageCategoryBody = () => {
   return (
-    <div className="h-[88vh] pt-3 mt-2 pl-10 pr-8 bg-darkwhite overflow-y-scroll">
+    <div className="h-[88vh] pt-6 mt-2 pl-12 pr-8 bg-darkwhite overflow-y-scroll">
       <ManageCategoryList/>
       <hr className=" mt-1 mb-3 border-2 bord" />
       <ManageCategorySearch/>

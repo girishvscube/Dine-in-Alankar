@@ -57,10 +57,10 @@ const ItemsForm = () => {
   ];
 
   return (
-    <div className="h-[70vh] mt-10 gap-4 flex flex-row">
-      <div className="h-full w-2/3  mr-6 flex flex-col">
-        <div className="w-full h-16 bg-search mb-6 flex justify-between pl-2 pr-2 pb-2 pt-1.5 rounded-lg focus-within:border-2 border-button_border ">
-          <div className="h-full w-10/12 pl-2  font-semibold">
+    <div className="h-[65vh] mt-10 gap-4 flex flex-row">
+      <div className="h-[45vh] w-2/3  mr-6 flex flex-col">
+        <div className=" h-16 bg-search mb-6 flex justify-between pl-2 pr-2 pb-2 pt-1.5 rounded-lg focus-within:border-2 border-button_border ">
+          <div className=" w-10/12 pl-2  font-semibold">
             <input
               type="text"
               className="h-9 w-full mt-2 text-lg bg-search font-semibold placeholder-orange  outline-none"
@@ -71,7 +71,7 @@ const ItemsForm = () => {
             <img src={search} alt="search icon" />
           </div>
         </div>
-        <div className=" h-1/6 w-full flex flex-row  justify-between">
+        <div className=" w-full flex flex-row  justify-between">
           <div className="w-1/5 h-full">
             <p className="font-sans mt-14 font-bold text-orange text-xl">
               All Orders
@@ -90,7 +90,7 @@ const ItemsForm = () => {
             </div>
           </div>
         </div>
-        <div className="w-full h-4/6 mt-4 p-4 rounded-lg box "></div>
+        
       </div>
       <div className="h-[67vh] w-1/3  items_box rounded-lg  mb-4 flex flex-col">
         <div className="h-full w-full   p-3 flex flex-col  ">
@@ -137,7 +137,7 @@ const ItemsForm = () => {
           ></input>
         </div>
         <div className="mb-8  flex justify-center items-center">
-          <button className="font-sans add text-white pl-12 rounded-lg border-orange pr-12 pt-3 pb-3 font-semibold text-base">
+          <button className="font-sans add text-white pl-16 rounded-lg border-orange pr-16 pt-5 pb-5 font-semibold text-lg">
             Next
           </button>
         </div>

@@ -1,0 +1,61 @@
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.add{
+    background-color: orange;
+    background-image: -webkit-linear-gradient(74deg, orange 50%, rgb(248, 177, 45) 50%);
+    border: orange;
+    
+
+}
+
+
+.button{
+    background-color: white;
+    background-image: -webkit-linear-gradient(74deg, gray 28.4% ,rgba(100, 95, 95, 0.16) );
+    border: white;
+
+}
+
+.row{
+   border-spacing: 40px;
+   border-collapse: separate;
+   border-radius: 10px;
+   border-radius: 20px;
+   border: 1px solid rgba(240, 145, 44, 0.34);
+   border-top: none;
+   border-left: none;
+   border-right: none;
+}
+
+.check{
+    background-color:orange;
+    outline: none;
+    border: 2px;
+    border-color: red;
+}
+
+.bord{
+    border: 1px solid rgba(240, 145, 44, 0.34);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.head{
+    border: 1px solid rgba(240, 145, 44, 0.34);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+
+
+.search_border{
+    background-image: linear-gradient(to right,#FFBE15 , #F38B1C);
+}
+
+

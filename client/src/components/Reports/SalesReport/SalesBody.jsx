@@ -1,8 +1,8 @@
 import React from 'react'
-import SalesButtons from './SalesButtons'
-import SalesList from './SalesList'
-import SalesTable from './SalesTable'
-import "./style.scss"
+import SalesList from "./SalesList"
+import SalesButtons from "./SalesButtons"
+import SalesTable from "./SalesTable"
+import "./style.scss";
 
 const SalesBody = () => {
   return (
@@ -16,3 +16,4 @@ const SalesBody = () => {
 }
 
 export default SalesBody
+

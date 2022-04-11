@@ -5,8 +5,8 @@ import "./style.scss"
 const AddNewStaffList = () => {
   return (
     <div className=''>
-    <p className='font-semibold text-orange mb-1 text-lg font-sans'>Add New Staff</p>
-    <p className=' font-semibold font-sans'>Manage Staff &#8250; Add New Staff</p>
+    <p className='font-semibold text-orange mb-1 text-2xl font-sans'>Add New Staff</p>
+    <p className=' font-semibold text-xl font-sans'>Manage Staff &nbsp; &#8250; &nbsp; Add New Staff</p>
   </div>
   )
 }

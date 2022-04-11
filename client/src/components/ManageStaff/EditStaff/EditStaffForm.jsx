@@ -15,11 +15,11 @@ const EditStaffForm = () => {
   <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
       <div className="h-[40vh]  field grid  grid-rows-3 pr-20 grid-flow-col">
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Name</p>
+          <p className="font-sans font-semibold text-lg mb-1">Name</p>
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 value outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-20 w-11/12 value outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -37,11 +37,11 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Phone No.</p>
+          <p className="font-sans font-semibold text-lg mb-1">Phone No.</p>
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
             {...register("Phone", {
               required: true,
               maxLength: 20,
@@ -59,11 +59,11 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Role</p>
+          <p className="font-sans font-semibold text-lg mb-1">Role</p>
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
             {...register("Role", {
               required: true,
               maxLength: 20,
@@ -81,11 +81,11 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Email</p>
+          <p className="font-sans font-semibold text-lg mb-1">Email</p>
           <input
             type="email"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Email", {
               required: true,
               pattern:
@@ -100,11 +100,11 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Password</p>
+          <p className="font-sans font-semibold text-lg mb-1">Password</p>
           <input
             type="password"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Password", {
               required: true,
               maxLength: 8,
@@ -122,11 +122,11 @@ const EditStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-xs mb-1">Table</p>
+          <p className="font-sans font-semibold text-lg mb-1">Table</p>
           <input
             type="text"
             placeholder=""
-            className="h-2/5 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -146,11 +146,11 @@ const EditStaffForm = () => {
       </div>
       <div className="h-[18vh] mt-5 flex justify-between">
         <div className="w-3/6 h-10/12  flex flex-col">
-          <p className="font-sans text-xs font-semibold mb-2">Upload Image</p>
+          <p className="font-sans text-lg font-semibold mb-2">Upload Image</p>
           <input type="file" className=" h-3/4 w-1/5 rounded-md bg-search ml-1 border-2 border-orange border-dashed"></input>
         </div>
         <div className="w-3/5 h-10/12   pt-2">
-          <div className="w-8/12 h-1/2 ml-4 flex flex-row">
+          <div className="w-8/12 h-1/2 ml-10 flex flex-row">
            <div className="form-group mr-8">
            <input className="outline-none" id="one" type="checkbox"/>
             <label className="font-sans" for="one">20A</label>
@@ -174,10 +174,10 @@ const EditStaffForm = () => {
           </div>
         </div>
       </div>
-      <div className="w-11/12 ml-12 h-1/6 mt-1 flex items-center justify-center">
+      <div className="mt-1 flex items-center justify-center">
         <button
           type="submit"
-          className="add font-sans text-white pl-8 pr-8 pt-3 pb-3 rounded-lg border-orange"
+          className="add font-sans text-lg mt-8 text-white pl-14 pr-14 pt-5 pb-5 rounded-lg border-orange"
         >
           Edit Staff
         </button>

@@ -27,6 +27,16 @@ import RollBody from "./components/ManageStaff/AddRole/RollBody";
 import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
 import { PartyOrders } from "./Pages/PartyOrders/PartyOrders";
 //import { PrivateRoute } from "./Pages/Login/PrivateRoute";
+import StoreBody from "./components/StoreSetting/Store/StoreBody";
+import TableBody from "./components/StoreSetting/Table/TableBody";
+import DiscountBody from "./components/StoreSetting/Discount/DiscountBody";
+import UserBody from "./components/StoreSetting/UserRole/UserBody";
+import CouponBody from "./components/StoreSetting/CouponDiscount/CouponBody";
+import StaffBody from "./components/Reports/StaffReport/StaffBody";
+import PCustomerBody from "./components/PartyOrder/PartyCustomer/PCustomerBody";
+import PItemsBody from "./components/PartyOrder/PartyItems/PItemsBody";
+import PPaymentBody from "./components/PartyOrder/PartyPayement/PPaymentBody";
+import PartyBody from "./components/PartyOrder/PartyOrder/PartyBody";
 
 function App() {
   return (
@@ -104,9 +114,36 @@ function App() {
           <Route exact path="feedback" element={<Feedback />} />
 
           {/* Reports Route*/}
-          <Route exact path="reports" element={<SalesBody />} />
+          <Route exact path="reports/staffreport" element={<StaffBody />} />
+          <Route exact path="reports/salesreport" element={<SalesBody />} />
 
-          <Route exact path="partyorder" element={<Dashboard />} />
+          {/*Party orders */}
+          <Route exact path="partyorder/activeorder" element={<PartyBody />} />
+          <Route
+            exact
+            path="partyorder/activeorder/customer"
+            element={<PCustomerBody />}
+          />
+          <Route
+            exact
+            path="partyorder/activeorder/items"
+            element={<PItemsBody />}
+          />
+          <Route
+            exact
+            path="partyorder/activeorder/payment"
+            element={<PPaymentBody />}
+          />
+
+          <Route exact path="setting/store" element={<StoreBody />} />
+          <Route exact path="setting/table" element={<TableBody />} />
+          <Route exact path="setting/discount" element={<DiscountBody />} />
+          <Route exact path="setting/userrole" element={<UserBody />} />
+          <Route
+            exact
+            path="setting/discount/createcoupon"
+            element={<CouponBody />}
+          />
         </Route>
         {/* </Route> */}
       </Routes>

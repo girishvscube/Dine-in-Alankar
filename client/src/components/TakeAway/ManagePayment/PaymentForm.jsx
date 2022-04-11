@@ -58,11 +58,11 @@ const PaymentForm = () => {
 
 
   return (
-   <div className="h-[70vh] mt-10 gap-4 flex flex-row">
-      <div className="h-full w-2/3  mr-6 flex flex-col">
+   <div className="h-[55vh] mt-10 gap-4 flex flex-row">
+      <div className=" w-2/3  mr-6 flex flex-col">
         <div className='flex flex-row'>
             <input type="text" className='text-orange pt-3 text-base w-2/4 pb-3 pl-2 outline-none bg-search rounded-md focus:ring-2 ring-button_border'/>
-            <button className='pt-4 pb-4 pl-16 pr-16 ml-10 font-sans font-semibold text-white text-base add'>Remove</button>
+            <button className='pt-5 pb-5 pl-16 pr-16 ml-10 font-sans font-semibold text-white text-lg add'>Remove</button>
         </div>
        
         <div className="w-full h-4/6 mt-4 p-4 rounded-lg"></div>
@@ -118,7 +118,7 @@ const PaymentForm = () => {
           </div>
         </div>
         <div className="mb-8  flex justify-center items-center">
-          <button className="font-sans add text-white pl-12 rounded-lg border-orange pr-12 pt-3 pb-3 font-semibold text-base">
+          <button className="font-sans add text-white pl-16 rounded-lg border-orange pr-16 pt-5 pb-5 font-semibold text-lg">
             Next
           </button>
         </div>

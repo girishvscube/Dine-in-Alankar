@@ -8,6 +8,7 @@
     background-color: orange;
     background-image: -webkit-linear-gradient(75deg, orange 50%, rgb(248, 177, 45) 50%);
     border: orange;
+    border-radius: 10px;
 }
 
 
@@ -28,13 +29,6 @@
     border-top: none;
 }
 
-.managemenu_body{
-    height: 90%;
-}
-
-.header{
-    height: 10%;
-}
 
 
 
@@ -42,9 +36,7 @@
     height: 85%;
 }
 
-.field{
-    height: 55%;
-}
+
 
 
 

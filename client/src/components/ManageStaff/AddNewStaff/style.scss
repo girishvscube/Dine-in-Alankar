@@ -8,8 +8,7 @@
     background-color: orange;
     background-image: -webkit-linear-gradient(75deg, orange 50%, rgb(248, 177, 45) 50%);
     border: orange;
-    
-
+    border-radius: 8px;
 }
 
 .row{
@@ -44,30 +43,7 @@
     border-top: none;
 }
 
-.managemenu_body{
-    height: 90%;
-}
 
-.header{
-    height: 10%;
-}
-
-.table_div{
-    height: 74%;
-}
-
-.for{
-    height: 83%;
-}
-
-.field{
-    height: 55%;
-}
-
-
-.table_cat{
-    height: 95%;
-}
 
 
 
@@ -123,7 +99,7 @@
     content: '';
     display: block;
     position: absolute;
-    top: 2px;
+    top: 5px;
     left: 9px;
     width: 6px;
     height: 14px;
