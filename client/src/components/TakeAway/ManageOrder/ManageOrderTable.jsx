@@ -5,7 +5,7 @@ import Data from "../../Data2.json"
 
 const ManageOrderTable = () => {
   return (
-    <div className="bg-white mt-8 pl-6 pt-4 box h-[66vh]">
+    <div className="bg-white mt-8 pl-6 box h-[66vh]">
     <div className="text-orange  mt-5 mb-3  text-lg font-semibold font-sans">All Items</div>
     <div className="h-[58vh] overflow-y-scroll font-sans">
       <Table className="">

@@ -15,7 +15,7 @@ const CouponForm = () => {
    <form onSubmit={handleSubmit(onSubmit)} className=" for">
     <div className="h-[45vh] grid  grid-rows-3 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-lg mb-1">Coupon Code</p>
+        <p className="font-sans font-semibold text-base mb-1">Coupon Code</p>
         <input
           type="text"
           placeholder=""
@@ -37,7 +37,7 @@ const CouponForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-lg  mb-1">Value</p>
+        <p className="font-sans font-semibold text-base mb-1">Value</p>
         <input
           type="email"
           placeholder=""
@@ -56,7 +56,7 @@ const CouponForm = () => {
         )}
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-lg  mb-1">Expiray Date</p>
+        <p className="font-sans font-semibold text-base  mb-1">Expiray Date</p>
         <input
           type="text"
           placeholder=""
@@ -76,7 +76,7 @@ const CouponForm = () => {
         
       </div>
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-lg  mb-1">Percentage/Amount</p>
+        <p className="font-sans font-semibold text-base  mb-1">Percentage/Amount</p>
        
          <div  className="h-2/4 w-11/12 outline-none pl-2 rounded-lg pr-5 bg-search focus-within:border-2 border-button_border ">
              <select className='w-full h-full outline-none bg-search '>
@@ -91,7 +91,7 @@ const CouponForm = () => {
       </div>
       
       <div className=" mr-10 flex flex-col">
-        <p className="font-sans font-semibold text-lg  mb-1">Status</p>
+        <p className="font-sans font-semibold text-base  mb-1">Status</p>
        
         <div  className="h-2/4 w-11/12 outline-none pl-2 rounded-lg pr-5 bg-search focus-within:border-2 border-button_border ">
              <select className='w-full h-full outline-none bg-search '>
@@ -109,7 +109,7 @@ const CouponForm = () => {
     <div className="w-10/12 ml-12 h-1/6 mt-20 flex items-center justify-center">
       <button
         type="submit"
-        className="add font-sans font-semibold text-lg text-white pl-16 pr-16 pt-4 pb-4 rounded-lg border-orange"
+        className="add font-sans font-semibold text-base text-white pl-14 pr-14 pt-4 pb-4 rounded-lg border-orange"
       >
         Create
       </button>

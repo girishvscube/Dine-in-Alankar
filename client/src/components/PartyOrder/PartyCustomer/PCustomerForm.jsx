@@ -16,11 +16,11 @@ const PCustomerForm = () => {
       <div className="h-[60vh] w-11/12 mt-16  rounded-lg bg-white  flex flex-col">
         <div className="menu_box w-full mt-1 grid grid-rows-3  grid-flow-col gap-1 pr-1/12">
           <div className="">
-            <p className="text-lg font-semibold font-sans">Customer Name</p>
+            <p className="text-base font-semibold font-sans">Customer Name</p>
             <input
               placeholder=""
               type="text"
-              className="w-11/12 h-20 bg-input_color mt-2 outline-none rounded-md focus:ring-2 ring-button_border pl-2"
+              className="w-11/12 h-16 bg-input_color mt-2 outline-none rounded-md focus:ring-2 ring-button_border pl-2"
               {...register("Name", {
                 required: true,
                 maxLength: 20,
@@ -32,11 +32,11 @@ const PCustomerForm = () => {
             )}
           </div>
           <div className="">
-            <p className="text-lg font-semibold font-sans">Total Amount</p>
+            <p className="text-base font-semibold font-sans">Total Amount</p>
             <input
               placeholder=""
               type="text"
-              className="w-11/12 h-20 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
+              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
               {...register("Name", {
                 required: true,
                 maxLength: 20,
@@ -48,11 +48,11 @@ const PCustomerForm = () => {
             )}
           </div>
           <div className="">
-            <p className="text-lg font-semibold font-sans">Occassion</p>
+            <p className="text-base font-semibold font-sans">Occassion</p>
             <input
               placeholder=""
               type="text"
-              className="w-11/12 h-20 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
+              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
               {...register("Name", {
                 required: true,
                 maxLength: 20,
@@ -66,11 +66,11 @@ const PCustomerForm = () => {
          
           
           <div className="">
-            <p className="text-lg font-semibold font-sans">Phone No.</p>
+            <p className="text-base font-semibold font-sans">Phone No.</p>
             <input
               placeholder=""
               type="text"
-              className="w-11/12 h-20 bg-input_color outline-none mt-2  rounded-md focus:ring-2 ring-button_border pl-2"
+              className="w-11/12 h-16 bg-input_color outline-none mt-2  rounded-md focus:ring-2 ring-button_border pl-2"
               {...register("Name", {
                 required: true,
                 maxLength: 20,
@@ -82,11 +82,11 @@ const PCustomerForm = () => {
             )}
           </div>
           <div className="">
-            <p className="text-lg font-semibold font-sans">Advance Received</p>
+            <p className="text-base font-semibold font-sans">Advance Received</p>
             <input
               placeholder=""
               type="text"
-              className="w-11/12 h-20 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
+              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
               {...register("Name", {
                 required: true,
                 maxLength: 20,
@@ -98,13 +98,13 @@ const PCustomerForm = () => {
             )}
           </div>
           <div className="">
-            <p className="text-lg font-semibold font-sans">
+            <p className="text-base font-semibold font-sans">
               Availability Count
             </p>
             <input
               placeholder=""
               type="text"
-              className="w-11/12 h-20 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
+              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
               {...register("Name", {
                 required: true,
                 maxLength: 20,
@@ -118,7 +118,7 @@ const PCustomerForm = () => {
         </div>
         <div className="flex flex-col w-full h-2/6">
           <div className=" h-1/3 w-full mt-20 flex justify-center items-center">
-            <button className=" pl-16 pr-16 pt-5 pb-5 text-lg  mt-1 add rounded-lg text-white font-semibold  font-sans">
+            <button className=" pl-14 pr-14 pt-4 pb-4 text-base  mt-1 add rounded-lg text-white font-semibold  font-sans">
               Next
             </button>
           </div>

@@ -210,7 +210,7 @@ const AddNewCategoryForm = () => {
         <button className=" mt-10 bg-search rounded-md pl-3 pr-3 text-3xl text-orange">+</button>
       </div>
       <div className="w-full h-1/6 flex justify-center items-center">
-            <button className="add pt-5 pb-5 pl-8 pr-8 rounded-lg text-lg font-semibold font-sans text-white">Add Category</button>
+            <button className="add pt-4 pb-4 pl-8 pr-8 rounded-lg text-base font-semibold font-sans text-white">Add Category</button>
       </div>
     </div>
   );

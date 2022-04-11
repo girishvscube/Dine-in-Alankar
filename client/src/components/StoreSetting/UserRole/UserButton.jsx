@@ -5,7 +5,7 @@ const UserButton = () => {
   return (
     <div className=''>
         <div className=' bg-darkwhite pr-5'>
-            <select className='rounded-lg pt-5 pb-5 pl-3 pr-20 text-orange outline-none border-2 text-lg border-button_border'>
+            <select className='rounded-lg pt-4 pb-4 pl-3 pr-20 text-orange outline-none border-2 text-base border-button_border'>
                 <option>Waiter</option>
                 <option>Manager</option>
                 <option>Chief</option>

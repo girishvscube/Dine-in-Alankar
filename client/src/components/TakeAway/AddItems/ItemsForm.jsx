@@ -63,11 +63,11 @@ const ItemsForm = () => {
           <div className=" w-10/12 pl-2  font-semibold">
             <input
               type="text"
-              className="h-9 w-full mt-2 text-lg bg-search font-semibold placeholder-orange  outline-none"
+              className="h-9 w-full mt-1 text-lg bg-search font-semibold placeholder-orange  outline-none"
               placeholder="Search"
             />
           </div>
-          <div className="h-full mt-2 w-1/12 bg-search">
+          <div className="h-full mt-1 w-1/12 bg-search">
             <img src={search} alt="search icon" />
           </div>
         </div>

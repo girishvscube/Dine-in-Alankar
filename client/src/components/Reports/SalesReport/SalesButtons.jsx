@@ -30,13 +30,13 @@ const SalesButtons = () => {
     </div>
     <div className="w-1/2 h-1/2 flex  justify-end items-end pl-4 pt-2">
     <div className="w-11/12 flex flex-row gap-6" >
-    <input type="date" className="outline-none pt-5 w-2/6 rounded-lg pb-5 border-2 border-button_border  text-orange text-lg pl-4 pr-4"/>
-      <select className="outline-none w-2/6 text-orange rounded-lg  border-2 border-button_border text-lg pt-6 pb-6 pl-3 pr-16">
+    <input type="date" className="outline-none pt-4 w-2/6 rounded-lg pb-4 border-2 border-button_border  text-orange text-base pl-4 pr-4"/>
+      <select className="outline-none w-2/6 text-orange rounded-lg  border-2 border-button_border text-base pt-5 pb-5 pl-3 pr-16">
         <option value="dine-in">Dine-In</option>
         <option value="order">Party Order</option>
         <option value="away">Take Away</option>
       </select>
-      <input type="date" className="outline-none w-2/6 rounded-lg pt-5 pb-5 border-2 border-button_border pl-4 pr-4 text-orange text-lg"/>
+      <input type="date" className="outline-none w-2/6 rounded-lg pt-4 pb-4 border-2 border-button_border pl-4 pr-4 text-orange text-base"/>
     </div>
     </div>
   </div>

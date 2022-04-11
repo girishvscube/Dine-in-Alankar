@@ -117,13 +117,13 @@ export const obj = [
         {
           menuItem: "Active Order",
           status: false,
-          mainmenu: "partyorder",
+          mainmenu: "party-order",
           menuimg: require("./Images/Sidenavbar/activeorder.png"),
         },
         {
           menuItem: "Past Order",
           status: false,
-          mainmenu: "partyorder",
+          mainmenu: "party-order",
           menuimg: require("./Images/Sidenavbar/pastorder.png"),
         },
       ],

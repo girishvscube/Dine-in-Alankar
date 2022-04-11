@@ -139,7 +139,7 @@ const PItemsForm = () => {
         ></input>
       </div>
       <div className="mb-8  flex justify-center items-center">
-        <button className="font-sans add text-white pl-16 rounded-lg border-orange pr-16 pt-5 pb-5 font-semibold text-lg">
+        <button className="font-sans add text-white pl-16 rounded-lg border-orange pr-16 pt-4 pb-4 font-semibold text-base">
           Next
         </button>
       </div>

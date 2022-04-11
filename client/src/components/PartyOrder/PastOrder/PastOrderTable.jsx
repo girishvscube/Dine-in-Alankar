@@ -16,33 +16,33 @@ import Paper from "@mui/material/Paper";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-const PartyTable = () => {
+const PastOrderTable = () => {
 
     const [data, setData] = useState(pastAllOrdersData);
-  const [open, setOpen] = useState(false);
-  console.log(data);
-  const menuArr = [
-    "S.No",
-    "Customer Name",
-    "Date & Time",
-    "Order ID",
-    "Total",
-    "Payment Mode",
-  ];
-
-  const handleClick = (item) => {
-    setData(
-      data.map((e) => {
-        if (e.sno === item.sno) {
-          e.status = !e.status;
-          setOpen(!open);
-        } else {
-          e.status = false;
-        }
-        return e;
-      })
-    );
-  };
+    const [open, setOpen] = useState(false);
+    console.log(data);
+    const menuArr = [
+      "S.No",
+      "Customer Name",
+      "Date & Time",
+      "Order ID",
+      "Total",
+      "Payment Mode",
+    ];
+  
+    const handleClick = (item) => {
+      setData(
+        data.map((e) => {
+          if (e.sno === item.sno) {
+            e.status = !e.status;
+            setOpen(!open);
+          } else {
+            e.status = false;
+          }
+          return e;
+        })
+      );
+    };
 
   return (
     <div className=" pt-4 pl-6 h-[60vh] pr-6 mt-6 rounded-lg">
@@ -145,4 +145,4 @@ const PartyTable = () => {
   )
 }
 
-export default PartyTable
+export default PastOrderTable

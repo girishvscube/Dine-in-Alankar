@@ -14,11 +14,11 @@ const AddNewStaffForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
       <div className="h-[40vh] grid  grid-rows-3 pr-20 grid-flow-col">
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-lg mb-1">Name</p>
+          <p className="font-sans font-semibold text-base mb-1">Name</p>
           <input
             type="text"
             placeholder=""
-            className="h-20 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-16 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -36,11 +36,11 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-lg mb-1">Phone No.</p>
+          <p className="font-sans font-semibold text-base mb-1">Phone No.</p>
           <input
             type="text"
             placeholder=""
-            className="h-20 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+            className="h-16 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
             {...register("Phone", {
               required: true,
               maxLength: 20,
@@ -58,11 +58,11 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-lg mb-1">Role</p>
+          <p className="font-sans font-semibold text-base mb-1">Role</p>
           <input
             type="text"
             placeholder=""
-            className="h-20 text-orange w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-16 text-orange w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Role", {
               required: true,
               maxLength: 20,
@@ -80,11 +80,11 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-lg mb-1">Email</p>
+          <p className="font-sans font-semibold text-base mb-1">Email</p>
           <input
             type="email"
             placeholder=""
-            className="h-20 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-16 w-11/12 text-orange outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Email", {
               required: true,
               pattern:
@@ -99,11 +99,11 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-lg mb-1">Password</p>
+          <p className="font-sans font-semibold text-base mb-1">Password</p>
           <input
             type="password"
             placeholder=""
-            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
+            className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
             {...register("Password", {
               required: true,
               maxLength: 8,
@@ -121,11 +121,11 @@ const AddNewStaffForm = () => {
           )}
         </div>
         <div className=" mr-10 flex flex-col">
-          <p className="font-sans font-semibold text-lg mb-1">Table</p>
+          <p className="font-sans font-semibold text-base mb-1">Table</p>
           <input
             type="text"
             placeholder=""
-            className="h-20 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
+            className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
             {...register("Name", {
               required: true,
               maxLength: 20,
@@ -145,7 +145,7 @@ const AddNewStaffForm = () => {
       </div>
       <div className="h-[18vh] mt-5 flex justify-between">
         <div className="w-3/6 h-10/12  flex flex-col">
-          <p className="font-sans text-lg font-semibold mb-2">Upload Image</p>
+          <p className="font-sans text-base font-semibold mb-2">Upload Image</p>
           <input type="file" className=" h-3/4 w-1/5 rounded-md bg-search ml-1 border-2 border-orange border-dashed"></input>
         </div>
         <div className="w-3/5 h-10/12   pt-2">
@@ -176,7 +176,7 @@ const AddNewStaffForm = () => {
       <div className=" mt-1 flex items-center justify-center">
         <button
           type="submit"
-          className="add font-sans text-white mt-8 pl-12 pr-12 pt-4 pb-4 text-lg rounded-lg border-orange"
+          className="add font-sans text-white mt-8 pl-12 pr-12 pt-4 pb-4 text-base rounded-lg border-orange"
         >
           Create Staff
         </button>

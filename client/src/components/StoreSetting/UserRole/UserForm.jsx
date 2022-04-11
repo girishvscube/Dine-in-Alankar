@@ -111,7 +111,7 @@ const UserForm = () => {
           </div>
       </div>
       <div className=" flex justify-center items-center">
-          <button className=" pl-12 pt-4 pb-4  pr-12 add rounded-lg border-2 text-lg border-orange text-white font-semibold">Add User Role</button>
+          <button className=" pl-12 pt-4 pb-4  pr-12 add rounded-lg border-2 text-base border-orange text-white font-semibold">Add User Role</button>
       </div>
     </div>
   );
