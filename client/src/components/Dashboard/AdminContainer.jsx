@@ -1,18 +1,10 @@
 import { FoodItems } from "./FoodItems";
 import { CurveLineChart } from "./CurveLineChart";
-import { useState } from "react";
-import { Calender } from "./Calender";
-
-import dateimg from "../../Images/Sidenavbar/reports.png";
+import { DatePickerMUI } from "../DatePickerMUI/DatePickerMUI";
 
 export const AdminContainer = () => {
-  const [showCalender, setShowCalender] = useState(false);
-  const handleClick = () => {
-    setShowCalender(!showCalender);
-  };
-
   return (
-    <div className="w-screen">
+    <div className="w-screen mt-1">
       <div className="h-[88vh] overflow-y-scroll bg-darkwhite">
         <div className="grid grid-flow-row gap-2 pl-11 mt-11">
           <p className=" text-[26px] font-bold text-darkyellow">Dashboard</p>
@@ -45,14 +37,8 @@ export const AdminContainer = () => {
         <div className="mt-6 px-11">
           <div className="flex justify-between mb-11 ">
             <p className=" text-2xl font-semibold text-darkyellow">Date</p>
-            <div className="  ">
-              <img
-                onClick={handleClick}
-                className=" w-5 cursor-pointer mr-0"
-                src={dateimg}
-                alt="calender"
-              />
-              <div className="mt-4"> {showCalender ? <Calender /> : ""}</div>
+            <div>
+              <DatePickerMUI />
             </div>
           </div>
           <CurveLineChart />

@@ -1,16 +1,9 @@
 import "./pastorders.scss";
-import calender from "../../Images/PastOrders/calender.svg";
-import { useState } from "react";
-import { Calender } from "../Dashboard/Calender";
 import search from "../../Images/ActiveOrder/Search_fill.png";
 import { AllOrders } from "./AllOrders";
+import { DatePickerMUI } from "../DatePickerMUI/DatePickerMUI";
 
 export const SuperAdminContainer = () => {
-  const [showCalender, setShowCalender] = useState(false);
-
-  const handleClick = () => {
-    setShowCalender(!showCalender);
-  };
   return (
     <div className="w-screen">
       <div className=" overflow-y-scroll h-[88vh]">
@@ -29,17 +22,8 @@ export const SuperAdminContainer = () => {
           <p className=" text-darkyellow text-xl h-16 border-2 border-darkyellow w-2/12 rounded-lg">
             Time
           </p>
-          <div className="pt-3 pl-3 text-darkyellow text-xl h-16 border-2 border-darkyellow w-2/12 rounded-lg flex justify-between ">
-            <p>Today</p>
-            <div>
-              <img
-                className="relative"
-                onClick={handleClick}
-                src={calender}
-                alt="calender"
-              />
-              {showCalender ? <Calender /> : ""}
-            </div>
+          <div className="">
+            <DatePickerMUI />
           </div>
           <div className="w-2/6 ml-auto pr-11  ">
             <div className="  displayGrid bg-search border-2 border-darkyellow rounded-lg">

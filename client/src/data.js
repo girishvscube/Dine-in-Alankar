@@ -61,7 +61,7 @@ export const obj = [
     img: require("./Images/Sidenavbar/managemenu.png"),
     wimg: require("./Images/Sidenavbar/wmanagemenu.png"),
     status: false,
-    link: "managemenu",
+    link: "manage-menu",
     submenu: {
       menulist: [],
       status: false,
@@ -73,7 +73,7 @@ export const obj = [
     img: require("./Images/Sidenavbar/managecategory.png"),
     wimg: require("./Images/Sidenavbar/wmanagecategory.png"),
     status: false,
-    link: "managecategory",
+    link: "manage-category",
     submenu: {
       menulist: [],
       status: false,
@@ -85,7 +85,7 @@ export const obj = [
     img: require("./Images/Sidenavbar/takeaway.png"),
     wimg: require("./Images/Sidenavbar/wtakeaway.png"),
     status: false,
-    link: "takeaway",
+    link: "take-away",
     submenu: {
       status: false,
       menulist: [

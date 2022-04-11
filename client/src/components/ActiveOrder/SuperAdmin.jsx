@@ -56,7 +56,7 @@ export const SuperAdmin = () => {
             placeholder="Search"
           />
           <div className="2xl:ml-4">
-            <Link to="/menu/dinein/createneworder">
+            <Link to="/menu/dinein/create-new-order">
               {" "}
               <button className="h-[60px] Btn text-sm w-[160px] p-3 relative top-1 text-white font-semibold 2xl:px-5 2xl:w-[180px] 2xl:text-base ">
                 {/*  px-7 py-3 */}

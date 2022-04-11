@@ -6,6 +6,8 @@ import login_img from "../../Images/login1.svg";
 import "./login.scss";
 
 export const Login = () => {
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+  console.log("BASE URL", BASE_URL);
   const intialValues = {
     email: "",
     password: "",
@@ -55,7 +57,7 @@ export const Login = () => {
   return (
     <div className=" bg-background max-w-[1920px] mx-auto h-screen overflow-hidden">
       {/* Alankar Logo */}
-      <div className=" ml-24 pt-6 mb-16 2xl:ml-40 2xl:pt-20 2xl:mb-24">
+      <div className=" ml-24 pt-9 mb-16 2xl:ml-40 2xl:pt-20 2xl:mb-24">
         <img
           className="w-[220px] h-16 2xl:w-[326px] 2xl:h-18"
           src={alankar}

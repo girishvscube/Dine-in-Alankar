@@ -10,7 +10,7 @@ const ManageCategorySearch = () => {
   return (
     <div className="  flex justify-between">
       <div className="w-1/6 h-full flex justify-between">
-        <Link to="/menu/addnewcategory">
+        <Link to="/menu/add-new-category">
           <button className="w-full h-full text-base  mr-8 add text-center pt-3 pb-3 text-white font-semibold font-sans">
             Add New Category
           </button>

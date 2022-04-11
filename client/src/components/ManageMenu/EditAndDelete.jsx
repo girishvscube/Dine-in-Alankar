@@ -30,7 +30,7 @@ const EditAndDelete = () => {
     <div>
       <div className="flex w-11/12  h-10     ">
         <div className="  ">
-          <Link to="/menu/editmenu">
+          <Link to="/menu/edit-menu">
             {" "}
             <img src={edit} className="mt-1" alt="edit icon" />
           </Link>

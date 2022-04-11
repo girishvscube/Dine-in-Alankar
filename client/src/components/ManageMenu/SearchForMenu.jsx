@@ -7,7 +7,7 @@ const SearchForMenu = () => {
   return (
     <div className="flex justify-between">
       <div className=" flex ">
-        <Link to="/menu/addmenu">
+        <Link to="/menu/add-menu">
           <button className=" pl-6 pr-6 pt-4 pb-4 text-base add text-center  rounded-lg text-white font-semibold font-sans">
             Add New Items
           </button>

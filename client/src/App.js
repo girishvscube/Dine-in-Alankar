@@ -25,6 +25,8 @@ import SalesBody from "./components/Reports/SalesReport/SalesBody";
 import AddNewStaffBody from "./components/ManageStaff/AddNewStaff/AddNewStaffBody";
 import RollBody from "./components/ManageStaff/AddRole/RollBody";
 import EditStaffBody from "./components/ManageStaff/EditStaff/EditStaffBody";
+import { PartyOrders } from "./Pages/PartyOrders/PartyOrders";
+//import { PrivateRoute } from "./Pages/Login/PrivateRoute";
 
 function App() {
   return (
@@ -34,43 +36,53 @@ function App() {
         <Route exact path="/" element={<Login />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />
         <Route exact path="/resetpassword" element={<ResetPassword />} />
-        {/* Parent Route Sidenavbar and Header */}
 
+        {/* Private Routing */}
+        {/* <Route element={<PrivateRoute />}> */}
+        {/* Parent Route Sidenavbar and Header */}
         <Route exact path="/menu" element={<Sidenavheader />}>
           {/* Dashboard */}
           <Route exact path="dashboard" element={<Dashboard />} />
           {/* Dine in Route */}
           <Route exact path="dinein" element={<ActiveOrder />} />
           <Route exact path="dinein/dashboard" element={<Dashboard />} />
-          <Route exact path="dinein/activeorder" element={<ActiveOrder />} />
+          <Route exact path="dinein/active-order" element={<ActiveOrder />} />
           <Route
             exact
-            path="dinein/createneworder"
+            path="dinein/create-new-order"
             element={<CreateNewOrder />}
           />
-          <Route exact path="dinein/pastorder" element={<PastOrders />} />
-          <Route exact path="dinein/managetable" element={<ManageTables />} />
+          <Route exact path="dinein/past-order" element={<PastOrders />} />
+          <Route exact path="dinein/manage-table" element={<ManageTables />} />
           <Route exact path="dinein/KDS" element={<KDS />} />
           {/* Manage Menu Route */}
-          <Route exact path="managemenu" element={<ManageMenuBody />} />
-          <Route exact path="addmenu" element={<AddMenuBody />} />
-          <Route exact path="editmenu" element={<EditMenuBody />} />
+          <Route exact path="manage-menu" element={<ManageMenuBody />} />
+          <Route exact path="add-menu" element={<AddMenuBody />} />
+          <Route exact path="edit-menu" element={<EditMenuBody />} />
           {/* ManageCategory Route */}
-          <Route exact path="managecategory" element={<ManageCategoryBody />} />
-          <Route exact path="addnewcategory" element={<AddNewCategoryBody />} />
-          <Route exact path="editcategory" element={<CategoryBody />} />
-
-          {/* Take away Route */}
-          <Route exact path="takeaway" element={<ManageOrderBody />} />
-          <Route exact path="takeaway/itemdetails" element={<ItemsBody />} />
           <Route
             exact
-            path="takeaway/customerdetails"
+            path="manage-category"
+            element={<ManageCategoryBody />}
+          />
+          <Route
+            exact
+            path="add-new-category"
+            element={<AddNewCategoryBody />}
+          />
+          <Route exact path="edit-category" element={<CategoryBody />} />
+
+          {/* Take away Route */}
+          <Route exact path="take-away" element={<ManageOrderBody />} />
+          <Route exact path="take-away/item-details" element={<ItemsBody />} />
+          <Route
+            exact
+            path="take-away/customer-details"
             element={<DetailBody />}
           />
           <Route
             exact
-            path="takeaway/managepayment"
+            path="take-away/manage-payment"
             element={<PaymentBody />}
           />
           <Route exact path="takeaway/dashboard" element={<Dashboard />} />
@@ -80,6 +92,7 @@ function App() {
             element={<ManageOrderBody />}
           />
           {/* Party Order Route*/}
+          <Route exact path="partyorder" element={<PartyOrders />} />
 
           {/* Manage Staff Route */}
           <Route exact path="managestaff" element={<ManageStaffBody />} />
@@ -95,6 +108,7 @@ function App() {
 
           <Route exact path="partyorder" element={<Dashboard />} />
         </Route>
+        {/* </Route> */}
       </Routes>
     </>
   );

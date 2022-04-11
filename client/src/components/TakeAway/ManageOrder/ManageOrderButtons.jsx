@@ -27,7 +27,7 @@ const ManageOrderButtons = () => {
               <img src={search} alt="search_icon" />
             </div>
           </div>
-          <Link to="/menu/takeaway/customerdetails">
+          <Link to="/menu/take-away/customer-details">
             <button className="add pl-6 pr-6  pt-4 pb-4 font-sans font-semibold text-white">
               Create New Order
             </button>

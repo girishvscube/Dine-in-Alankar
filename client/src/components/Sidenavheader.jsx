@@ -137,7 +137,7 @@ export const Sidenavheader = () => {
                       <Link
                         to={`/menu/${item?.mainmenu}/${item.menuItem
                           .toLowerCase()
-                          .replace(" ", "")}`}
+                          .replace(" ", "-")}`}
                       >
                         <p
                           onClick={() => handleClickSubmenuItem(item)}
