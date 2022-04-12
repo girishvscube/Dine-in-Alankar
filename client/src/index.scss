@@ -75,17 +75,3 @@
     @apply font-sans text-orange text-base outline-none pt-4 pb-4 pl-4 rounded-lg font-semibold bg-search placeholder-orange;
   }
 }
-
-
-@layer components {
-  .textfield{
-      @apply  font-sans text-orange text-base outline-none pt-3 pb-4 pl-4  pr-24 rounded-lg font-semibold bg-search focus:ring-1 ring-button_border;
-  }
-}
-
-@layer components {
-  .searchfield{
-      @apply font-sans text-orange text-base outline-none pt-2 pb-2 pl-4 rounded-lg font-semibold bg-search placeholder-orange;
-      
-  }
-}
