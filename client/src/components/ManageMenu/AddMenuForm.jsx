@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.scss";
 import { useForm } from "react-hook-form";
+import { Button } from "../Button";
 
 const AddMenuForm = () => {
   const {
@@ -145,10 +146,8 @@ const AddMenuForm = () => {
             <p className="font-semibold mt-2 text-base font-sans">Upload Image</p>
             <div className="h-full w-1/12 mt-1 bg-red-400"></div>
           </div>
-          <div className=" h-1/3 w-full mt-1 flex justify-center items-center">
-            <button className=" pl-10 pr-10 text-base pt-4 pb-4  mt-1 add rounded-lg text-white font-semibold  font-sans">
-              Update Menu
-            </button>
+          <div className=" h-1/3 w-full mt-2 flex justify-center items-center">
+            <Button className="pl-8 pr-8">Update Menu</Button>
           </div>
         </div>
       </div>

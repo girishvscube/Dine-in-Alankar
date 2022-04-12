@@ -2,15 +2,16 @@ import React from "react";
 import "./style.scss";
 import search from "../../Images/ActiveOrder/Search_fill.png";
 import { Link } from "react-router-dom";
+import { Button } from "../Button";
+import { TextField } from "../TextField";
+import { SearchField } from "../SearchField";
 
 const SearchForMenu = () => {
   return (
     <div className="flex justify-between">
       <div className=" flex ">
         <Link to="/menu/add-menu">
-          <button className=" pl-6 pr-6 pt-4 pb-4 text-base add text-center  rounded-lg text-white font-semibold font-sans">
-            Add New Items
-          </button>
+          <Button className="pl-6 pr-6">Add New Items</Button>
         </Link>
         <div className=" text-xs  ">
           <select className=" border-2 pl-3 pr-8 pt-4 pb-4  mr-2 ml-6 border-button_border text-base outline-none text-orange rounded-lg ">
@@ -22,15 +23,12 @@ const SearchForMenu = () => {
           </select>
         </div>
       </div>
-      <div className="w-1/2 bg-search focus-within:border-2 border-button_border text-orange  flex justify-between pl-2 pr-2  rounded-lg ">
-        <div className=" pl-2  font-semibold">
-          <input
-            type="text"
-            className=" text-lg pt-4 bg-search font-semibold placeholder-orange outline-none"
-            placeholder="Search"
-          />
+      <div className="w-1/2 bg-search focus-within:border-2 border-button_border text-orange  flex justify-between  pr-2  rounded-lg ">
+        <div className=" w-11/12  font-semibold">
+          
+          <SearchField className="w-11/12"/>
         </div>
-        <div className=" bg-search pt-3">
+        <div className=" bg-search pt-2 text-lg">
           <img src={search} alt="search_icon" />
         </div>
       </div>

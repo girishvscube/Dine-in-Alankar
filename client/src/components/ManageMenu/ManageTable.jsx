@@ -14,7 +14,7 @@ const ManageTable = () => {
   };
 
   return (
-    <div className=" h-[65vh] bg-white pt-2 pl-6 mt-10 box rounded-lg">
+    <div className=" h-[65vh] box bg-white pt-2 pl-6 mt-10 box rounded-lg">
       <div className="text-orange text-xl  mt-5 mb-4 font-semibold font-sans">
         All Items
       </div>
