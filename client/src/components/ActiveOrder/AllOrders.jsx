@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { data } from "../../AllOrders";
+import { Button } from "../Button";
 import { DetailOrder } from "./DetailOrder";
 import "./superadmin.scss";
 
@@ -61,9 +62,12 @@ export const AllOrders = () => {
                   <p className=" mb-7 mt-7 font-normal">{e.PaymentStatus}</p>
                 </td>
                 <td>
-                  <button className="mb-7 mt-7 Btn px-11 py-3 rounded-lg text-white font-normal">
+                  {/* <button className="mb-7 mt-7 Btn px-11 py-3 rounded-lg text-white font-normal">
                     {e.PaymentAction}
-                  </button>
+                  </button> */}
+                  <Button className="mb-7 mt-7 Btn px-11 py-3 rounded-lg text-white font-normal">
+                    {e.PaymentAction}
+                  </Button>
                 </td>
               </tr>
             ))}

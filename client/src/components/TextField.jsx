@@ -1,7 +1,13 @@
 import classNames from "classnames";
 import React from "react";
 
-export const TextField = ({ children, className = "", onChange }) => {
+export const TextField = ({
+  children,
+  className = "",
+  onChange,
+  type,
+  placeholder,
+}) => {
   const textfieldClasses = classNames("textfield", className);
 
   const commonProps = {
@@ -9,9 +15,5 @@ export const TextField = ({ children, className = "", onChange }) => {
     onChange,
   };
 
-  return React.createElement(
-    "input",
-    { ...commonProps, type: "text" },
-    children
-  );
+  return <input {...commonProps} type={type} placeholder={placeholder} />;
 };

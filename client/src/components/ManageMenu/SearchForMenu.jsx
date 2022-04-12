@@ -25,8 +25,7 @@ const SearchForMenu = () => {
       </div>
       <div className="w-1/2 bg-search focus-within:border-2 border-button_border text-orange  flex justify-between  pr-2  rounded-lg ">
         <div className=" w-11/12  font-semibold">
-          
-          <SearchField className="w-11/12"/>
+          <TextField className="w-11/12" />
         </div>
         <div className=" bg-search pt-2 text-lg">
           <img src={search} alt="search_icon" />
