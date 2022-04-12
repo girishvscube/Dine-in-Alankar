@@ -1,13 +1,19 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import alankar from "../../Images/alankar.svg";
 import login_img from "../../Images/login1.svg";
 import "./login.scss";
+import { AuthContext } from "../../context/AuthContext";
 
 export const Login = () => {
+  const navigate = useNavigate();
+
+  const { handleToken } = useContext(AuthContext);
+
   const BASE_URL = process.env.REACT_APP_BASE_URL;
-  console.log("BASE URL", BASE_URL);
+
   const intialValues = {
     email: "",
     password: "",
@@ -26,7 +32,7 @@ export const Login = () => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
 
-    console.log("formValues :", formValues);
+    // console.log("formValues :", formValues.email);
   };
 
   //Form Validations
@@ -34,6 +40,21 @@ export const Login = () => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setisSubmit(true);
+
+    axios
+      .post(`${BASE_URL}/login`, formValues)
+      .then((res) => {
+        // console.log(res.data.data.token.token);
+        //localStorage.setItem("alankartoken", res.data.data.token.token);
+        // localStorage.clear();
+        handleToken(res.data.data.token.token);
+        navigate("/menu/dashboard");
+      })
+      .then((error) => {
+        console.log(error);
+        navigate("/");
+        // alert("please use correct credentials");
+      });
   };
 
   const validate = (values) => {

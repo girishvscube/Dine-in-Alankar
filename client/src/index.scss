@@ -41,7 +41,7 @@
   width: 130px !important;
 }
 
-.cancel_btn{
+.cancel_btn {
   background-color: white !important;
   border: 1px solid orange !important;
   width: 130px !important;
@@ -53,13 +53,26 @@
 }
 
 @layer components {
-  .btn{
-      @apply pl-4 pr-4 pt-4 pb-4 font-sans text-center text-white text-base  rounded-lg font-semibold bg-orange;
-      background-image: -webkit-linear-gradient(
-        75deg,
-        orange 50%,
-        rgb(248, 177, 45) 50%
-      ) !important; 
+  .btn {
+    @apply pl-4 pr-4 pt-4 pb-4 font-sans text-center text-white text-base  rounded-lg font-semibold bg-orange;
+    background-image: -webkit-linear-gradient(
+      75deg,
+      orange 50%,
+      rgb(248, 177, 45) 50%
+    ) !important;
+    background-image: linear-gradient(
+      75deg,
+      orange 50%,
+      rgb(248, 177, 45) 50%
+    ) !important;
+  }
+
+  .textfield {
+    @apply font-sans text-orange text-base outline-none pt-3 pb-4 pl-4  pr-24 rounded-lg font-semibold bg-search placeholder:text-darkyellow placeholder:font-semibold;
+  }
+
+  .searchfield {
+    @apply font-sans text-orange text-base outline-none pt-4 pb-4 pl-4 rounded-lg font-semibold bg-search placeholder-orange;
   }
 }
 

@@ -3,6 +3,7 @@ import refresh from "../../Images/ActiveOrder/refresh.png";
 import "./superadmin.scss";
 import { AllOrders } from "./AllOrders";
 import { Link } from "react-router-dom";
+import { TextField } from "../TextField";
 
 export const SuperAdmin = () => {
   return (
@@ -50,8 +51,13 @@ export const SuperAdmin = () => {
             />
           </div>
 
-          <input
+          {/* <input
             className=" w-1/4  h-16 bg-search pl-7 rounded-xl outline-none placeholder:text-darkyellow placeholder:font-semibold "
+            type="text"
+            placeholder="Search"
+          /> */}
+          <TextField
+            className="w-1/4 h-16  pl-7"
             type="text"
             placeholder="Search"
           />
