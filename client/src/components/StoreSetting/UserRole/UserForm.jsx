@@ -1,4 +1,5 @@
 import React from "react";
+import {Button} from "../../Button"
 
 const UserForm = () => {
   return (
@@ -111,7 +112,7 @@ const UserForm = () => {
           </div>
       </div>
       <div className=" flex justify-center items-center">
-          <button className=" pl-12 pt-4 pb-4  pr-12 add rounded-lg border-2 text-base border-orange text-white font-semibold">Add User Role</button>
+         <Button className="pl-6 pr-6">Add New Role</Button>
       </div>
     </div>
   );

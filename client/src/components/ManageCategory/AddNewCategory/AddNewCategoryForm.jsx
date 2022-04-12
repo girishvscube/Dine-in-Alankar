@@ -4,6 +4,8 @@ import { orange } from "@mui/material/colors";
 import Radio from "@mui/material/Radio";
 import { color } from "@mui/system";
 import food from "../../../Images/ManageCategory/fast-food.png"
+import Plus from "../Plus/Plus";
+import { Button } from "../../Button";
 
 const AddNewCategoryForm = () => {
   const [selectedValue, setSelectedValue] = React.useState("a");
@@ -206,11 +208,11 @@ const AddNewCategoryForm = () => {
           <img src={food} alt="food image"/>
         </div>
       </div>
-      <div className="mb-10">
-        <button className=" mt-10 bg-search rounded-md pl-3 pr-3 text-3xl text-orange">+</button>
+      <div className="mb-10 mt-10 w-1/3">
+        <Plus/>
       </div>
       <div className="w-full h-1/6 flex justify-center items-center">
-            <button className="add pt-4 pb-4 pl-8 pr-8 rounded-lg text-base font-semibold font-sans text-white">Add Category</button>
+           <Button className="pl-8 pr-8">Add Category</Button>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import "./style.scss";
 import { useForm } from "react-hook-form";
 import { Button } from "../Button";
+import { TextField } from "../TextField";
 
 const AddMenuForm = () => {
   const {
@@ -17,67 +18,20 @@ const AddMenuForm = () => {
         <div className=" menu_box w-full mt-1 grid grid-rows-4  grid-flow-col gap-2 pr-1/12">
           <div className="">
             <p className="text-base font-semibold font-sans">Name</p>
-            <input
-              placeholder=""
-              type="number"
-              className="w-11/12 h-16 bg-input_color mt-2 outline-none rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+           <TextField className="w-10/12 h-16"/>
+            
           </div>
           <div className="">
             <p className="text-base font-semibold font-sans">Time</p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <TextField className="w-10/12 h-16"/>
           </div>
           <div className=" ">
             <p className="text-base font-semibold font-sans">Sub Category</p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <TextField className="w-10/12 h-16"/>
           </div>
           <div className="">
             <p className="text-base font-semibold font-sans">Dine - In Price</p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none focus:ring-2 ring-button_border pl-2 mt-2 rounded-md"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <TextField className="w-10/12 h-16"/>
           </div>
           <div className=" ">
             <p className="text-base font-semibold font-sans">Meal Type</p>
@@ -98,7 +52,7 @@ const AddMenuForm = () => {
           </div>
           <div className="">
             <p className="text-base font-semibold font-sans">Category</p>
-           <div className="w-11/12 h-16 mt-2 ">
+           <div className="w-10/12 h-16 mt-1 ">
                <select className="w-full h-full pl-2 bg-input_color outline-none rounded-lg">
                    <option value="south">simply south</option>
                    <option value="chinese">chinese</option>
@@ -108,37 +62,13 @@ const AddMenuForm = () => {
           </div>
           <div className=" ">
             <p className="text-base font-semibold font-sans">Take Away Price</p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <TextField className="w-10/12 h-16"/>
           </div>
           <div className="">
             <p className="text-base font-semibold font-sans">
               Availability Count
             </p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <TextField className="w-10/12 h-16"/>
           </div>
         </div>
         <div className="flex flex-col w-full h-2/6">

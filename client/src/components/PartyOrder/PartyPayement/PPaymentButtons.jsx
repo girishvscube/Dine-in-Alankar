@@ -1,6 +1,7 @@
 import React from 'react'
 import "./style.scss"
 import { Link } from 'react-router-dom'
+import { Button } from '../../Button'
 
 const PPaymentButtons = () => {
   return (
@@ -18,9 +19,7 @@ const PPaymentButtons = () => {
             Add Items
           </button></Link>
         
-        <button className="h-full text-base ml-10 pl-6 pr-6 pt-4 pb-4 add text-center rounded-lg text-white font-semibold font-sans">
-          Manage Payment
-        </button>
+        <Button className='pl-6 pr-6 ml-10'>Manage Payment</Button>
       </div>
     </div>
   )

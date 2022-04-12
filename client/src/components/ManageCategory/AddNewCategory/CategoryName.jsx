@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
+import { TextField } from '../../TextField';
 
 
 const CategoryName = () => {
@@ -14,15 +15,7 @@ const CategoryName = () => {
   return (
    <div className=' name  mt-4 flex flex-col'>
        <p className='font-semibold font-sans text-base'>Category Name</p>
-        <input className='w-2/5  mt-2 h-16 rounded-lg bg-search outline-none focus-within:border-2 border-button_border font-sans pl-2' type="text" placeholder='' {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+        <TextField className='w-1/3 h-16 mt-1'/>
    </div>
   )
 }

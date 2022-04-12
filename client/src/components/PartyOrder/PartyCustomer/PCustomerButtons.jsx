@@ -1,14 +1,13 @@
 import React from "react";
 import "./style.scss";
 import {Link} from "react-router-dom"
+import { Button } from "../../Button";
 
 const PCustomerButtons = () => {
   return (
     <div className="  flex justify-between">
       <div className=" flex ">
-        <button className=" h-full pl-6 pr-6 pt-4 pb-4 text-base add text-center  rounded-lg text-white font-semibold font-sans">
-          Customer Details
-        </button>
+        <Button className="pl-6 pr-6">Customer Details</Button>
 
         <Link to="/menu/party-order/active-order/items">
         <button className="h-full text-base ml-10 pl-12 pr-12 pt-4 pb-4 button text-center rounded-lg text-white font-semibold font-sans">

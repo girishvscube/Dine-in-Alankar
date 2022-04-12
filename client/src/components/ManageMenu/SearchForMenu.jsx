@@ -24,11 +24,11 @@ const SearchForMenu = () => {
         </div>
       </div>
       <div className="w-1/2 bg-search focus-within:border-2 border-button_border text-orange  flex justify-between  pr-2  rounded-lg ">
-        <div className=" w-11/12  font-semibold">
+        <div className=" w-11/12 text-lg font-semibold">
           
-          <SearchField className="w-11/12"/>
+          <SearchField className="w-11/12 pt-4"/>
         </div>
-        <div className=" bg-search pt-2 text-lg">
+        <div className=" bg-search pt-2">
           <img src={search} alt="search_icon" />
         </div>
       </div>

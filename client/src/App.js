@@ -115,10 +115,18 @@ function App() {
           <Route exact path="feedback" element={<Feedback />} />
 
           {/* Reports Route*/}
+          <Route exact path="reports" element={<SalesBody />} />
           <Route exact path="reports/staff-report" element={<StaffBody />} />
           <Route exact path="reports/sales-report" element={<SalesBody />} />
 
           {/*Party orders */}
+         
+          <Route
+            exact
+            path="party-order"
+            element={<PartyBody />}
+          />
+
           <Route
             exact
             path="party-order/active-order"
@@ -146,6 +154,7 @@ function App() {
             element={<PPaymentBody />}
           />
 
+          <Route exact path="setting" element={<StoreBody />} />  
           <Route exact path="setting/store" element={<StoreBody />} />
           <Route exact path="setting/table" element={<TableBody />} />
           <Route exact path="setting/discount" element={<DiscountBody />} />
