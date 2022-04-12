@@ -17,7 +17,7 @@ const ManageOrderButtons = () => {
           />
         </div>
         <div className="w-3/4 flex flex-row justify-end items-end">
-          <div className=" bg-search w-2/4 focus-within:border-2 border-button_border text-orange flex flex-row rounded-lg pt-2 pb-2 mr-8 ">
+          <div className=" bg-search w-2/4 focus-within:border-2 border-button_border text-orange flex flex-row rounded-lg mr-8 ">
             
              <SearchField/>
            
