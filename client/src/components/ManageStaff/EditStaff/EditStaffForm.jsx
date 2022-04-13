@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
-import { useForm } from "react-hook-form";
-import { TextField } from "../../TextField";
+ import { useForm } from "react-hook-form";
+ import { TextField } from "../../TextField";
 import { Button } from "../../Button";
 
 const EditStaffForm = () => {

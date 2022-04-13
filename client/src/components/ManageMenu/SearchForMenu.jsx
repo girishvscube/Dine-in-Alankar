@@ -1,12 +1,46 @@
-import React from "react";
+import React, { useState} from "react";
 import "./style.scss";
 import search from "../../Images/ActiveOrder/Search_fill.png";
 import { Link } from "react-router-dom";
 import { Button } from "../Button";
 import { TextField } from "../TextField";
 import { SearchField } from "../SearchField";
+import axios from "axios";
 
 const SearchForMenu = () => {
+
+ 
+  const[look, setLook]=useState("")
+
+  const handleChange=(e)=>{
+    setLook(e.target.value)
+   
+    console.log("data",look);
+
+    if(look.length>=2){
+      stats()
+    }
+    
+  }
+
+
+  const toke = "Mjk.P__uN-xiBTTboHV-xwv1wLnH81OZw4PlwgVKpQGt4Xmvh6Z2u3gaXY24Wi44"
+  
+  
+  const stats= async ()=>{
+    const res = await axios(`https://test-dev-api.scube.me/admin/menus?page=1&search_key=${look}`,{
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `bearer ${toke}`
+    }
+    })
+     console.log("d", res);
+     setLook(res);
+}
+
+
+
+
   return (
     <div className="flex justify-between">
       <div className=" flex ">
@@ -26,7 +60,7 @@ const SearchForMenu = () => {
       <div className="w-1/2 bg-search focus-within:border-2 border-button_border text-orange  flex justify-between  pr-2  rounded-lg ">
         <div className=" w-11/12 text-lg font-semibold">
           
-          <SearchField className="w-11/12 pt-4"/>
+          <SearchField onChange={handleChange} className="w-11/12 pt-4"/>
         </div>
         <div className=" bg-search pt-2">
           <img src={search} alt="search_icon" />

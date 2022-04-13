@@ -14,7 +14,7 @@ const ManageCategoryTable = () => {
     <div className="text-orange w-full text-xl  mb-3 font-semibold font-sans">All Items</div>
     <div className=" w-full h-[60vh] overflow-y-scroll font-sans">
       <Table className="">
-        <Thead className="sticky top-0 border-b-2 mb-1  bg-white head ">
+        <Thead className="sticky top-0 border-b-2 mb-1 z-20 bg-white head ">
           <Tr className=" text-left text-lg">
             <Th className="font-sans pb-2 pr-5">S. No.</Th>
             <Th className="font-sans pb-2 ">Name</Th>

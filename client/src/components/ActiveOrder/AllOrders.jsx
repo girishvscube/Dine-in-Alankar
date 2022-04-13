@@ -1,12 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { data } from "../../AllOrders";
 import { Button } from "../Button";
 import { DetailOrder } from "./DetailOrder";
 import "./superadmin.scss";
+import axios from "axios";
 
 export const AllOrders = () => {
   const [orderData, setOrderData] = useState(data);
   const [showOrderDetail, setShowOrderDetail] = useState(false);
+  const [order,setOrder]=useState([])
+
+
+  const toke = "Mjk.P__uN-xiBTTboHV-xwv1wLnH81OZw4PlwgVKpQGt4Xmvh6Z2u3gaXY24Wi44"
+
+
+  const stats= async ()=>{
+    const res = await axios(`https://test-dev-api.scube.me/orders/past-orders?order_type=2&page=1`,{
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `bearer ${toke}`
+    }
+    })
+    console.log("d", res);
+    setOrder(res);
+}
+
+useEffect(()=>{
+  stats()
+},[])
+
+
   var orderMenu = [
     "Table No.",
     "Order ID",

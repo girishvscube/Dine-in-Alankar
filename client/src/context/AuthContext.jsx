@@ -6,6 +6,7 @@ export const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [token, setToken] = useState("");
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     let token = localStorage.getItem("alankarToken");
