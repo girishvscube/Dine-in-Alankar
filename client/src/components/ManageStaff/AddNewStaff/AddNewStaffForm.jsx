@@ -1,43 +1,142 @@
-import React from "react";
+import React, { useState } from "react";
+import  Validator from "validatorjs";
+import swal from "sweetalert";
+import axiosInstance from "../../helpers/axios"
 import "./style.scss";
 import { Button } from "../../Button";
-import { TextField } from "../../TextField";
+import { Text } from "../../Text";
 import { useForm } from "react-hook-form";
 
+
+
+const fields = {
+  name: "",
+  phone: "",
+  role: "",
+  email: "",
+  password: "",
+  table: "",
+  
+};
+
 const AddNewStaffForm = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const [params, setParams] = useState(fields);
+	const [errors, setErrors] = useState(fields);
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		const newParams = { ...params };
+		newParams[name] = value;
+		setParams(newParams);
+	};
+
+  const handleSubmit = (e) => {
+		e.preventDefault();
+		let validation = new Validator(params, {
+			name: "required|max:100",
+			phone: "required|numeric",
+			role: "required|max:150",
+      email: "required|email",
+			password: "required|password",
+      table: "required",
+		});
+		if (validation.fails()) {
+			const fieldErrors = {};
+			for (let key in validation.errors.errors) {
+				fieldErrors[key] = validation.errors.errors[key][0];
+			}
+			setErrors(fieldErrors);
+			return;
+		}
+		setErrors({});
+		axiosInstance
+			.post("/bulk-order", params)
+			.then((response) => {
+				swal(
+					"Thanks for contacting us!",
+					response.data.data.message,
+					"success"
+				).then((value) => {
+					setParams(fields);
+				});
+			})
+			.catch((error) => {
+				const fieldErrors = {};
+				for (let key in error.response.data.errors) {
+					fieldErrors[key] = error.response.data.errors[key][0];
+				}
+				setErrors(fieldErrors);
+			});
+	};
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
+    <form onSubmit={handleSubmit} className="h-[70vh]">
       <div className="h-[40vh] grid  grid-rows-3 pr-20 grid-flow-col">
         <div className=" mr-10 flex flex-col">
           <p className="font-sans font-semibold text-base mb-1">Name</p>
-          <TextField className="w-10/12 h-16"/>
+          <Text
+						name="name"
+						value={params.name}
+						handleChange={handleChange}
+						error={errors.name}
+						placeholder=""
+            className="h-16"
+					/>
         </div>
         <div className=" mr-10 flex flex-col">
           <p className="font-sans font-semibold text-base mb-1">Phone No.</p>
-          <TextField className="w-10/12 h-16"/>
+          <Text
+						name="phone"
+						value={params.phone}
+						handleChange={handleChange}
+						error={errors.phone}
+						placeholder=""
+            className="h-16"
+					/>
         </div>
         <div className=" mr-10 flex flex-col">
           <p className="font-sans font-semibold text-base mb-1">Role</p>
-          <TextField className="w-10/12 h-16"/>
+          <Text
+						name="role"
+						value={params.role}
+						handleChange={handleChange}
+						error={errors.role}
+						placeholder=""
+            className="h-16"
+					/>
         </div>
         <div className=" mr-10 flex flex-col">
           <p className="font-sans font-semibold text-base mb-1">Email</p>
-          <TextField className="w-10/12 h-16"/>
+          <Text
+						name="email"
+						value={params.email}
+						handleChange={handleChange}
+						error={errors.email}
+						placeholder=""
+            className="h-16"
+					/>
         </div>
         <div className=" mr-10 flex flex-col">
           <p className="font-sans font-semibold text-base mb-1">Password</p>
-          <TextField className="w-10/12 h-16"/>
+          <Text
+						name="password"
+						value={params.password}
+						handleChange={handleChange}
+						error={errors.password}
+						placeholder=""
+            className="h-16"
+					/>
         </div>
         <div className=" mr-10 flex flex-col">
           <p className="font-sans font-semibold text-base mb-1">Table</p>
-          <TextField className="w-10/12 h-16"/>
+          <Text
+						name="table"
+						value={params.table}
+						handleChange={handleChange}
+						error={errors.table}
+						placeholder=""
+            className="h-16"
+					/>
         </div>
       </div>
       <div className="h-[18vh] mt-5 flex justify-between">
@@ -71,7 +170,7 @@ const AddNewStaffForm = () => {
         </div>
       </div>
       <div className=" mt-1 flex items-center justify-center">
-        <Button className="pl-12 pr-12">Create Staff</Button>
+        <Button text="Create Staff" className="pl-12 pr-12"></Button>
       </div>
     </form>
   );

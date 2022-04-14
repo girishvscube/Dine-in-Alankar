@@ -7,7 +7,7 @@ const DetailSearch = () => {
   return (
     <div className="  flex justify-between">
       <div className=" flex ">
-        <Button className="pl-6 pr-6">Customer Details</Button>
+        <Button text="Customer Details" className="pl-6 pr-6"></Button>
 
         <Link to="/menu/take-away/item-details">
         <button className="h-full text-base ml-10 pl-12 pr-12 pt-4 pb-4 button text-center rounded-lg text-white font-semibold font-sans">

@@ -3,7 +3,7 @@ import ItemTable from "./ItemTable";
 import "./style.scss"
 import search from "../../../Images/ActiveOrder/Search_fill.png"
 import { Button } from "../../Button";
- import { TextField } from "../../TextField";
+ import { Text } from "../../Text";
 import { SearchField } from "../../SearchField";
 
 const ItemsForm = () => {
@@ -130,10 +130,10 @@ const ItemsForm = () => {
           <p className="font-sans font-semibold text-base">
             Special Instructions
           </p>
-         <TextField className="h-16"/>
+         <Text className=" w-full h-16"/>
         </div>
         <div className="mb-8  flex justify-center items-center">
-          <Button className="pl-16 pr-16">Next</Button>
+          <Button text="Next" className="pl-16 pr-16"></Button>
         </div>
       </div>
     </div>

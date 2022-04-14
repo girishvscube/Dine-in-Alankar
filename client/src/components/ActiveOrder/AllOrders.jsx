@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { data } from "../../AllOrders";
-import { Button } from "../Button";
+import { Button } from "../Button"
 import { DetailOrder } from "./DetailOrder";
 import "./superadmin.scss";
 import axios from "axios";
@@ -88,8 +88,8 @@ useEffect(()=>{
                   {/* <button className="mb-7 mt-7 Btn px-11 py-3 rounded-lg text-white font-normal">
                     {e.PaymentAction}
                   </button> */}
-                  <Button className="mb-7 mt-7 Btn px-11 py-3 rounded-lg text-white font-normal">
-                    {e.PaymentAction}
+                  <Button text={e.PaymentAction} className="mb-7 mt-7 Btn px-11 py-3 rounded-lg text-white font-normal">
+                    
                   </Button>
                 </td>
               </tr>

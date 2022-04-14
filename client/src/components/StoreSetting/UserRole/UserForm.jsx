@@ -112,7 +112,7 @@ const UserForm = () => {
           </div>
       </div>
       <div className=" flex justify-center items-center">
-         <Button className="pl-6 pr-6">Add New Role</Button>
+         <Button text="Add New Role" className="pl-6 mt-4 pr-6"></Button>
       </div>
     </div>
   );

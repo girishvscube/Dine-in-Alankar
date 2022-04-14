@@ -3,7 +3,7 @@ import "./style.scss"
 import search from "../../../Images/ActiveOrder/Search_fill.png"
 import PItemsTable from './PItemsTable';
 import { SearchField } from '../../SearchField';
- import { TextField } from '../../TextField';
+ import { Text } from "../../Text";
 import { Button } from '../../Button';
 
 const PItemsForm = () => {
@@ -128,12 +128,12 @@ const PItemsForm = () => {
         })}
         <hr className=" mt-4 mb-3 border-2 bord" />
         <p className="font-sans font-semibold text-base">
-          Special Instructions
-        </p>
-        <TextField Name='h-1/6'/>
+            Special Instructions
+          </p>
+         <Text className=" w-full h-16"/>
       </div>
       <div className="mb-8  flex justify-center items-center">
-        <Button className='pl-14 pr-14'>Next</Button>
+        <Button text="Next" className='pl-14 pr-14'></Button>
       </div>
     </div>
   </div>

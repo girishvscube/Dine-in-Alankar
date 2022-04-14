@@ -10,7 +10,7 @@ const DicsountTable = () => {
     <div className="bg-white pb-4 mt-8 pt-10 box ">
     <div className=" overflow-y-scroll h-[60vh] pl-10 pr-10 pb-10  font-sans">
       <Table className="">
-        <Thead className="sticky top-0 border-b-2 mb-1 bg-white head ">
+        <Thead className="sticky top-0 border-b-2 z-20 mb-1 bg-white head ">
           <Tr className=" text-left text-lg">
             <Th className="font-sans  pb-4">S. No.</Th>
             <Th className="font-sans pb-4 ">Name</Th>

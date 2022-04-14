@@ -30,7 +30,7 @@ const PartyButtons = () => {
           </div>
             <input type="date" className='text-orange w-2/12 h-15 border-2 pl-3 pr-6 border-button_border rounded-lg'/>
            <Link to="/menu/party-order/active-order/customer">
-             <Button className='pl-4 pr-4'>Create New Order</Button>
+             <Button text="Create New Order" className='pl-4 pr-4'></Button>
              </Link>
         </div>
        </div>

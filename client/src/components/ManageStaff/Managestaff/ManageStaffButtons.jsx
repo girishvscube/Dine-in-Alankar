@@ -11,11 +11,11 @@ const ManageStaffButtons = () => {
       <div className=" flex ">
         <Link to="/menu/addnewstaff">
           
-         <Button className="pl-8 pr-8">Add New Staff</Button>
+         <Button text="Add New Staff" className="pl-8 pr-8"></Button>
         </Link>
         <Link to="/menu/newrole">
           
-          <Button className="pl-8 pr-8 ml-10">Add New Role</Button>
+          <Button text="Add New Role" className="pl-8 pr-8 ml-10"></Button>
         </Link>
       </div>
       <div className="w-2/4 h-14 bg-search flex justify-between focus-within:border-2 border-button_border p-2 rounded-lg">

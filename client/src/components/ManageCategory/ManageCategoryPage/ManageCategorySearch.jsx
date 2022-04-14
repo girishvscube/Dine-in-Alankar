@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import search from "../../../Images/ActiveOrder/Search_fill.png";
-import { Button } from "../../Button";
+import { Button } from "../../Button"
 import { SearchField } from "../../SearchField";
 
 const ManageCategorySearch = () => {
@@ -13,7 +13,7 @@ const ManageCategorySearch = () => {
     <div className="  flex justify-between">
       <div className="w-1/6 flex justify-between">
         <Link to="/menu/add-new-category">
-         <Button className="pl-4 pr-4 mt-0.5">Add New Category</Button>
+         <Button text="Add New Category" className="pl-4 pr-4 mt-0.5"></Button>
         </Link>
       </div>
       <div className=" w-3/5 bg-search flex justify-between pl-2 pr-2  rounded-lg focus-within:border-2 border-button_border text-orange">

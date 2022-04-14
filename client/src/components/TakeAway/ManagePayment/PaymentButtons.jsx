@@ -17,7 +17,7 @@ const PaymentButtons = () => {
             Add Items
           </button>
         </Link>
-        <Button className=" ml-10 pl-6 pr-6">Manage Payment</Button>
+        <Button text="Manage Payment" className=" ml-10 pl-6 pr-6"></Button>
       </div>
     </div>
   );

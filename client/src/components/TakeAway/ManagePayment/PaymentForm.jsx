@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { Button } from '../../Button';
-import { TextField } from '../../TextField';
+import { Text } from "../../Text";
 import "./style.scss";
 
 const PaymentForm = () => {
@@ -62,9 +62,10 @@ const PaymentForm = () => {
   return (
    <div className="h-[55vh] mt-10 gap-4 flex flex-row">
       <div className=" w-2/3  mr-6 flex flex-col">
-        <div className='flex flex-row'>
-         <TextField className='w-2/4'/>
-            <Button className='pl-14 ml-12 pr-14'>Remove</Button>
+        <div className='flex h-14  flex-row'>
+            <Text className='w-96 mt-0.5'/>
+            <Button text="Remove" className='pl-14 pr-14 ml-10'></Button>
+           
         </div>
        
         <div className="w-full h-4/6 mt-4 p-4 rounded-lg"></div>
@@ -120,7 +121,7 @@ const PaymentForm = () => {
           </div>
         </div>
         <div className="mb-8  flex justify-center items-center">
-         <Button className='pl-14 pr-14 '>Next</Button>
+         <Button text="Next" className='pl-14 pr-14 '></Button>
         </div>
       </div>
     </div>

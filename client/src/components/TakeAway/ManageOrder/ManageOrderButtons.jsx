@@ -21,12 +21,12 @@ const ManageOrderButtons = () => {
             
              <SearchField/>
            
-            <div className="pt-2 bg-search ">
+            <div className="pt-2.5 mr-2 bg-search ">
               <img src={search} alt="search_icon" />
             </div>
           </div>
           <Link to="/menu/take-away/customer-details">
-            <Button className="pl-6 pr-6">Create New Order</Button>
+            <Button text="Create New Order" className="pl-6 pr-6"></Button>
           </Link>
         </div>
       </div>

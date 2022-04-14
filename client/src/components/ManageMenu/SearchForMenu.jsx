@@ -6,11 +6,18 @@ import { Button } from "../Button";
 import { TextField } from "../TextField";
 import { SearchField } from "../SearchField";
 import axios from "axios";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
+
+
 
 const SearchForMenu = () => {
 
- 
+  const {token,data,handleData } = useContext(AuthContext);
+
   const[look, setLook]=useState("")
+
+  console.log("token",token)
 
   const handleChange=(e)=>{
     setLook(e.target.value)
@@ -23,9 +30,7 @@ const SearchForMenu = () => {
     
   }
 
-
-  const toke = "Mjk.P__uN-xiBTTboHV-xwv1wLnH81OZw4PlwgVKpQGt4Xmvh6Z2u3gaXY24Wi44"
-  
+  const toke ="MzY.wmiPNSpRUO_siIfi_20gJviRqrYSKtv1uuoBJZrgjfquPKF818QdN8uUu_Bt"
   
   const stats= async ()=>{
     const res = await axios(`https://test-dev-api.scube.me/admin/menus?page=1&search_key=${look}`,{
@@ -34,8 +39,8 @@ const SearchForMenu = () => {
         'Authorization': `bearer ${toke}`
     }
     })
-     console.log("d", res);
-     setLook(res);
+     console.log("d", res.data.data.data);
+     handleData(res.data.data.data);
 }
 
 
@@ -45,7 +50,7 @@ const SearchForMenu = () => {
     <div className="flex justify-between">
       <div className=" flex ">
         <Link to="/menu/add-menu">
-          <Button className="pl-6 pr-6">Add New Items</Button>
+          <Button text="Add New Items" className="pl-6 pr-6"></Button>
         </Link>
         <div className=" text-xs  ">
           <select className=" border-2 pl-3 pr-8 pt-4 pb-4  mr-2 ml-6 border-button_border text-base outline-none text-orange rounded-lg ">

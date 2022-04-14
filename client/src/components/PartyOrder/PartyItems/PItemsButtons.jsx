@@ -15,7 +15,7 @@ const PItemsButtons = () => {
         </button>
        </Link>
         
-        <Button className='pl-12 pr-12 ml-10'>Add Items</Button>
+        <Button text="Add Items" className='pl-12 pr-12 ml-10'></Button>
         
          <Link to="/menu/party-order/active-order/payment">
          <button className="h-full text-base ml-10 pl-6 pr-6 pt-4 pb-4 button text-center rounded-lg text-white font-semibold font-sans">

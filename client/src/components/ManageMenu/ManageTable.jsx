@@ -6,16 +6,21 @@ import "./style.scss";
 import ToggleSwitch from "../ToggleSwitch";
 import EditAndDelete from "./EditAndDelete";
 import axios from "axios";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 const ManageTable = () => {
   const [design, setDesign] = useState("adding");
   const [menu, setMenu]=useState([])
   
+
+  const {token,data,handleData } = useContext(AuthContext);
   
+  {console.log(data)}
   
   var number =1;
 
-  const toke = "Mjk.P__uN-xiBTTboHV-xwv1wLnH81OZw4PlwgVKpQGt4Xmvh6Z2u3gaXY24Wi44"
+  
 
 
   
@@ -23,11 +28,11 @@ const ManageTable = () => {
     const res = await axios(`https://test-dev-api.scube.me/admin/menus?page=1`,{
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `bearer ${toke}`
+        'Authorization': `bearer ${token}`
     }
     })
     console.log("d", res.data.data.data);
-    setMenu(res.data.data.data);
+    handleData(res.data.data.data);
 }
 
 
@@ -36,11 +41,7 @@ useEffect(()=>{
   stats()
 },[])
 
- 
 
-
-
-  
 
   return (
     <div className=" h-[65vh] box bg-white pt-2 pl-6 mt-10 box rounded-lg">
@@ -60,7 +61,7 @@ useEffect(()=>{
               <Th className="font-sans pb-2 pl-6">Action</Th>
             </Tr>
           </Thead>
-          {menu.map((data, i) => {
+          {data.map((data, i) => {
             return (
               <Tbody>
                 <Tr className="row border-b-2 font-sans">

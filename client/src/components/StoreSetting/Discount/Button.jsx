@@ -9,7 +9,7 @@ const Button_1 = () => {
     <div className="  flex justify-between">
     <div className="flex justify-between">
       <Link to="/menu/setting/discount/create-coupon">
-        <Button className='pl-4 pr-4'>Create New Coupon</Button>
+        <Button text="Create New Coupon" className='pl-4 pr-4'></Button>
       </Link>
       
     </div>

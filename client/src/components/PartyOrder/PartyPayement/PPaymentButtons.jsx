@@ -19,7 +19,7 @@ const PPaymentButtons = () => {
             Add Items
           </button></Link>
         
-        <Button className='pl-6 pr-6 ml-10'>Manage Payment</Button>
+        <Button text="Manage Payment" className='pl-6 pr-6 ml-10'></Button>
       </div>
     </div>
   )
