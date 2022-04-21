@@ -18,10 +18,10 @@ export const AllOrders = () => {
 
   const handleClick = (el) => {
     setShowOrderDetail(true);
+    localStorage.setItem("showOrderDetail", showOrderDetail);
   };
   return (
     <div className="mx-11 bg-white ">
-      {/* {showOrderDetail ? <DetailOrder /> : ""} */}
       <h1 className=" text-2xl font-bold text-darkyellow my-8 ml-11">
         All Orders
       </h1>
@@ -74,6 +74,9 @@ export const AllOrders = () => {
           </tbody>
         </table>
       </div>
+      {/* <div className={`${showOrderDetail}` ? "hidden" : ""}> */}
+      <DetailOrder />
+      {/* </div> */}
     </div>
   );
 };

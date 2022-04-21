@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import "./superadmin.scss";
 import "./orderdetail.scss";
 import Swal from "sweetalert2";
 export const DetailOrder = ({ showOrderDetail }) => {
-  const [sideBar, setSideBar] = useState(false);
+  let isShow = localStorage.getItem("showOrderDetail");
+  //console.log(typeof isShow);
+  const [sideBar, setSideBar] = useState();
+
+  useEffect(() => {
+    if (isShow == "true") setSideBar(true);
+    else setSideBar(false);
+  }, []);
+
+  console.log(showOrderDetail);
   var arr = [
     {
       id: 1,
@@ -39,19 +48,20 @@ export const DetailOrder = ({ showOrderDetail }) => {
       isserved: "cooking",
     },
   ];
-  console.log(showOrderDetail);
+
   const handleShow = () => {
     setSideBar(true);
   };
 
   const handleClose = () => {
     setSideBar(false);
+    //isShow = false
   };
 
   const handleSendBill = () => {
     Swal.fire({
-      title: '<strong>Table Transfer</strong>',
-      html:`<div>
+      title: "<strong>Table Transfer</strong>",
+      html: `<div>
       <p>Existing Table :&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>20A</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
       <br/>
       <br/>
@@ -65,15 +75,15 @@ export const DetailOrder = ({ showOrderDetail }) => {
       </div>`,
       showCloseButton: true,
       focusConfirm: false,
-      confirmButtonText:'Submit',
-      confirmButtonClass:'confirm_btn'
-    })
+      confirmButtonText: "Submit",
+      confirmButtonClass: "confirm_btn",
+    });
   };
 
   const handlePrintBill = () => {
     Swal.fire({
-      title: '<strong>Payment</strong>',
-      html:`<div>
+      title: "<strong>Payment</strong>",
+      html: `<div>
       <p>Name :&emsp;&emsp;&emsp;&emsp;<b>Sailu Chandragiri</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
       <br/>
       <br/>
@@ -87,16 +97,15 @@ export const DetailOrder = ({ showOrderDetail }) => {
       focusConfirm: false,
       showCancelButton: true,
       showDenyButton: true,
-      confirmButtonText:'Yes',
-      cancelButtonText:'NC',
-      denyButtonText:'No',
-      cancelButtonColor:'white',
-      denyButtonColor:'white',
-      confirmButtonClass:'confirm_btn',
-      cancelButtonClass:'cancel_btn',
-      denyButtonClass:'cancel_btn',
-      
-    })
+      confirmButtonText: "Yes",
+      cancelButtonText: "NC",
+      denyButtonText: "No",
+      cancelButtonColor: "white",
+      denyButtonColor: "white",
+      confirmButtonClass: "confirm_btn",
+      cancelButtonClass: "cancel_btn",
+      denyButtonClass: "cancel_btn",
+    });
   };
   return (
     <div>
