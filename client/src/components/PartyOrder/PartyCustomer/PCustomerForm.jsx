@@ -1,126 +1,146 @@
-import React from 'react'
+import React, { useState } from "react";
+import  Validator from "validatorjs";
+import swal from "sweetalert";
+import axiosInstance from "../../helpers/axios"
 import "./style.scss";
 import { useForm } from "react-hook-form";
+import { Text } from "../../Text";
+import { Button } from '../../Button';
+
+
+const fields = {
+  customername: "",
+  totalamount: "",
+  occassion: "",
+  phone: "",
+  advancereceived: "",
+  
+};
 
 const PCustomerForm = () => {
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = (data) => console.log(data);
+  const [params, setParams] = useState(fields);
+	const [errors, setErrors] = useState(fields);
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		const newParams = { ...params };
+		newParams[name] = value;
+		setParams(newParams);
+	};
+
+  
+  const handleSubmit = (e) => {
+		e.preventDefault();
+		let validation = new Validator(params, {
+			customername: "required|max:100",
+			totalamount: "required",
+			occassion: "required",
+      phone: "required|numeric",
+			advancereceived: "required",
+      
+		});
+		if (validation.fails()) {
+			const fieldErrors = {};
+			for (let key in validation.errors.errors) {
+				fieldErrors[key] = validation.errors.errors[key][0];
+			}
+			setErrors(fieldErrors);
+			return;
+		}
+		setErrors({});
+		axiosInstance
+			.post("/bulk-order", params)
+			.then((response) => {
+				swal(
+					"Thanks for contacting us!",
+					response.data.data.message,
+					"success"
+				).then((value) => {
+					setParams(fields);
+				});
+			})
+			.catch((error) => {
+				const fieldErrors = {};
+				for (let key in error.response.data.errors) {
+					fieldErrors[key] = error.response.data.errors[key][0];
+				}
+				setErrors(fieldErrors);
+			});
+	};
+
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
+    <form onSubmit={handleSubmit} className="h-[70vh]">
       <div className="h-[60vh] w-11/12 mt-16  rounded-lg bg-white  flex flex-col">
         <div className="menu_box w-full mt-1 grid grid-rows-3  grid-flow-col gap-1 pr-1/12">
           <div className="">
             <p className="text-base font-semibold font-sans">Customer Name</p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color mt-2 outline-none rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <Text
+						name="customername"
+						value={params.customername}
+						handleChange={handleChange}
+						error={errors.customername}
+						placeholder=""
+            className="h-16"
+					/>
           </div>
           <div className="">
             <p className="text-base font-semibold font-sans">Total Amount</p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <Text
+						name="totalamount"
+						value={params.totalamount}
+						handleChange={handleChange}
+						error={errors.totalamount}
+						placeholder=""
+            className="h-16"
+					/>
           </div>
           <div className="">
             <p className="text-base font-semibold font-sans">Occassion</p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <Text
+						name="occassion"
+						value={params.occassion}
+						handleChange={handleChange}
+						error={errors.occassion}
+						placeholder=""
+            className="h-16"
+					/>
           </div>
          
           
           <div className="">
             <p className="text-base font-semibold font-sans">Phone No.</p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none mt-2  rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <Text
+						name="phone"
+						value={params.phone}
+						handleChange={handleChange}
+						error={errors.phone}
+						placeholder=""
+            className="h-16"
+					/>
           </div>
           <div className="">
             <p className="text-base font-semibold font-sans">Advance Received</p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <Text
+						name="advancereceived"
+						value={params.advancereceived}
+						handleChange={handleChange}
+						error={errors.advancereceived}
+						placeholder=""
+            className="h-16"
+					/>
           </div>
           <div className="">
             <p className="text-base font-semibold font-sans">
-              Availability Count
+              Date Of Occassion
             </p>
-            <input
-              placeholder=""
-              type="text"
-              className="w-11/12 h-16 bg-input_color outline-none mt-2 rounded-md focus:ring-2 ring-button_border pl-2"
-              {...register("Name", {
-                required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors?.Name?.type === "required" && (
-              <p className="text-xs text-red-600">This field is required</p>
-            )}
+            <input type="date" className='w-10/12 h-16 bg-search'/>
           </div>
         </div>
         <div className="flex flex-col w-full h-2/6">
           <div className=" h-1/3 w-full mt-20 flex justify-center items-center">
-            <button className=" pl-14 pr-14 pt-4 pb-4 text-base  mt-1 add rounded-lg text-white font-semibold  font-sans">
-              Next
-            </button>
+            <Button text="Next" className='pl-16 pr-16'></Button>
           </div>
         </div>
       </div>

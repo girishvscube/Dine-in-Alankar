@@ -60,16 +60,17 @@
       orange 50%,
       rgb(248, 177, 45) 50%
     ) !important;
-    background-image: linear-gradient(
-      75deg,
-      orange 50%,
-      rgb(248, 177, 45) 50%
-    ) !important;
+   
+   
   }
 
   .textfield {
-    @apply font-sans text-orange text-base outline-none pt-3 pb-4 pl-4  pr-24 rounded-lg font-semibold bg-search placeholder:text-darkyellow placeholder:font-semibold;
+    @apply font-sans  text-base outline-none pt-3 pb-4 pl-4 w-10/12 pr-24 rounded-lg font-semibold bg-search placeholder:text-darkyellow placeholder:font-semibold;
   }
+
+  .base-text-error {
+		@apply relative  text-sm text-red-500 ;
+	}
 
   .searchfield {
     @apply font-sans text-orange text-base outline-none pt-4 pb-4 pl-4 rounded-lg font-semibold bg-search placeholder-orange;

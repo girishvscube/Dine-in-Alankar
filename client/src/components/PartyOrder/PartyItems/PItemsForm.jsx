@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import "./style.scss"
 import search from "../../../Images/ActiveOrder/Search_fill.png"
 import PItemsTable from './PItemsTable';
+import { SearchField } from '../../SearchField';
+ import { Text } from "../../Text";
+import { Button } from '../../Button';
 
 const PItemsForm = () => {
 
@@ -62,14 +65,8 @@ const PItemsForm = () => {
     <div className="h-[65vh] mt-10 gap-4 flex flex-row">
     <div className="h-[45vh] w-2/3  mr-6 flex flex-col">
       <div className=" h-16 bg-search mb-6 flex justify-between pl-2 pr-2 pb-2 pt-1.5 rounded-lg focus-within:border-2 border-button_border ">
-        <div className=" w-10/12 pl-2  font-semibold">
-          <input
-            type="text"
-            className="h-9 w-full mt-2 text-lg bg-search font-semibold placeholder-orange  outline-none"
-            placeholder="Search"
-          />
-        </div>
-        <div className="h-full mt-2 w-1/12 bg-search">
+        <SearchField />
+        <div className="h-full mt-1 w-1/12 bg-search">
           <img src={search} alt="search icon" />
         </div>
       </div>
@@ -131,17 +128,12 @@ const PItemsForm = () => {
         })}
         <hr className=" mt-4 mb-3 border-2 bord" />
         <p className="font-sans font-semibold text-base">
-          Special Instructions
-        </p>
-        <input
-          type="text"
-          className="w-full h-1/6  rounded-lg pl-2 text-orange bg-search mt-2 outline-none focus:ring-2 ring-yellow "
-        ></input>
+            Special Instructions
+          </p>
+         <Text className=" w-full h-16"/>
       </div>
       <div className="mb-8  flex justify-center items-center">
-        <button className="font-sans add text-white pl-16 rounded-lg border-orange pr-16 pt-4 pb-4 font-semibold text-base">
-          Next
-        </button>
+        <Button text="Next" className='pl-14 pr-14'></Button>
       </div>
     </div>
   </div>

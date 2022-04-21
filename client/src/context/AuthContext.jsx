@@ -5,7 +5,8 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
   const navigate = useNavigate();
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState("MzY.wmiPNSpRUO_siIfi_20gJviRqrYSKtv1uuoBJZrgjfquPKF818QdN8uUu_Bt");
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     let token = localStorage.getItem("alankarToken");
@@ -20,8 +21,12 @@ export const AuthContextProvider = ({ children }) => {
     setToken(newToken);
   };
 
+  const handleData = (newData) => {
+    setData(newData);
+  };
+
   return (
-    <AuthContext.Provider value={{ token, handleToken }}>
+    <AuthContext.Provider value={{ token, handleToken , handleData, data}}>
       {children}
     </AuthContext.Provider>
   );

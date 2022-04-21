@@ -1,150 +1,151 @@
-import React from 'react'
-import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import  Validator from "validatorjs";
+import swal from "sweetalert";
+import axiosInstance from "../../../components/helpers/axios"
+ import { useForm } from "react-hook-form";
 import "./style.scss";
+import { Text } from '../../Text';
+import { Button } from '../../Button';
+
+const fields = {
+  storename: "",
+  email: "",
+  gstpercent: "",
+  phone: "",
+  storeaddress: "",
+  gstno: "",
+ 
+};
+
 
 const StoreForm = () => {
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = (data) => console.log(data);
+  const [params, setParams] = useState(fields);
+	const [errors, setErrors] = useState(fields);
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		const newParams = { ...params };
+		newParams[name] = value;
+		setParams(newParams);
+	};
+
+  const handleSubmit = (e) => {
+		e.preventDefault();
+		let validation = new Validator(params, {
+			storename: "required|max:100",
+			email: "required|email",
+			gstpercent: "required|max:150",
+      phone: "required|numeric",
+			storeaddress: "required",
+      gstno: "required|numeric",
+		});
+		if (validation.fails()) {
+			const fieldErrors = {};
+			for (let key in validation.errors.errors) {
+				fieldErrors[key] = validation.errors.errors[key][0];
+			}
+			setErrors(fieldErrors);
+			return;
+		}
+		setErrors({});
+		axiosInstance
+			.post("/bulk-order", params)
+			.then((response) => {
+				swal(
+					"Thanks for contacting us!",
+					response.data.data.message,
+					"success"
+				).then((value) => {
+					setParams(fields);
+				});
+			})
+			.catch((error) => {
+				const fieldErrors = {};
+				for (let key in error.response.data.errors) {
+					fieldErrors[key] = error.response.data.errors[key][0];
+				}
+				setErrors(fieldErrors);
+			});
+	};
 
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
+    <form onSubmit={handleSubmit}  className="h-[70vh]">
     <div className="h-[40vh] grid  grid-rows-3 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
         <p className="font-sans text-base font-semibold mb-1">Store Name</p>
-        <input
-          type="text"
-          placeholder=""
-          className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
-          {...register("StoreName", {
-            required: true,
-            maxLength: 20,
-            pattern: /^[A-Za-z]+$/i,
-          })}
-        />
-        {errors?.StoreName?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
-        {errors?.StoreName?.type === "maxLength" && (
-          <p className="text-xs text-red-600">Name cannot exceed 20 characters</p>
-        )}
-        {errors?.StoreName?.type === "pattern" && (
-          <p className="text-red-600 text-xs">Alphabetical characters only</p>
-        )}
+        <Text
+						name="storename"
+						value={params.storename}
+						handleChange={handleChange}
+						error={errors.storename}
+						placeholder=""
+            className="h-16"
+					/>
       </div>
       <div className=" mr-10 flex flex-col">
         <p className="font-sans font-semibold text-base  mb-1">Email</p>
-        <input
-          type="email"
-          placeholder=""
-          className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
-          {...register("Email", {
-            required: true,
-            pattern:
-              /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-          })}
-        />
-         {errors?.Email?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
-        {errors?.Email?.type === "pattern" && (
-          <p className="text-red-600 text-xs">Invalid email</p>
-        )}
+        <Text
+						name="email"
+						value={params.email}
+						handleChange={handleChange}
+						error={errors.email}
+						placeholder=""
+            className="h-16"
+					/>
       </div>
       <div className=" mr-10 flex flex-col">
         <p className="font-sans font-semibold text-base  mb-1">GST Percent</p>
-        <input
-          type="text"
-          placeholder=""
-          className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
-          {...register("Gst", {
-            required: true,
-            maxLength: 20,
-            pattern: /^[A-Za-z]+$/i,
-          })}
-        />
-         {errors?.Gst?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
-        {errors?.Gst?.type === "maxLength" && (
-          <p className="text-xs text-red-600">Role cannot exceed 20 characters</p>
-        )}
+        <Text
+						name="gstpercent"
+						value={params.gstpercent}
+						handleChange={handleChange}
+						error={errors.gstpercent}
+						placeholder=""
+            className="h-16"
+					/>
         
       </div>
       <div className=" mr-10 flex flex-col">
         <p className="font-sans font-semibold text-base mb-1">Phone No.</p>
-        <input
-          type="text"
-          placeholder=""
-          className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
-          {...register("Phone", {
-            required: true,
-            maxLength: 20,
-            pattern: /^[0-9\b]+$/,
-          })}
-        />
-         {errors?.Phone?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
-        {errors?.Phone?.type === "maxLength" && (
-          <p className="text-xs text-red-600">Phone cannot exceed 20 characters</p>
-        )}
-        {errors?.Phone?.type === "pattern" && (
-          <p className="text-red-600 text-xs">Numerical characters only</p>
-        )}
+        <Text
+						name="phone"
+						value={params.phone}
+						handleChange={handleChange}
+						error={errors.phone}
+						placeholder=""
+            className="h-16"
+					/>
       </div>
       
       <div className=" mr-10 flex flex-col">
         <p className="font-sans font-semibold text-base  mb-1">Store Address</p>
-        <input
-          type="password"
-          placeholder=""
-          className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
-          {...register("address", {
-            required: true,
-            maxLength: 8,
-            pattern:/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g,
-          })}
-        />
-         {errors?.address?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
+        <Text
+						name="storeaddress"
+						value={params.storeaddress}
+						handleChange={handleChange}
+						error={errors.storeaddress}
+						placeholder=""
+            className="h-16"
+					/>
        
       </div>
       <div className=" mr-10 flex flex-col">
         <p className="font-sans font-semibold text-base  mb-1">GST No.</p>
-        <input
-          type="text"
-          placeholder=""
-          className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
-          {...register("GstNo", {
-            required: true,
-            maxLength: 20,
-            pattern: /^[0-9\b]+$/,
-          })}
-        />
-         {errors?.GstNo?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
-        
-        {errors?.GstNo?.type === "pattern" && (
-          <p className="text-red-600 text-xs">Numerical characters only</p>
-        )}
+        <Text
+						name="gstno"
+						value={params.gstno}
+						handleChange={handleChange}
+						error={errors.gstno}
+						placeholder=""
+            className="h-16"
+					/>
       </div>
     </div>
    
     <div className=" mt-20 mr-28 flex items-center justify-center">
-      <button
-        type="submit"
-        className="add font-sans text-base font-semibold text-white pl-16 pr-16 pt-4 pb-4 rounded-lg border-orange"
-      >
-        Update
-      </button>
+     <Button text="Update" className='pl-14 pr-14'></Button>
     </div>
   </form>
   )

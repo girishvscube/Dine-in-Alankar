@@ -1,7 +1,32 @@
 import "./createneworder.scss";
 import search from "../../Images/ActiveOrder/Search_fill.png";
+import axios from "axios";
+import { useState,useEffect } from "react";
+
 
 export const AddItems = () => {
+  const [neworder,setNeworder]=useState([])
+
+  // const toke = "Mjk.P__uN-xiBTTboHV-xwv1wLnH81OZw4PlwgVKpQGt4Xmvh6Z2u3gaXY24Wi44"
+
+
+
+//   const stats= async ()=>{
+//     const res = await axios.post(`https://test-dev-api.scube.me/orders/past-orders?order_type=2&page=1`,{
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'Authorization': `bearer ${toke}`
+//     }
+//     })
+//     console.log("d", res);
+//     setNeworder(res);
+// }
+
+// useEffect(()=>{
+//   stats()
+// },[])
+
+
   var obj = [
     {
       name: "Rawa Idly",

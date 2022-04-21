@@ -1,4 +1,6 @@
 import React,{useState} from 'react'
+import { Button } from '../../Button';
+import { Text } from "../../Text";
 import "./style.scss";
 
 const PaymentForm = () => {
@@ -60,9 +62,10 @@ const PaymentForm = () => {
   return (
    <div className="h-[55vh] mt-10 gap-4 flex flex-row">
       <div className=" w-2/3  mr-6 flex flex-col">
-        <div className='flex flex-row'>
-            <input type="text" className='text-orange pt-3 text-base w-2/4 pb-3 pl-2 outline-none bg-search rounded-md focus:ring-2 ring-button_border'/>
-            <button className='pt-4 pb-4 pl-16 pr-16 ml-10 font-sans font-semibold text-white text-base add'>Remove</button>
+        <div className='flex h-14  flex-row'>
+            <Text className='w-96 mt-0.5'/>
+            <Button text="Remove" className='pl-14 pr-14 ml-10'></Button>
+           
         </div>
        
         <div className="w-full h-4/6 mt-4 p-4 rounded-lg"></div>
@@ -86,7 +89,7 @@ const PaymentForm = () => {
                     &#8377; {item.price * value}
                   </p>
                 </div>
-                <div className=" flex gap-2 ml-24 pt-2 flex-row">
+                <div className=" flex gap-2 ml-24 pt-1 flex-row">
                   <button className="bg-orange  pl-2 pr-2 rounded-sm  text-white font-sans font-semibold " onClick={() => {Decrement(item.id)}}>
                     -
                   </button>
@@ -118,9 +121,7 @@ const PaymentForm = () => {
           </div>
         </div>
         <div className="mb-8  flex justify-center items-center">
-          <button className="font-sans add text-white pl-16 rounded-lg border-orange pr-16 pt-4 pb-4 font-semibold text-lg">
-            Next
-          </button>
+         <Button text="Next" className='pl-14 pr-14 '></Button>
         </div>
       </div>
     </div>

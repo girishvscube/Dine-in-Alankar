@@ -2,6 +2,8 @@ import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import search from "../../../Images/ActiveOrder/Search_fill.png";
+import { Button } from "../../Button";
+import { SearchField } from "../../SearchField";
 
 const ManageStaffButtons = () => {
   return (
@@ -9,25 +11,15 @@ const ManageStaffButtons = () => {
       <div className=" flex ">
         <Link to="/menu/addnewstaff">
           
-          <button className=" pl-8 pr-8 pt-4 pb-4 text-base add text-center  rounded-lg text-white font-semibold font-sans">
-            Add New Staff
-          </button>
+         <Button text="Add New Staff" className="pl-8 pr-8"></Button>
         </Link>
         <Link to="/menu/newrole">
           
-          <button className=" text-base ml-10 pl-8 pr-8 pt-4 pb-4 add text-center rounded-lg text-white font-semibold font-sans">
-            Add New Role
-          </button>
+          <Button text="Add New Role" className="pl-8 pr-8 ml-10"></Button>
         </Link>
       </div>
       <div className="w-2/4 h-14 bg-search flex justify-between focus-within:border-2 border-button_border p-2 rounded-lg">
-        <div className=" pt-1 pb-1 w-10/12 pl-2  font-semibold">
-          <input
-            type="text"
-            className="h-9 w-full text-lg bg-search font-semibold placeholder-orange outline-none"
-            placeholder="Search"
-          />
-        </div>
+       <SearchField className="w-10/12"/>
         <div className="pt-1 pb-1 w-1/12 bg-search">
           <img src={search} alt="search icon" />
         </div>

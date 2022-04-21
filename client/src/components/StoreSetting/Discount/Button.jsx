@@ -1,16 +1,16 @@
 import React from 'react'
 import "./style.scss";
 import {Link} from "react-router-dom";
+import { Button } from '../../Button';
 
 
-const Button = () => {
+const Button_1 = () => {
   return (
     <div className="  flex justify-between">
     <div className="flex justify-between">
       <Link to="/menu/setting/discount/create-coupon">
-      <button className=" text-base  add text-center pl-4 pr-4 pt-4 pb-4 rounded-lg text-white font-semibold font-sans">
-        Create New Coupon
-      </button></Link>
+        <Button text="Create New Coupon" className='pl-4 pr-4'></Button>
+      </Link>
       
     </div>
    
@@ -18,4 +18,4 @@ const Button = () => {
   )
 }
 
-export default Button
+export default Button_1

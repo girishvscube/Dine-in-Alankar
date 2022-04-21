@@ -1,96 +1,111 @@
-import React from 'react'
-import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import  Validator from "validatorjs";
+import swal from "sweetalert";
+import axiosInstance from "../../../components/helpers/axios"
+ import { useForm } from "react-hook-form";
+import { Button } from '../../Button';
 import "./style.scss";
+import { Text } from '../../Text';
+
+
+const fields = {
+  tablename: "",
+  floorno: "",
+  hallname: "",
+};
 
 const TableForm = () => {
+  const [params, setParams] = useState(fields);
+	const [errors, setErrors] = useState(fields);
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = (data) => console.log(data);
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		const newParams = { ...params };
+		newParams[name] = value;
+		setParams(newParams);
+	};
+
+  const handleSubmit = (e) => {
+		e.preventDefault();
+		let validation = new Validator(params, {
+			tablename: "required|max:100",
+			floorno: "required",
+			hallname: "required|max:150",
+      
+		});
+		if (validation.fails()) {
+			const fieldErrors = {};
+			for (let key in validation.errors.errors) {
+				fieldErrors[key] = validation.errors.errors[key][0];
+			}
+			setErrors(fieldErrors);
+			return;
+		}
+		setErrors({});
+		axiosInstance
+			.post("/bulk-order", params)
+			.then((response) => {
+				swal(
+					"Thanks for contacting us!",
+					response.data.data.message,
+					"success"
+				).then((value) => {
+					setParams(fields);
+				});
+			})
+			.catch((error) => {
+				const fieldErrors = {};
+				for (let key in error.response.data.errors) {
+					fieldErrors[key] = error.response.data.errors[key][0];
+				}
+				setErrors(fieldErrors);
+			});
+	};
 
 
   return (
-     <form onSubmit={handleSubmit(onSubmit)} className="h-[70vh]">
+     <form onSubmit={handleSubmit} className="h-[70vh]">
     <div className=" h-[26vh] grid grid-rows-2 pr-20 grid-flow-col">
       <div className=" mr-10 flex flex-col">
         <p className="font-sans text-base font-semibold  mb-1">Table Name</p>
-        <input
-          type="text"
-          placeholder=""
-          className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
-          {...register("StoreName", {
-            required: true,
-            maxLength: 20,
-            pattern: /^[A-Za-z]+$/i,
-          })}
-        />
-        {errors?.StoreName?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
-        {errors?.StoreName?.type === "maxLength" && (
-          <p className="text-xs text-red-600">Name cannot exceed 20 characters</p>
-        )}
-        {errors?.StoreName?.type === "pattern" && (
-          <p className="text-red-600 text-xs">Alphabetical characters only</p>
-        )}
+        <Text
+						name="tablename"
+						value={params.tablename}
+						handleChange={handleChange}
+						error={errors.tablename}
+						placeholder=""
+            className="h-16"
+					/>
       </div>
       <div className=" mr-10 flex flex-col">
         <p className="font-sans text-base font-semibold   mb-1">Floor No.</p>
-        <input
-          type="email"
-          placeholder=""
-          className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border "
-          {...register("floor", {
-            required: true,
-            maxLength: 20,
-            pattern: /^[0-9\b]+$/,
-          })}
-        />
-         {errors?.floor?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
-        {errors?.floor?.type === "maxLength" && (
-          <p className="text-xs text-red-600">Phone cannot exceed 20 characters</p>
-        )}
-        {errors?.floor?.type === "pattern" && (
-          <p className="text-red-600 text-xs">Numerical characters only</p>
-        )}
+        <Text
+						name="floorno"
+						value={params.floorno}
+						handleChange={handleChange}
+						error={errors.floorno}
+						placeholder=""
+            className="h-16"
+					/>
       </div>
      
       <div className=" mr-10 flex flex-col">
         <p className="font-sans font-semibold text-base  mb-1">Hall Name</p>
-        <input
-          type="password"
-          placeholder=""
-          className="h-16 w-11/12 outline-none pl-2 rounded-lg bg-search focus:ring-2 ring-button_border"
-          {...register("hallName", {
-            required: true,
-            maxLength: 20,
-            pattern: /^[A-Za-z]+$/i,
-          })}
-        />
-        {errors?.hallName?.type === "required" && (
-          <p className="text-xs text-red-600">This field is required</p>
-        )}
-        {errors?.hallName?.type === "maxLength" && (
-          <p className="text-xs text-red-600">Name cannot exceed 20 characters</p>
-        )}
-        
+        <Text
+						name="hallname"
+						value={params.hallname}
+						handleChange={handleChange}
+						error={errors.hallname}
+						placeholder=""
+            className="h-16"
+					/>
        
       </div>
       
     </div>
    
     <div className="w-10/12 ml-12 h-1/6 mt-24 flex items-center justify-center">
-      <button
-        type="submit"
-        className="add font-sans font-semibold text-base  text-white pl-14 pr-14 pt-4 pb-4 rounded-lg border-orange"
-      >
-        Create
-      </button>
+     <Button text="Create" className='pl-16 pr-16'></Button>
     </div>
   </form>
   )
