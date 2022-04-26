@@ -51,7 +51,6 @@ const mailConfig: MailConfig = {
       key: Env.get('MAILGUN_API_KEY'),
       domain: Env.get('MAILGUN_DOMAIN'),
     },
-
   },
 }
 

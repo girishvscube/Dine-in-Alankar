@@ -5,24 +5,25 @@ export default class Coupon extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column()
+  public code: string
+
+  @column()
+  public percent: string
+
+  @column()
+  public value: string
+
+  @column()
+  public status: boolean
+
+  @column()
+  public expires_at: Date
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
-
-  @column()
-  public name : string
-
-  @column()
-  public expiry_date :Date
-
-  @column()
-  public availability : boolean
-
-  @column()
-  public percentage : string
-
-  @column()
-  public value : number
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
 }
+// upon_code , coupon percentage,value,status,expiry date

@@ -24,9 +24,9 @@ export default class TableValidator {
    *    ```
    */
   public schema = schema.create({
-    table_number : schema.string({trim:true}),
-    floor : schema.string({trim:true}),
-    hall:schema.string({trim:true})
+    table_number: schema.string({ trim: true }),
+    floor: schema.string({ trim: true }),
+    hall: schema.string({ trim: true }),
   })
 
   /**
@@ -41,8 +41,8 @@ export default class TableValidator {
    *
    */
   public messages = {
-    'table_number.required':'table number should be be required',
-    'floor.required':'floor number should be required',
-    'hall.required':'hall number should be required'
+    'table_number.required': 'table number should be be required',
+    'floor.required': 'floor number should be required',
+    'hall.required': 'hall number should be required',
   }
 }

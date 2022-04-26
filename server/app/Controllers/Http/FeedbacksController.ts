@@ -1,58 +1,141 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Feedback from 'App/Models/Feedback'
-import FeedbackValidator from 'App/Validators/FeedbackValidator'
-
+import NotFoundException from 'App/Exceptions/NotFoundException'
+import NotcreatedException from 'App/Exceptions/NotcreatedException'
+import Order from 'App/Models/Order'
+const Validator = require('validatorjs')
 export default class FeedbacksController {
-  public async index({}: HttpContextContract) {
-    const data = await Feedback.query()
-      .preload('feedback_staff', (query) => {
-        query.select('name')
+  public async index({ response }: HttpContextContract) {
+    const data = await Feedback.query().preload('order', (query) => {
+      query.select('name', 'phone', 'table_id')
+      query.preload('table', (query) => {
+        query.preload('users', (query) => {
+          query.select('name')
+        })
       })
-      .preload('feedback_customer', (query) => {
-        query.select('name', 'phone_number')
-      })
-      .preload('feedback_order', (query) => {
-        query.select('id')
-      })
-    return data
+    })
+    response.ok(data)
+    if (!data) throw new NotFoundException('Not Found')
   }
-
-  public async create({}: HttpContextContract) {}
 
   public async store({ request, response }: HttpContextContract) {
-    try {
-      const { customer_id, order_id, ratings, comments, staff } = await request.validate(
-        FeedbackValidator
-      )
-      await Feedback.create({
-        customer_id,
-        order_id,
-        ratings,
-        comments,
-        staff,
+    const rules: any = {
+      rating: 'required|max:150',
+      comment: 'required|max:150',
+      order_id: 'required|integer',
+    }
+
+    const validation = new Validator(request.all(), rules)
+    if (validation.fails()) {
+      return response.badRequest(validation.errors.errors)
+    }
+
+    const data = await Feedback.create(request.all())
+    response.created({ data: data })
+    if (!data) throw new NotcreatedException('Not Created')
+  }
+
+  public async show({ response, params }: HttpContextContract) {
+    const id = params.id
+    const data = await Feedback.query()
+      .preload('order', (query) => {
+        query.select('name', 'phone', 'table_id')
+        query.preload('table', (query) => {
+          query.preload('users', (query) => {
+            query.select('name')
+          })
+        })
       })
-      return response.created({ message: 'feedback saved thank you...' })
-    } catch (err) {
-      return response.badRequest({ err: err.messages })
-    }
+      .where('id', id)
+      .first()
+    response.ok({ data: data })
+    if (!data) throw new NotFoundException('Not Found')
   }
 
-  public async show({}: HttpContextContract) {}
+  public async feedbackCount({ response }: HttpContextContract) {
+    const data = await Feedback.query().count('id as id')
+    response.ok({ data: data })
 
-  public async edit({}: HttpContextContract) {}
+    if (!data) throw new NotFoundException('Not Found')
+  }
 
-  public async update({}: HttpContextContract) {}
+  public async feedbackAvg({ response }: HttpContextContract) {
+    const data = await Feedback.query().avg('rating as rating')
+    response.ok({ data: data })
 
-  public async destroy({ response, params }: HttpContextContract) {
+    if (!data) throw new NotFoundException('Not Found')
+  }
+
+  public async Ratingssum({ response }: HttpContextContract) {
+    const data = await Feedback.query().sum('rating as rating')
+    response.ok({ data: data })
+
+    if (!data) throw new NotFoundException('Not Found')
+  }
+
+  public async Search({ request, response }) {
     try {
-      const id = params.id
-      const data = await Feedback.findOrFail(id)
-      if (data) {
-        data.delete()
-        return response.ok({ message: 'deleted successfully' })
-      }
+      const { id } = request.all()
+      console.log(id, 'id')
+
+      const data = await Feedback.query()
+        .preload('order', (query) => {
+          query.select('name', 'phone', 'table_id')
+          query.preload('table', (query) => {
+            query.preload('users', (query) => {
+              query.select('name')
+            })
+          })
+        })
+        .where('id', id)
+
+      return response.ok({ data: data })
     } catch (err) {
-      return response.badRequest({ message: 'something wrong..' })
+      return response.notFound({ error: 'no data found' })
     }
   }
+
+  public async datewise({ request, response }) {
+    try {
+      const { date } = request.all()
+      console.log(date, 'date')
+
+      const data = await Feedback.query()
+        .preload('order', (query) => {
+          query.select('name', 'phone', 'table_id')
+          query.preload('table', (query) => {
+            query.preload('users', (query) => {
+              query.select('name')
+            })
+          })
+        })
+        .where('created_at', 'LIKE', `${date}%`)
+
+      return response.ok({ data: data })
+    } catch (err) {
+      return response.notFound({ error: 'no data found' })
+    }
+  }
+
+  public async staffReport({}: HttpContextContract) {
+  //   const data = await Feedback.query().preload('order', (query) => {
+  //     query.select('name', 'phone', 'table_id', 'id')
+      
+  //     query.preload('table', (query) => {
+  //       query.preload('users', (query) => {
+  //         query.select('name', 'id', 'role_id')
+  //         query.preload('role')
+  //       })
+  //     })
+  //   })
+  //   return data
+
+  const data = await Order.query().preload('table', (query) => {
+    query.preload('users', (query) => {
+      query.select('name', 'id', 'role_id')
+      query.preload('role')
+    })
+  })
+  return data
+  }  
 }

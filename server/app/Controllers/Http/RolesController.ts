@@ -1,60 +1,85 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+const Validator = require('validatorjs')
 import Role from 'App/Models/Role'
-import RoleValidator from 'App/Validators/RoleValidator'
-
 export default class RolesController {
-  public async index({ response}: HttpContextContract) {
-    try{
+  public async index({ response }: HttpContextContract) {
+    try {
+      const data = await Role.all()
+      return response.ok({data:data})
+    } catch (exception) {
+      return response.internalServerError({ message: exception.message })
+    }
+  }
 
-      const data = await Role.all();
-      if(data.length>0){
-        return response.ok({data:data})
-      }
-      else{
-        return response.notFound({message:"no data found.."})
+  public async store({ request, response }: HttpContextContract) {
+    try {
+      const data = request.only(['name'])
+      const rules: any = {
+        name: 'required|max:150',
       }
 
-    }catch(err){
-      return response.badRequest({message:"Try again later..."})
+      const validation = await new Validator(data, rules)
+      if (validation.fails()) {
+        return response.badRequest({ message: validation.messages() })
+      }
+       await Role.create(data)
+      return response.ok({
+        message: 'Role Created Successfully',
+      
+      })
+    } catch (exception) {
+      return response.internalServerError({ message: exception.message })
     }
   }
 
   public async create({}: HttpContextContract) {}
 
-  public async store({request,response}: HttpContextContract) {
-    try{
-
-      const {role} = await request.validate(RoleValidator)
-
-      if(role){
-        await Role.create({role})
-       return response.created({message:"created successfully"})
-      }
-      else{
-        return response.unprocessableEntity({message:"please select any roles from the dropup"})
-      }
-
-    }catch(err){
-      return response.badRequest({message:"try again later with all required details"})
+  public async show({response,params}: HttpContextContract) {
+    try {
+      const id = params.id
+      const data = await Role.findOrFail(id)
+      return response.ok({
+        data:data
+      });
+    } catch (exception) {
+      return response.internalServerError({ message: "No data found" })
     }
-  }
 
-  public async show({}: HttpContextContract) {}
+  }
 
   public async edit({}: HttpContextContract) {}
 
-  public async update({}: HttpContextContract) {}
-
-  public async destroy({response,params}: HttpContextContract) {
-
-    try{
-      const id = params.id;
-      const data = await Role.findOrFail(id);
-      await data.delete();
-         return response.ok({message:`${data.role} is deleted`})
-    }catch(err){
-      return response.notFound({message:"Requested data not found to delete"})
+  public async update({request,response,params}: HttpContextContract) {
+    try {
+      const payload = request.only(['name'])
+      const rules: any = {
+        name: 'required|max:150',
+      }
+      const id = params.id
+      const validation = await new Validator(payload, rules)
+      if (validation.fails()) {
+        return response.badRequest({ message: validation.messages() })
+      }
+      const data = await Role.findOrFail(id)
+     
+      await data.save()
+      return response.ok({
+        message: 'Role Updated Successfully',
+        data: data
+      })
+    } catch (exception) {
+      return response.internalServerError({ message: "Something is wrong try again later" })
     }
+  }
 
+  public async destroy({ response, params }: HttpContextContract) {
+    try {
+      const id = params.id
+      const role = await Role.findOrFail(id)
+      await role.delete()
+      return response.ok({ message: 'Role Deleted Successfully' })
+    } catch (exception) {
+      return response.internalServerError({ message: exception.message })
+    }
   }
 }

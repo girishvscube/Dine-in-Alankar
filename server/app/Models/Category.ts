@@ -1,47 +1,57 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
-// import Dish from './Dish'
-import Subcat from './Subcat'
-import { compose } from '@ioc:Adonis/Core/Helpers'
-import { SoftDeletes } from '@ioc:Adonis/Addons/LucidSoftDeletes'
-import { slugify } from '@ioc:Adonis/Addons/LucidSlugify'
-import Dish from './Dish'
-export default class Category extends compose(BaseModel,SoftDeletes) {
+import Menu from './Menu'
+
+export default class Category extends BaseModel {
   @column({ isPrimary: true })
   public id: number
+
   @column()
-  @slugify({
-    strategy: 'shortId',
-    fields: ['category_name'],
-    allowUpdates:true
-  })
+  public name: string
+
+  @column()
   public slug: string
-  @column()
-  public category_name : string
 
   @column()
-  public category_image : string
+  public image: string
 
-  @column()
-  public is_available : boolean
-
-  
-//  @hasMany(()=>Dish,{
-//  foreignKey:'category_id' 
-//  })
-//  public dishes : HasMany<typeof Dish>
-
- @hasMany(()=>Subcat,{
-  foreignKey:'category_id' 
+  @column({
+    prepare: (value: boolean) => Number(value),
+    serialize: (value: number) => Boolean(value),
   })
-  public subcat : HasMany<typeof Subcat>
-  
+  public status: boolean
 
-  @hasMany(()=>Dish,{
-     foreignKey:'category_id'
+  @column()
+  public gst: string
+
+  @column()
+  public parent_id: number
+
+  @hasMany(()=>Menu,{
+   foreignKey: 'category_id'
   })
-  public items : HasMany<typeof Dish>
+  public menus : HasMany<typeof Menu>
 
- @column.dateTime()
- public deletedAt: DateTime
+  @column.dateTime({ autoCreate: true })
+  public createdAt: DateTime
+
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  public updatedAt: DateTime
+
+  static async listing(request) {
+    const { page = 1, search_key = '' } = request.qs()
+    
+    const limit = 10
+    let query = this.query()
+
+    if (search_key) {
+      query = query.where('name', 'LIKE', `%${search_key}%`)
+    }
+
+    return query
+      .select('id', 'name', 'image', 'status', 'created_at')
+      .whereNull('parent_id')
+      .orderBy('id', 'desc')
+      .paginate(page, limit)
+  }
 }

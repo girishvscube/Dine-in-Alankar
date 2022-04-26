@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.54193a58.css",
+    "main.js": "/static/js/main.ecf8694f.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/login1.svg": "/static/media/login1.709e66571c76481767c01ad4cc1273f5.svg",
+    "static/media/alankar.svg": "/static/media/alankar.0384157c0724a62f57215e8f5bc4aa46.svg",
+    "static/media/DS-DIGIB.TTF": "/static/media/DS-DIGIB.81b4bd9230069b72f5e8.TTF",
+    "static/media/north.png": "/static/media/north.560ad9e99456b61e3246.png",
+    "static/media/alan.png": "/static/media/alan.2987066c5dbdf5068449.png",
+    "static/media/chinese.png": "/static/media/chinese.5e81aa32e213b9033ef0.png",
+    "static/media/south.png": "/static/media/south.5b83b455f8d9a25a8cb0.png",
+    "static/media/Sales.svg": "/static/media/Sales.9f653f8a6bd2047dfb7fe57c7c65c11e.svg",
+    "static/media/TotalSales.svg": "/static/media/TotalSales.12162613b4adf950cb350f5284d4810a.svg",
+    "static/media/calender.svg": "/static/media/calender.d9bf843e80c546a5fedcde7b5e78dcd3.svg",
+    "index.html": "/index.html",
+    "static/media/Refresh.svg": "/static/media/Refresh.9f09a029357edb7223b63b6e3b0d664a.svg",
+    "static/media/EDIT ICON.svg": "/static/media/EDIT ICON.cd023fe6e3557304ca64fe831cb357e7.svg",
+    "main.54193a58.css.map": "/static/css/main.54193a58.css.map",
+    "main.ecf8694f.js.map": "/static/js/main.ecf8694f.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54193a58.css",
+    "static/js/main.ecf8694f.js"
+  ]
+}

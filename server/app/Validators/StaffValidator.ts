@@ -24,14 +24,14 @@ export default class StaffValidator {
    *    ```
    */
   public schema = schema.create({
-    name : schema.string({trim:true}),
-    email : schema.string({trim:true}),
-    phone:schema.string({trim:true}),
-    password:schema.string({trim:true}),
-    role : schema.number(),
-    table :schema.number(),
-    image:schema.string({trim:true}),
-    available : schema.boolean()
+    name: schema.string({ trim: true }),
+    email: schema.string({ trim: true }),
+    phone: schema.string({ trim: true }),
+    password: schema.string({ trim: true }),
+    role: schema.number(),
+    table: schema.number(),
+    image: schema.string({ trim: true }),
+    available: schema.boolean(),
   })
 
   /**

@@ -24,7 +24,7 @@ export default class RoleValidator {
    *    ```
    */
   public schema = schema.create({
-    role : schema.string({trim:true})
+    role: schema.string({ trim: true }),
   })
 
   /**
@@ -39,6 +39,6 @@ export default class RoleValidator {
    *
    */
   public messages = {
-    'role.required':'role field is required'
+    'role.required': 'role field is required',
   }
 }

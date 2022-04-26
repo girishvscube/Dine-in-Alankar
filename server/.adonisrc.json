@@ -23,7 +23,6 @@
     "@adonisjs/core",
     "@adonisjs/lucid",
     "@adonisjs/auth",
-    "@adonisjs/session",
     "@adonisjs/mail",
     "@adonisjs/lucid-slugify",
     "adonis-lucid-soft-deletes"

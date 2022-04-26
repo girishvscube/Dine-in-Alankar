@@ -24,9 +24,9 @@ export default class FeedbackValidator {
    *    ```
    */
   public schema = schema.create({
-    customer_id : schema.number(),
+    customer_id: schema.number(),
     order_id: schema.number(),
-    comments: schema.string({trim:true}),
+    comments: schema.string({ trim: true }),
     staff: schema.number(),
     ratings: schema.number(),
   })
@@ -43,10 +43,10 @@ export default class FeedbackValidator {
    *
    */
   public messages = {
-    'order_id.required':'required',
-    'customer_id.required':'required',
-    'comments.required':'required',
-    'staff.required':'staff required',
-    'ratingd.required':'required'
+    'order_id.required': 'required',
+    'customer_id.required': 'required',
+    'comments.required': 'required',
+    'staff.required': 'staff required',
+    'ratingd.required': 'required',
   }
 }
